@@ -2,8 +2,8 @@ from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
 
 from app.database import get_db
-from app.models.company import Company
 from app.schemas.company import CompanyCreate
+from app.services import company_service
 
 router = APIRouter(
     prefix="/companies",
@@ -16,8 +16,7 @@ router = APIRouter(
 # ==========================
 @router.get("/")
 def get_companies(db: Session = Depends(get_db)):
-    companies = db.query(Company).all()
-    return companies
+    return company_service.get_all_companies(db)
 
 
 # ==========================
@@ -25,7 +24,7 @@ def get_companies(db: Session = Depends(get_db)):
 # ==========================
 @router.get("/{company_id}")
 def get_company(company_id: int, db: Session = Depends(get_db)):
-    company = db.query(Company).filter(Company.id == company_id).first()
+    company = company_service.get_company_by_id(company_id, db)
 
     if company is None:
         raise HTTPException(
@@ -44,15 +43,7 @@ def create_company(
     company: CompanyCreate,
     db: Session = Depends(get_db)
 ):
-    db_company = Company(
-        company_name=company.company_name,
-        industry=company.industry,
-        email=company.email
-    )
-
-    db.add(db_company)
-    db.commit()
-    db.refresh(db_company)
+    db_company = company_service.create_company(company, db)
 
     return {
         "message": "Company created successfully!",
@@ -69,20 +60,17 @@ def update_company(
     company: CompanyCreate,
     db: Session = Depends(get_db)
 ):
-    db_company = db.query(Company).filter(Company.id == company_id).first()
+    db_company = company_service.update_company(
+        company_id,
+        company,
+        db
+    )
 
     if db_company is None:
         raise HTTPException(
             status_code=404,
             detail="Company not found"
         )
-
-    db_company.company_name = company.company_name
-    db_company.industry = company.industry
-    db_company.email = company.email
-
-    db.commit()
-    db.refresh(db_company)
 
     return {
         "message": "Company updated successfully!",
@@ -98,16 +86,16 @@ def delete_company(
     company_id: int,
     db: Session = Depends(get_db)
 ):
-    db_company = db.query(Company).filter(Company.id == company_id).first()
+    deleted = company_service.delete_company(
+        company_id,
+        db
+    )
 
-    if db_company is None:
+    if deleted is None:
         raise HTTPException(
             status_code=404,
             detail="Company not found"
         )
-
-    db.delete(db_company)
-    db.commit()
 
     return {
         "message": "Company deleted successfully!"
