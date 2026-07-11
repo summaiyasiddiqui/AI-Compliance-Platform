@@ -6,6 +6,6 @@ class Company(Base):
     __tablename__ = "companies"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, nullable=False)
+    company_name = Column(String, nullable=False)
     industry = Column(String, nullable=False)
-    country = Column(String, nullable=False)
+    email = Column(String, nullable=False)
