@@ -1,12 +1,20 @@
 from sqlalchemy.orm import Session
 from app.models.company import Company
+from app.models.user import User
 
 
 # ==========================
 # GET ALL COMPANIES
 # ==========================
-def get_all_companies(db: Session):
-    return db.query(Company).all()
+def get_all_companies(
+    db: Session,
+    current_user: User
+):
+    return (
+        db.query(Company)
+        .filter(Company.owner_id == current_user.id)
+        .all()
+    )
 
 
 # ==========================
@@ -21,12 +29,22 @@ def get_company_by_id(company_id: int, db: Session):
 # ==========================
 # CREATE COMPANY
 # ==========================
-def create_company(company, db: Session):
+def create_company(
+    company,
+    db: Session,
+    current_user: User
+):
+    print("Current user:", current_user)
+    print("Current user ID:", current_user.id)
+
     db_company = Company(
         company_name=company.company_name,
         industry=company.industry,
-        email=company.email
+        email=company.email,
+        owner_id=current_user.id
     )
+
+    print("Owner ID being saved:", db_company.owner_id)
 
     db.add(db_company)
     db.commit()

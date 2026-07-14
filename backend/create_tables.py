@@ -1,5 +1,8 @@
 from app.database import Base, engine
-from app.models import Company
+
+# Import models directly
+from app.models.company import Company
+from app.models.user import User
 
 print("Creating database tables...")
 

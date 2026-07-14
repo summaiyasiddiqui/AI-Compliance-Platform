@@ -4,6 +4,8 @@ from sqlalchemy.orm import Session
 from app.database import get_db
 from app.schemas.company import CompanyCreate
 from app.services import company_service
+from app.dependencies import get_current_user
+from app.models.user import User
 
 router = APIRouter(
     prefix="/companies",
@@ -22,17 +24,15 @@ def get_companies(db: Session = Depends(get_db)):
 # ==========================
 # GET COMPANY BY ID
 # ==========================
-@router.get("/{company_id}")
-def get_company(company_id: int, db: Session = Depends(get_db)):
-    company = company_service.get_company_by_id(company_id, db)
-
-    if company is None:
-        raise HTTPException(
-            status_code=404,
-            detail="Company not found"
-        )
-
-    return company
+@router.get("/")
+def get_companies(
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
+    return company_service.get_all_companies(
+        db,
+        current_user
+    )
 
 
 # ==========================
@@ -41,9 +41,14 @@ def get_company(company_id: int, db: Session = Depends(get_db)):
 @router.post("/")
 def create_company(
     company: CompanyCreate,
-    db: Session = Depends(get_db)
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
 ):
-    db_company = company_service.create_company(company, db)
+    db_company = company_service.create_company(
+    company,
+    db,
+    current_user
+)
 
     return {
         "message": "Company created successfully!",
