@@ -13,16 +13,9 @@ router = APIRouter(
 )
 
 
+
 # ==========================
 # GET ALL COMPANIES
-# ==========================
-@router.get("/")
-def get_companies(db: Session = Depends(get_db)):
-    return company_service.get_all_companies(db)
-
-
-# ==========================
-# GET COMPANY BY ID
 # ==========================
 @router.get("/")
 def get_companies(
@@ -34,6 +27,28 @@ def get_companies(
         current_user
     )
 
+## ==========================
+# GET COMPANY BY ID
+# ==========================
+@router.get("/{company_id}")
+def get_company(
+    company_id: int,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
+    company = company_service.get_company_by_id(
+        company_id,
+        db,
+        current_user
+    )
+
+    if company is None:
+        raise HTTPException(
+            status_code=403,
+            detail="You are not authorized to access this company."
+        )
+
+    return company
 
 # ==========================
 # CREATE COMPANY
@@ -63,18 +78,20 @@ def create_company(
 def update_company(
     company_id: int,
     company: CompanyCreate,
-    db: Session = Depends(get_db)
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
 ):
     db_company = company_service.update_company(
         company_id,
         company,
-        db
+        db,
+        current_user
     )
 
     if db_company is None:
         raise HTTPException(
-            status_code=404,
-            detail="Company not found"
+            status_code=403,
+            detail="You are not authorized to update this company."
         )
 
     return {
@@ -82,24 +99,26 @@ def update_company(
         "company": db_company
     }
 
-
+    
 # ==========================
 # DELETE COMPANY
 # ==========================
 @router.delete("/{company_id}")
 def delete_company(
     company_id: int,
-    db: Session = Depends(get_db)
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
 ):
     deleted = company_service.delete_company(
         company_id,
-        db
+        db,
+        current_user
     )
 
-    if deleted is None:
+    if not deleted:
         raise HTTPException(
-            status_code=404,
-            detail="Company not found"
+            status_code=403,
+            detail="You are not authorized to delete this company."
         )
 
     return {

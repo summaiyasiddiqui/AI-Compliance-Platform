@@ -1,4 +1,5 @@
 from sqlalchemy.orm import Session
+
 from app.models.company import Company
 from app.models.user import User
 
@@ -20,10 +21,19 @@ def get_all_companies(
 # ==========================
 # GET COMPANY BY ID
 # ==========================
-def get_company_by_id(company_id: int, db: Session):
-    return db.query(Company).filter(
-        Company.id == company_id
-    ).first()
+def get_company_by_id(
+    company_id: int,
+    db: Session,
+    current_user: User
+):
+    return (
+        db.query(Company)
+        .filter(
+            Company.id == company_id,
+            Company.owner_id == current_user.id
+        )
+        .first()
+    )
 
 
 # ==========================
@@ -34,17 +44,12 @@ def create_company(
     db: Session,
     current_user: User
 ):
-    print("Current user:", current_user)
-    print("Current user ID:", current_user.id)
-
     db_company = Company(
         company_name=company.company_name,
         industry=company.industry,
         email=company.email,
         owner_id=current_user.id
     )
-
-    print("Owner ID being saved:", db_company.owner_id)
 
     db.add(db_company)
     db.commit()
@@ -56,8 +61,17 @@ def create_company(
 # ==========================
 # UPDATE COMPANY
 # ==========================
-def update_company(company_id: int, company, db: Session):
-    db_company = get_company_by_id(company_id, db)
+def update_company(
+    company_id: int,
+    company,
+    db: Session,
+    current_user: User
+):
+    db_company = get_company_by_id(
+        company_id,
+        db,
+        current_user
+    )
 
     if db_company is None:
         return None
@@ -75,8 +89,16 @@ def update_company(company_id: int, company, db: Session):
 # ==========================
 # DELETE COMPANY
 # ==========================
-def delete_company(company_id: int, db: Session):
-    db_company = get_company_by_id(company_id, db)
+def delete_company(
+    company_id: int,
+    db: Session,
+    current_user: User
+):
+    db_company = get_company_by_id(
+        company_id,
+        db,
+        current_user
+    )
 
     if db_company is None:
         return None
