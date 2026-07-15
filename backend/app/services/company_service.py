@@ -44,6 +44,20 @@ def create_company(
     db: Session,
     current_user: User
 ):
+    # Check if the current user already has a company
+    # with the same name
+    existing_company = (
+        db.query(Company)
+        .filter(
+            Company.company_name == company.company_name,
+            Company.owner_id == current_user.id
+        )
+        .first()
+    )
+
+    if existing_company:
+        return None
+
     db_company = Company(
         company_name=company.company_name,
         industry=company.industry,

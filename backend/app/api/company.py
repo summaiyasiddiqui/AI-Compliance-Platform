@@ -1,8 +1,8 @@
-from fastapi import APIRouter, HTTPException, Depends
+from fastapi import APIRouter, HTTPException, Depends, status
 from sqlalchemy.orm import Session
 
 from app.database import get_db
-from app.schemas.company import CompanyCreate
+from app.schemas.company import CompanyCreate, CompanyResponse
 from app.services import company_service
 from app.dependencies import get_current_user
 from app.models.user import User
@@ -13,11 +13,10 @@ router = APIRouter(
 )
 
 
-
 # ==========================
 # GET ALL COMPANIES
 # ==========================
-@router.get("/")
+@router.get("/", response_model=list[CompanyResponse])
 def get_companies(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user)
@@ -27,10 +26,11 @@ def get_companies(
         current_user
     )
 
-## ==========================
+
+# ==========================
 # GET COMPANY BY ID
 # ==========================
-@router.get("/{company_id}")
+@router.get("/{company_id}", response_model=CompanyResponse)
 def get_company(
     company_id: int,
     db: Session = Depends(get_db),
@@ -50,20 +50,30 @@ def get_company(
 
     return company
 
+
 # ==========================
 # CREATE COMPANY
 # ==========================
-@router.post("/")
+@router.post(
+    "/",
+    status_code=status.HTTP_201_CREATED
+)
 def create_company(
     company: CompanyCreate,
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user)
 ):
     db_company = company_service.create_company(
-    company,
-    db,
-    current_user
-)
+        company,
+        db,
+        current_user
+    )
+
+    if db_company is None:
+        raise HTTPException(
+            status_code=400,
+            detail="You already have a company with this name."
+        )
 
     return {
         "message": "Company created successfully!",
@@ -99,7 +109,7 @@ def update_company(
         "company": db_company
     }
 
-    
+
 # ==========================
 # DELETE COMPANY
 # ==========================
