@@ -18,12 +18,24 @@ router = APIRouter(
 # ==========================
 @router.get("/", response_model=list[CompanyResponse])
 def get_companies(
+    search: str | None = None,
+    industry: str | None = None,
+    page: int = 1,
+    limit: int = 10,
+    sort_by: str = "id",
+    order: str = "asc",
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user)
+    current_user: User = Depends(get_current_user),
 ):
     return company_service.get_all_companies(
-        db,
-        current_user
+        db=db,
+        current_user=current_user,
+        search=search,
+        industry=industry,
+        page=page,
+        limit=limit,
+        sort_by=sort_by,
+        order=order,
     )
 
 

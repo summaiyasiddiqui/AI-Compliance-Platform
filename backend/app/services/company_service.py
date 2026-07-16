@@ -1,4 +1,5 @@
 from sqlalchemy.orm import Session
+from sqlalchemy import asc, desc
 
 from app.models.company import Company
 from app.models.user import User
@@ -9,13 +10,55 @@ from app.models.user import User
 # ==========================
 def get_all_companies(
     db: Session,
-    current_user: User
+    current_user: User,
+    search: str = None,
+    industry: str = None,
+    page: int = 1,
+    limit: int = 10,
+    sort_by: str = "id",
+    order: str = "asc",
 ):
-    return (
+    # Base query - only return companies owned by the logged-in user
+    query = (
         db.query(Company)
         .filter(Company.owner_id == current_user.id)
-        .all()
     )
+
+    # Search by company name
+    if search:
+        query = query.filter(
+            Company.company_name.ilike(f"%{search}%")
+        )
+
+    # Filter by industry
+    if industry:
+        query = query.filter(
+            Company.industry.ilike(industry)
+        )
+
+    # Allowed fields for sorting
+    allowed_sort_fields = {
+        "id": Company.id,
+        "company_name": Company.company_name,
+        "industry": Company.industry,
+        "email": Company.email,
+    }
+
+    # Apply sorting
+    if sort_by in allowed_sort_fields:
+        column = allowed_sort_fields[sort_by]
+
+        if order.lower() == "desc":
+            query = query.order_by(desc(column))
+        else:
+            query = query.order_by(asc(column))
+
+    # Pagination
+    offset = (page - 1) * limit
+
+    query = query.offset(offset).limit(limit)
+
+    return query.all()
 
 
 # ==========================
