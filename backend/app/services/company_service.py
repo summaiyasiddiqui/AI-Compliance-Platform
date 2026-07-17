@@ -3,7 +3,7 @@ from sqlalchemy import asc, desc
 
 from app.models.company import Company
 from app.models.user import User
-
+from math import ceil
 
 # ==========================
 # GET ALL COMPANIES
@@ -35,6 +35,9 @@ def get_all_companies(
         query = query.filter(
             Company.industry.ilike(industry)
         )
+    # Count total records BEFORE pagination
+    total_records = query.count()
+    total_pages = ceil(total_records / limit) if total_records > 0 else 1
 
     # Allowed fields for sorting
     allowed_sort_fields = {
@@ -58,18 +61,28 @@ def get_all_companies(
 
     query = query.offset(offset).limit(limit)
 
-    return query.all()
+    companies = query.all()
+
+    return {
+    "companies": companies,
+    "total_records": total_records,
+    "current_page": page,
+    "page_size": limit,
+    "total_pages": total_pages,
+}
 
 
 # ==========================
 # GET COMPANY BY ID
 # ==========================
+from fastapi import HTTPException
+
 def get_company_by_id(
     company_id: int,
     db: Session,
     current_user: User
 ):
-    return (
+    company = (
         db.query(Company)
         .filter(
             Company.id == company_id,
@@ -77,6 +90,18 @@ def get_company_by_id(
         )
         .first()
     )
+
+    if not company:
+        raise HTTPException(
+            status_code=404,
+            detail={
+                "success": False,
+                "message": "Company not found",
+                "data": None,
+            },
+        )
+
+    return company
 
 
 # ==========================

@@ -6,6 +6,7 @@ from app.schemas.company import CompanyCreate, CompanyResponse
 from app.services import company_service
 from app.dependencies import get_current_user
 from app.models.user import User
+from fastapi import Query
 
 router = APIRouter(
     prefix="/companies",
@@ -16,29 +17,48 @@ router = APIRouter(
 # ==========================
 # GET ALL COMPANIES
 # ==========================
-@router.get("/", response_model=list[CompanyResponse])
+@router.get("/")
 def get_companies(
     search: str | None = None,
     industry: str | None = None,
-    page: int = 1,
-    limit: int = 10,
+    page: int = Query(1, ge=1, description="Page number"),
+    limit: int = Query(
+    10,
+    ge=1,
+    le=100,
+    description="Number of companies per page"
+),
     sort_by: str = "id",
-    order: str = "asc",
+    order: str = Query(
+    "asc",
+    pattern="^(asc|desc)$",
+    description="Sort order: asc or desc"
+),
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
-    return company_service.get_all_companies(
-        db=db,
-        current_user=current_user,
-        search=search,
-        industry=industry,
-        page=page,
-        limit=limit,
-        sort_by=sort_by,
-        order=order,
-    )
+    result = company_service.get_all_companies(
+    db=db,
+    current_user=current_user,
+    search=search,
+    industry=industry,
+    page=page,
+    limit=limit,
+    sort_by=sort_by,
+    order=order,
+)
 
-
+    return {
+    "success": True,
+    "message": "Companies retrieved successfully",
+    "data": result["companies"],
+    "meta": {
+        "total_records": result["total_records"],
+        "current_page": result["current_page"],
+        "page_size": result["page_size"],
+        "total_pages": result["total_pages"],
+    },
+}
 # ==========================
 # GET COMPANY BY ID
 # ==========================
