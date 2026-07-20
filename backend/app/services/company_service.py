@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import asc, desc
-
+from app.schemas.company import CompanyResponse
 from app.models.company import Company
 from app.models.user import User
 from math import ceil
@@ -62,6 +62,11 @@ def get_all_companies(
     query = query.offset(offset).limit(limit)
 
     companies = query.all()
+
+    companies = [
+    CompanyResponse.model_validate(company)
+    for company in companies
+]
 
     return {
     "companies": companies,
@@ -137,7 +142,7 @@ def create_company(
     db.commit()
     db.refresh(db_company)
 
-    return db_company
+    return CompanyResponse.model_validate(db_company)
 
 
 # ==========================
@@ -165,7 +170,7 @@ def update_company(
     db.commit()
     db.refresh(db_company)
 
-    return db_company
+    return CompanyResponse.model_validate(db_company)
 
 
 # ==========================

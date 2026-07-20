@@ -1,5 +1,6 @@
 from fastapi import APIRouter, HTTPException, Depends, status
 from sqlalchemy.orm import Session
+from app.schemas.response import APIResponse
 
 from app.database import get_db
 from app.schemas.company import CompanyCreate, CompanyResponse
@@ -17,7 +18,7 @@ router = APIRouter(
 # ==========================
 # GET ALL COMPANIES
 # ==========================
-@router.get("/")
+@router.get("/", response_model=APIResponse)
 def get_companies(
     search: str | None = None,
     industry: str | None = None,
@@ -51,12 +52,14 @@ def get_companies(
     return {
     "success": True,
     "message": "Companies retrieved successfully",
-    "data": result["companies"],
-    "meta": {
-        "total_records": result["total_records"],
-        "current_page": result["current_page"],
-        "page_size": result["page_size"],
-        "total_pages": result["total_pages"],
+    "data": {
+        "companies": result["companies"],
+        "meta": {
+            "total_records": result["total_records"],
+            "current_page": result["current_page"],
+            "page_size": result["page_size"],
+            "total_pages": result["total_pages"],
+        },
     },
 }
 # ==========================
@@ -88,6 +91,7 @@ def get_company(
 # ==========================
 @router.post(
     "/",
+    response_model=APIResponse,
     status_code=status.HTTP_201_CREATED
 )
 def create_company(
@@ -108,15 +112,18 @@ def create_company(
         )
 
     return {
-        "message": "Company created successfully!",
-        "company": db_company
-    }
-
+    "success": True,
+    "message": "Company created successfully!",
+    "data": db_company
+}
 
 # ==========================
 # UPDATE COMPANY
 # ==========================
-@router.put("/{company_id}")
+@router.put(
+    "/{company_id}",
+    response_model=APIResponse
+)
 def update_company(
     company_id: int,
     company: CompanyCreate,
@@ -135,17 +142,20 @@ def update_company(
             status_code=403,
             detail="You are not authorized to update this company."
         )
-
     return {
-        "message": "Company updated successfully!",
-        "company": db_company
-    }
+    "success": True,
+    "message": "Company updated successfully!",
+    "data": db_company
+}
 
 
 # ==========================
 # DELETE COMPANY
 # ==========================
-@router.delete("/{company_id}")
+@router.delete(
+    "/{company_id}",
+    response_model=APIResponse
+)
 def delete_company(
     company_id: int,
     db: Session = Depends(get_db),
@@ -164,5 +174,7 @@ def delete_company(
         )
 
     return {
-        "message": "Company deleted successfully!"
-    }
+    "success": True,
+    "message": "Company deleted successfully!",
+    "data": None
+}
