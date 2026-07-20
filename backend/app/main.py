@@ -6,12 +6,27 @@ from app.api.auth import router as auth_router
 from app.database import Base, engine
 from app.models.company import Company
 from app.models.user import User
+from fastapi import HTTPException
+from fastapi.exceptions import RequestValidationError
+
+from app.exceptions import (
+    http_exception_handler,
+    validation_exception_handler,
+)
+
 app = FastAPI(
     title="ComplianceAI API",
     description="AI-powered Compliance Management Platform",
     version="1.0.0"
 )
-
+app.add_exception_handler(
+    HTTPException,
+    http_exception_handler
+)
+app.add_exception_handler(
+    RequestValidationError,
+    validation_exception_handler
+)
 @app.get("/")
 def home():
     return {
