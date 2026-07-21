@@ -19,7 +19,11 @@ router = APIRouter(
 # -----------------------------
 # Register User
 # -----------------------------
-@router.post("/register", response_model=UserResponse)
+@router.post(
+    "/register",
+    response_model=UserResponse,
+    status_code=201
+)
 def register_user(
     user: UserCreate,
     db: Session = Depends(get_db)
