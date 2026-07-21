@@ -1,7 +1,7 @@
 from fastapi import HTTPException, Request
 from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
-
+from app.logger import logger
 
 async def http_exception_handler(
     request: Request,
@@ -30,6 +30,10 @@ async def validation_exception_handler(
                 "message": error["msg"],
             }
         )
+        if exc.status_code >= 500:
+             logger.error(f"Server Error: {exc.detail}")
+        elif exc.status_code >= 400:
+           logger.warning(f"HTTP {exc.status_code}: {exc.detail}")
 
     return JSONResponse(
         status_code=422,

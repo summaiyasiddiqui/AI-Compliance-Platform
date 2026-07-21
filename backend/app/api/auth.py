@@ -9,6 +9,7 @@ from app.schemas.token import Token
 from app.security import hash_password, verify_password
 from app.auth import create_access_token
 from app.dependencies import get_current_user
+from app.logger import logger
 
 router = APIRouter(
     prefix="/auth",
@@ -64,16 +65,24 @@ def register_user(
 # -----------------------------
 # Login User
 # -----------------------------
+
 @router.post("/login", response_model=Token)
 def login_user(
     form_data: OAuth2PasswordRequestForm = Depends(),
     db: Session = Depends(get_db)
 ):
+    logger.info(
+        f"Login attempt for username: {form_data.username}"
+    )
+
     db_user = db.query(User).filter(
         User.username == form_data.username
     ).first()
 
     if not db_user:
+        logger.warning(
+            f"Failed login attempt for username: {form_data.username}"
+        )
         raise HTTPException(
             status_code=401,
             detail="Invalid username or password"
@@ -83,6 +92,9 @@ def login_user(
         form_data.password,
         db_user.hashed_password
     ):
+        logger.warning(
+            f"Failed login attempt for username: {form_data.username}"
+        )
         raise HTTPException(
             status_code=401,
             detail="Invalid username or password"
@@ -92,10 +104,15 @@ def login_user(
         data={"sub": db_user.username}
     )
 
+    logger.info(
+        f"User logged in successfully: {db_user.username}"
+    )
+
     return {
         "access_token": access_token,
         "token_type": "bearer"
     }
+   
 
 
 # -----------------------------

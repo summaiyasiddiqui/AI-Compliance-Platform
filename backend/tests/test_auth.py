@@ -44,14 +44,14 @@ def test_login_user():
     assert "access_token" in data
     assert data["token_type"] == "bearer"
 
-    
+
 def test_get_current_user():
     # Step 1: Login
     login_response = client.post(
         "/auth/login",
         data={
             "username": "summaiya",
-            "password": "mypassword123"
+            "password": "password123"
         }
     )
 
