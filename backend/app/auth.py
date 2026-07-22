@@ -1,9 +1,10 @@
 from datetime import datetime, timedelta
 from jose import jwt, JWTError
+from app.config import settings
 
-SECRET_KEY = "your_super_secret_key_change_this_in_production"
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+SECRET_KEY = settings.secret_key
+ALGORITHM = settings.algorithm
+ACCESS_TOKEN_EXPIRE_MINUTES = settings.access_token_expire_minutes
 
 
 def create_access_token(data: dict):

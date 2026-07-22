@@ -16,3 +16,15 @@
 2026-07-21 02:57:26,235 - INFO - Login attempt for username: logginguser
 2026-07-21 03:01:47,414 - INFO - Login attempt for username: logginguser
 2026-07-21 03:01:47,763 - INFO - User logged in successfully: logginguser
+2026-07-22 01:38:47,018 - INFO - Login attempt for username: summaiya14
+2026-07-22 01:49:17,988 - INFO - Login attempt for username: summaiya14
+2026-07-22 02:04:58,895 - INFO - Login attempt for username: summaiya14
+2026-07-22 02:04:59,148 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-07-22 02:05:00,328 - INFO - User logged in successfully: summaiya14
+2026-07-22 02:05:22,563 - INFO - Login attempt for username: summaiya14
+2026-07-22 02:05:23,517 - INFO - User logged in successfully: summaiya14

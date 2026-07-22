@@ -1,7 +1,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-DATABASE_URL = "postgresql://postgres:postgres123@localhost:5432/compliance_ai"
+from app.config import settings
+
+DATABASE_URL = settings.database_url
 
 engine = create_engine(DATABASE_URL)
 
