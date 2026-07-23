@@ -8,7 +8,7 @@ from app.models.company import Company
 from app.models.user import User
 from fastapi import HTTPException
 from fastapi.exceptions import RequestValidationError
-
+from app.middleware import LoggingMiddleware
 from app.exceptions import (
     http_exception_handler,
     validation_exception_handler,
@@ -19,6 +19,8 @@ app = FastAPI(
     description="AI-powered Compliance Management Platform",
     version="1.0.0"
 )
+app.add_middleware(LoggingMiddleware)
+
 app.add_exception_handler(
     HTTPException,
     http_exception_handler

@@ -28,3 +28,60 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2026-07-22 02:05:00,328 - INFO - User logged in successfully: summaiya14
 2026-07-22 02:05:22,563 - INFO - Login attempt for username: summaiya14
 2026-07-22 02:05:23,517 - INFO - User logged in successfully: summaiya14
+2026-07-23 08:24:40,497 - INFO - Incoming Request: GET /docs
+2026-07-23 08:24:40,501 - INFO - Completed: 200 in 4.25 ms
+2026-07-23 08:24:41,490 - INFO - Incoming Request: GET /openapi.json
+2026-07-23 08:24:41,682 - INFO - Completed: 200 in 192.68 ms
+2026-07-23 08:25:39,783 - INFO - Incoming Request: POST /auth/login
+2026-07-23 08:25:39,852 - INFO - Login attempt for username: summaiya14
+2026-07-23 08:25:39,926 - WARNING - Failed login attempt for username: summaiya14
+2026-07-23 08:25:39,929 - INFO - Completed: 401 in 146.55 ms
+2026-07-23 08:25:59,559 - INFO - Incoming Request: POST /auth/login
+2026-07-23 08:25:59,564 - INFO - Login attempt for username: summaiya14
+2026-07-23 08:25:59,568 - WARNING - Failed login attempt for username: summaiya14
+2026-07-23 08:25:59,573 - INFO - Completed: 401 in 14.54 ms
+2026-07-23 08:25:59,804 - INFO - Incoming Request: POST /auth/login
+2026-07-23 08:25:59,811 - INFO - Login attempt for username: summaiya14
+2026-07-23 08:25:59,817 - WARNING - Failed login attempt for username: summaiya14
+2026-07-23 08:25:59,822 - INFO - Completed: 401 in 17.41 ms
+2026-07-23 08:28:45,473 - INFO - Incoming Request: POST /auth/register
+2026-07-23 08:28:45,541 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-07-23 08:28:46,360 - INFO - Completed: 201 in 886.94 ms
+2026-07-23 08:29:31,122 - INFO - Incoming Request: POST /auth/login
+2026-07-23 08:29:31,127 - INFO - Login attempt for username: summaiya14
+2026-07-23 08:29:31,679 - INFO - User logged in successfully: summaiya14
+2026-07-23 08:29:31,681 - INFO - Completed: 200 in 559.3 ms
+2026-07-23 08:40:50,210 - INFO - Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-23 08:40:50,213 - INFO - Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-23 08:40:50,214 - INFO - Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-23 08:40:50,226 - INFO - Completed: 200 in 17.14 ms
+2026-07-23 08:40:50,228 - INFO - Completed: 200 in 14.91 ms
+2026-07-23 08:40:50,230 - INFO - Completed: 200 in 16.11 ms
+2026-07-23 08:40:51,005 - INFO - Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-23 08:40:51,128 - INFO - Completed: 200 in 123.27 ms
+2026-07-23 08:41:16,572 - INFO - Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-23 08:41:16,620 - INFO - Login attempt for username: summaiya14
+2026-07-23 08:41:16,700 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-07-23 08:41:17,299 - INFO - User logged in successfully: summaiya14
+2026-07-23 08:41:17,301 - INFO - Completed: 200 in 729.28 ms
+2026-07-23 08:45:29,808 - INFO - GET /docs | Status: 200 | Time: 3.38 ms | Client: 172.19.0.1
+2026-07-23 08:45:30,003 - INFO - GET /openapi.json | Status: 200 | Time: 78.57 ms | Client: 172.19.0.1
+2026-07-23 08:45:51,295 - INFO - Login attempt for username: summaiya14
+2026-07-23 08:45:51,376 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-07-23 08:45:51,958 - INFO - User logged in successfully: summaiya14
+2026-07-23 08:45:51,961 - INFO - POST /auth/login | Status: 200 | Time: 699.35 ms | Client: 172.19.0.1
