@@ -29,6 +29,9 @@ services:
     env_file:
       - .env
 
+    volumes:
+    - .:/app
+
     command: ./entrypoint.sh
 
 volumes:
