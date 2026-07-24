@@ -7,6 +7,9 @@ class Settings(BaseSettings):
     algorithm: str
     access_token_expire_minutes: int
 
+    resend_api_key: str
+    email_from: str
+
     model_config = SettingsConfigDict(
         env_file=".env",
         extra="ignore"

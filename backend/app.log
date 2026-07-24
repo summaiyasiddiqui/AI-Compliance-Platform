@@ -85,3 +85,81 @@ Traceback (most recent call last):
 AttributeError: module 'bcrypt' has no attribute '__about__'
 2026-07-23 08:45:51,958 - INFO - User logged in successfully: summaiya14
 2026-07-23 08:45:51,961 - INFO - POST /auth/login | Status: 200 | Time: 699.35 ms | Client: 172.19.0.1
+2026-07-23 09:02:44,493 - INFO - [f5cfc23c] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-23 09:02:44,497 - INFO - [f5cfc23c] GET /docs | Status: 200 | Time: 4.56 ms | Client: 172.19.0.1
+2026-07-23 09:02:44,726 - INFO - [48db3bc6] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-23 09:02:44,999 - INFO - [48db3bc6] GET /openapi.json | Status: 200 | Time: 273.11 ms | Client: 172.19.0.1
+2026-07-23 09:03:28,124 - INFO - [3d29efd4] Incoming Request: POST /auth/register | Client: 172.19.0.1
+2026-07-23 09:03:28,289 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-07-23 09:03:29,053 - INFO - [3d29efd4] POST /auth/register | Status: 201 | Time: 929.34 ms | Client: 172.19.0.1
+2026-07-23 09:03:29,056 - INFO - Starting welcome email task for hasan@gmail.com
+2026-07-23 09:03:34,056 - INFO - Welcome email sent to hasan@gmail.com
+2026-07-23 15:49:52,068 - INFO - [4c0b6995] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-23 15:49:52,073 - INFO - [4c0b6995] GET /docs | Status: 200 | Time: 5.97 ms | Client: 172.19.0.1
+2026-07-23 15:49:52,342 - INFO - [d09b6c5a] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-23 15:49:52,499 - INFO - [d09b6c5a] GET /openapi.json | Status: 200 | Time: 157.22 ms | Client: 172.19.0.1
+2026-07-23 15:50:54,047 - INFO - [8c0306ef] Incoming Request: POST /auth/register | Client: 172.19.0.1
+2026-07-23 15:50:54,264 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-07-23 15:50:54,920 - INFO - [8c0306ef] POST /auth/register | Status: 201 | Time: 872.24 ms | Client: 172.19.0.1
+2026-07-23 15:50:54,922 - INFO - Starting welcome email task for alizey@gmail.com
+2026-07-23 15:51:16,000 - ERROR - Failed to send email: [Errno 111] Connection refused
+2026-07-23 15:51:16,002 - INFO - Welcome email task completed for alizey@gmail.com
+2026-07-23 15:55:10,572 - INFO - [5eff6dde] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-23 15:55:10,581 - INFO - [5eff6dde] GET /docs | Status: 200 | Time: 9.52 ms | Client: 172.19.0.1
+2026-07-23 15:55:10,736 - INFO - [b4a7da43] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-23 15:55:10,833 - INFO - [b4a7da43] GET /openapi.json | Status: 200 | Time: 97.03 ms | Client: 172.19.0.1
+2026-07-23 15:55:52,339 - INFO - [e04b8142] Incoming Request: POST /auth/register | Client: 172.19.0.1
+2026-07-23 15:55:52,464 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-07-23 15:55:53,113 - INFO - [e04b8142] POST /auth/register | Status: 201 | Time: 774.65 ms | Client: 172.19.0.1
+2026-07-23 15:55:53,116 - INFO - Starting welcome email task for shizrey@gmail.com
+2026-07-23 15:55:53,118 - INFO - Connecting to Gmail SMTP...
+2026-07-23 15:56:15,285 - ERROR - Failed to send email: timed out
+2026-07-23 15:56:15,286 - INFO - Welcome email task completed for shizrey@gmail.com
+2026-07-24 09:36:24,915 - INFO - [8b829a15] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-24 09:36:24,925 - INFO - [8b829a15] GET /docs | Status: 200 | Time: 9.89 ms | Client: 172.19.0.1
+2026-07-24 09:36:25,128 - INFO - [418a8e6f] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-24 09:36:25,240 - INFO - [418a8e6f] GET /openapi.json | Status: 200 | Time: 112.82 ms | Client: 172.19.0.1
+2026-07-24 09:37:07,284 - INFO - [d19428be] Incoming Request: POST /auth/register | Client: 172.19.0.1
+2026-07-24 09:37:07,518 - INFO - [d19428be] POST /auth/register | Status: 400 | Time: 233.27 ms | Client: 172.19.0.1
+2026-07-24 09:37:26,852 - INFO - [ef55f2ce] Incoming Request: POST /auth/register | Client: 172.19.0.1
+2026-07-24 09:37:26,867 - INFO - [ef55f2ce] POST /auth/register | Status: 400 | Time: 15.35 ms | Client: 172.19.0.1
+2026-07-24 09:37:38,830 - INFO - [d978b475] Incoming Request: POST /auth/register | Client: 172.19.0.1
+2026-07-24 09:37:38,847 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-07-24 09:37:39,520 - INFO - [d978b475] POST /auth/register | Status: 201 | Time: 690.35 ms | Client: 172.19.0.1
+2026-07-24 09:37:39,523 - INFO - Starting welcome email task for shizsid@gmail.com
+2026-07-24 10:49:09,258 - INFO - [d59a1b1a] Incoming Request: POST /auth/register | Client: 172.19.0.1
+2026-07-24 10:50:07,965 - INFO - [82326b0a] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-24 10:50:07,967 - INFO - [82326b0a] GET /docs | Status: 200 | Time: 2.08 ms | Client: 172.19.0.1
+2026-07-24 10:50:08,180 - INFO - [5a8b0705] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-24 10:50:08,288 - INFO - [5a8b0705] GET /openapi.json | Status: 200 | Time: 108.05 ms | Client: 172.19.0.1
+2026-07-24 10:52:36,042 - INFO - [82ceb612] Incoming Request: POST /auth/register | Client: 172.19.0.1
+2026-07-24 10:52:36,297 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-07-24 10:52:37,046 - INFO - [82ceb612] POST /auth/register | Status: 201 | Time: 1003.7 ms | Client: 172.19.0.1
+2026-07-24 10:52:37,049 - INFO - Starting welcome email task for aicompliance9@gmail.com
+2026-07-24 10:52:39,102 - INFO - Email sent successfully to aicompliance9@gmail.com
+2026-07-24 10:52:39,106 - INFO - Welcome email task completed for aicompliance9@gmail.com
