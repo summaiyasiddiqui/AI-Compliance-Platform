@@ -64,8 +64,10 @@ def register_user(
     
     background_tasks.add_task(
     send_welcome_email,
-    new_user.email
+    new_user.email,
+    new_user.username
 )
+
 
     return new_user
 

@@ -2,14 +2,14 @@ from app.email_service import send_email
 from app.logger import logger
 
 
-def send_welcome_email(email: str):
+def send_welcome_email(email: str, username: str):
 
     logger.info(f"Starting welcome email task for {email}")
 
     subject = "Welcome to ComplianceAI"
 
     body = f"""
-Hello,
+Hello {username},
 
 Welcome to ComplianceAI! 🎉
 
