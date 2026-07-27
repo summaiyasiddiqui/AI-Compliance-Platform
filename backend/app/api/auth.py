@@ -14,6 +14,7 @@ import secrets
 from datetime import datetime, timedelta
 from app.schemas.user import ForgotPasswordRequest, ResetPasswordRequest
 from app.email_service import send_email
+from app.admin import require_admin
 
 router = APIRouter(
     prefix="/auth",
@@ -56,10 +57,11 @@ def register_user(
         )
 
     new_user = User(
-        username=user.username,
-        email=user.email,
-        hashed_password=hash_password(user.password)
-    )
+    username=user.username,
+    email=user.email,
+    hashed_password=hash_password(user.password),
+    role=user.role
+)
 
     db.add(new_user)
     db.commit()
@@ -220,4 +222,12 @@ def reset_password(
 
     return {
         "message": "Password has been reset successfully."
+    }
+
+@router.get("/admin")
+def admin_dashboard(
+    current_user: User = Depends(require_admin),
+):
+    return {
+        "message": f"Welcome Admin {current_user.username}!"
     }

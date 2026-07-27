@@ -236,3 +236,25 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2026-07-27 08:47:45,500 - INFO - [5baf84cb] POST /auth/login | Status: 200 | Time: 714.53 ms | Client: 172.19.0.1
 2026-07-27 08:49:13,104 - INFO - [bf684688] Incoming Request: POST /auth/reset-password | Client: 172.19.0.1
 2026-07-27 08:49:13,118 - INFO - [bf684688] POST /auth/reset-password | Status: 400 | Time: 14.38 ms | Client: 172.19.0.1
+2026-07-27 09:24:59,766 - INFO - [5b8f1f7b] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-27 09:24:59,774 - INFO - [5b8f1f7b] GET /docs | Status: 200 | Time: 8.07 ms | Client: 172.19.0.1
+2026-07-27 09:25:00,006 - INFO - [2517ce8a] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-27 09:25:00,274 - INFO - [2517ce8a] GET /openapi.json | Status: 200 | Time: 268.34 ms | Client: 172.19.0.1
+2026-07-27 09:25:48,952 - INFO - [711f2f8d] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-27 09:25:49,019 - INFO - Login attempt for username: summaiya14
+2026-07-27 09:25:49,086 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-07-27 09:25:49,713 - INFO - User logged in successfully: summaiya14
+2026-07-27 09:25:49,717 - INFO - [711f2f8d] POST /auth/login | Status: 200 | Time: 764.97 ms | Client: 172.19.0.1
+2026-07-27 09:26:12,458 - INFO - [fffeb490] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-27 09:26:12,464 - INFO - Login attempt for username: summaiya14
+2026-07-27 09:26:12,958 - INFO - User logged in successfully: summaiya14
+2026-07-27 09:26:12,961 - INFO - [fffeb490] POST /auth/login | Status: 200 | Time: 502.39 ms | Client: 172.19.0.1
+2026-07-27 09:26:33,324 - INFO - [eca4b724] Incoming Request: GET /auth/admin | Client: 172.19.0.1
+2026-07-27 09:26:33,354 - INFO - [eca4b724] GET /auth/admin | Status: 403 | Time: 29.9 ms | Client: 172.19.0.1
+2026-07-27 09:32:29,382 - INFO - [a3509786] Incoming Request: GET /auth/admin | Client: 172.19.0.1
+2026-07-27 09:32:29,586 - INFO - [a3509786] GET /auth/admin | Status: 403 | Time: 203.87 ms | Client: 172.19.0.1
