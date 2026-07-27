@@ -163,3 +163,76 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2026-07-24 10:52:37,049 - INFO - Starting welcome email task for aicompliance9@gmail.com
 2026-07-24 10:52:39,102 - INFO - Email sent successfully to aicompliance9@gmail.com
 2026-07-24 10:52:39,106 - INFO - Welcome email task completed for aicompliance9@gmail.com
+2026-07-24 20:38:47,529 - INFO - [95978c4a] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-24 20:38:47,536 - INFO - [95978c4a] GET /docs | Status: 200 | Time: 6.96 ms | Client: 172.19.0.1
+2026-07-24 20:38:47,961 - INFO - [190ce549] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-24 20:38:48,111 - INFO - [190ce549] GET /openapi.json | Status: 200 | Time: 149.82 ms | Client: 172.19.0.1
+2026-07-24 20:40:25,689 - INFO - [0e8525a6] Incoming Request: POST /auth/forgot-password | Client: 172.19.0.1
+2026-07-24 20:40:25,881 - INFO - [0e8525a6] POST /auth/forgot-password | Status: 200 | Time: 192.67 ms | Client: 172.19.0.1
+2026-07-24 21:01:19,573 - INFO - [7a68532c] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-24 21:01:19,578 - INFO - [7a68532c] GET /docs | Status: 200 | Time: 5.31 ms | Client: 172.19.0.1
+2026-07-24 21:01:20,010 - INFO - [c52df010] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-24 21:01:20,146 - INFO - [c52df010] GET /openapi.json | Status: 200 | Time: 135.98 ms | Client: 172.19.0.1
+2026-07-24 21:01:33,219 - INFO - [6adf9601] Incoming Request: POST /auth/forgot-password | Client: 172.19.0.1
+2026-07-24 21:01:33,333 - INFO - [6adf9601] POST /auth/forgot-password | Status: 200 | Time: 113.69 ms | Client: 172.19.0.1
+2026-07-24 21:15:51,351 - INFO - [13101e47] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-24 21:15:51,355 - INFO - [13101e47] GET /docs | Status: 200 | Time: 4.42 ms | Client: 172.19.0.1
+2026-07-24 21:15:51,569 - INFO - [29290f04] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-24 21:15:51,733 - INFO - [29290f04] GET /openapi.json | Status: 200 | Time: 164.68 ms | Client: 172.19.0.1
+2026-07-24 21:16:21,990 - INFO - [a91f4d3a] Incoming Request: POST /auth/forgot-password | Client: 172.19.0.1
+2026-07-24 21:16:22,166 - INFO - [a91f4d3a] POST /auth/forgot-password | Status: 200 | Time: 175.48 ms | Client: 172.19.0.1
+2026-07-24 21:16:38,465 - INFO - [9a851437] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-24 21:16:38,466 - INFO - [9a851437] GET /docs | Status: 200 | Time: 1.54 ms | Client: 172.19.0.1
+2026-07-24 21:16:38,591 - INFO - [740ad68b] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-24 21:16:38,593 - INFO - [740ad68b] GET /openapi.json | Status: 200 | Time: 2.38 ms | Client: 172.19.0.1
+2026-07-24 21:16:54,132 - INFO - [3385710b] Incoming Request: POST /auth/forgot-password | Client: 172.19.0.1
+2026-07-24 21:16:54,142 - INFO - [3385710b] POST /auth/forgot-password | Status: 200 | Time: 9.89 ms | Client: 172.19.0.1
+2026-07-24 21:20:05,724 - INFO - [9376022e] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-24 21:20:05,736 - INFO - [9376022e] GET /docs | Status: 200 | Time: 11.02 ms | Client: 172.19.0.1
+2026-07-24 21:20:05,905 - INFO - [f29b8d4f] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-24 21:20:06,045 - INFO - [f29b8d4f] GET /openapi.json | Status: 200 | Time: 140.44 ms | Client: 172.19.0.1
+2026-07-24 21:20:51,383 - INFO - [fbfae121] Incoming Request: POST /auth/forgot-password | Client: 172.19.0.1
+2026-07-24 21:20:51,506 - INFO - [fbfae121] POST /auth/forgot-password | Status: 200 | Time: 123.58 ms | Client: 172.19.0.1
+2026-07-24 21:25:20,422 - INFO - [f2c72b35] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-24 21:25:20,425 - INFO - [f2c72b35] GET /docs | Status: 200 | Time: 2.47 ms | Client: 172.19.0.1
+2026-07-24 21:25:20,583 - INFO - [b264cc0c] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-24 21:25:20,718 - INFO - [b264cc0c] GET /openapi.json | Status: 200 | Time: 135.63 ms | Client: 172.19.0.1
+2026-07-24 21:29:15,735 - INFO - [a21d7fe0] Incoming Request: POST /auth/forgot-password | Client: 172.19.0.1
+2026-07-24 21:29:15,908 - INFO - [a21d7fe0] POST /auth/forgot-password | Status: 200 | Time: 173.68 ms | Client: 172.19.0.1
+2026-07-27 08:21:32,741 - INFO - [3d1c2ffc] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-27 08:21:32,745 - INFO - [3d1c2ffc] GET /docs | Status: 200 | Time: 4.18 ms | Client: 172.19.0.1
+2026-07-27 08:21:32,959 - INFO - [8a7d78e3] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-27 08:21:33,080 - INFO - [8a7d78e3] GET /openapi.json | Status: 200 | Time: 121.25 ms | Client: 172.19.0.1
+2026-07-27 08:21:51,570 - INFO - [85e31d6e] Incoming Request: POST /auth/forgot-password | Client: 172.19.0.1
+2026-07-27 08:21:53,205 - ERROR - Failed to send email: 403 Client Error: Forbidden for url: https://api.resend.com/emails
+2026-07-27 08:21:53,210 - INFO - [85e31d6e] POST /auth/forgot-password | Status: 200 | Time: 1640.34 ms | Client: 172.19.0.1
+2026-07-27 08:23:51,736 - INFO - [c3a2e782] Incoming Request: POST /auth/forgot-password | Client: 172.19.0.1
+2026-07-27 08:23:52,583 - INFO - Email sent successfully to aicompliance9@gmail.com
+2026-07-27 08:23:52,586 - INFO - [c3a2e782] POST /auth/forgot-password | Status: 200 | Time: 851.01 ms | Client: 172.19.0.1
+2026-07-27 08:28:22,209 - INFO - [f04a571d] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-27 08:28:22,211 - INFO - [f04a571d] GET /docs | Status: 200 | Time: 2.53 ms | Client: 172.19.0.1
+2026-07-27 08:28:22,401 - INFO - [15c25bfb] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-27 08:28:22,621 - INFO - [15c25bfb] GET /openapi.json | Status: 200 | Time: 220.62 ms | Client: 172.19.0.1
+2026-07-27 08:28:43,471 - INFO - [11b6b7c9] Incoming Request: POST /auth/forgot-password | Client: 172.19.0.1
+2026-07-27 08:28:45,386 - INFO - Email sent successfully to aicompliance9@gmail.com
+2026-07-27 08:28:45,391 - INFO - [11b6b7c9] POST /auth/forgot-password | Status: 200 | Time: 1920.01 ms | Client: 172.19.0.1
+2026-07-27 08:33:53,193 - INFO - [dd862b7c] Incoming Request: POST /auth/reset-password | Client: 172.19.0.1
+2026-07-27 08:33:53,229 - INFO - [dd862b7c] POST /auth/reset-password | Status: 200 | Time: 35.53 ms | Client: 172.19.0.1
+2026-07-27 08:37:37,607 - INFO - [900f3498] Incoming Request: POST /auth/reset-password | Client: 172.19.0.1
+2026-07-27 08:37:37,723 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-07-27 08:37:38,423 - INFO - [900f3498] POST /auth/reset-password | Status: 200 | Time: 816.65 ms | Client: 172.19.0.1
+2026-07-27 08:39:40,414 - INFO - [ceefcb84] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-27 08:39:40,442 - INFO - Login attempt for username: AIcompliance
+2026-07-27 08:39:40,452 - WARNING - Failed login attempt for username: AIcompliance
+2026-07-27 08:39:40,458 - INFO - [ceefcb84] POST /auth/login | Status: 401 | Time: 43.88 ms | Client: 172.19.0.1
+2026-07-27 08:47:44,785 - INFO - [5baf84cb] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-27 08:47:44,794 - INFO - Login attempt for username: summaiya
+2026-07-27 08:47:45,493 - INFO - User logged in successfully: summaiya
+2026-07-27 08:47:45,500 - INFO - [5baf84cb] POST /auth/login | Status: 200 | Time: 714.53 ms | Client: 172.19.0.1
+2026-07-27 08:49:13,104 - INFO - [bf684688] Incoming Request: POST /auth/reset-password | Client: 172.19.0.1
+2026-07-27 08:49:13,118 - INFO - [bf684688] POST /auth/reset-password | Status: 400 | Time: 14.38 ms | Client: 172.19.0.1

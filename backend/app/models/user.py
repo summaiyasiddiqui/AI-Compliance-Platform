@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, DateTime
 from sqlalchemy.orm import relationship
 from app.database import Base
 
@@ -16,3 +16,5 @@ class User(Base):
         back_populates="owner",
         cascade="all, delete"
     )
+    reset_token = Column(String, nullable=True)
+    reset_token_expires = Column(DateTime, nullable=True) 
