@@ -7,7 +7,12 @@ from app.models.user import User
 from app.schemas.user import UserCreate, UserResponse
 from app.schemas.token import Token
 from app.security import hash_password, verify_password
-from app.auth import create_access_token
+from app.auth import (
+    create_access_token,
+    create_refresh_token,
+    decode_refresh_token
+)
+from app.schemas.refresh_token import RefreshTokenRequest
 from app.dependencies import get_current_user
 from app.logger import logger
 import secrets
@@ -116,17 +121,105 @@ def login_user(
         )
 
     access_token = create_access_token(
-        data={"sub": db_user.username}
-    )
+    data={"sub": db_user.username}
+)
+
+    refresh_token = create_refresh_token(
+    data={"sub": db_user.username}
+)
+    db_user.refresh_token = refresh_token
+    db.commit()
 
     logger.info(
         f"User logged in successfully: {db_user.username}"
     )
 
     return {
-        "access_token": access_token,
+    "access_token": access_token,
+    "refresh_token": refresh_token,
+    "token_type": "bearer"
+}
+
+
+# -----------------------------
+# Refresh Access Token
+# -----------------------------
+@router.post("/refresh", response_model=Token)
+def refresh_access_token(
+    request: RefreshTokenRequest,
+    db: Session = Depends(get_db)
+):
+    payload = decode_refresh_token(request.refresh_token)
+
+    if not payload:
+        raise HTTPException(
+            status_code=401,
+            detail="Invalid refresh token"
+        )
+
+    username = payload.get("sub")
+
+    db_user = db.query(User).filter(
+        User.username == username
+    ).first()
+
+    if not db_user:
+        raise HTTPException(
+            status_code=401,
+            detail="User not found"
+        )
+
+    if db_user.refresh_token != request.refresh_token:
+        raise HTTPException(
+            status_code=401,
+            detail="Refresh token has been revoked"
+        )
+
+    new_access_token = create_access_token(
+        data={"sub": db_user.username}
+    )
+
+    new_refresh_token = create_refresh_token(
+        data={"sub": db_user.username}
+    )
+
+    db_user.refresh_token = new_refresh_token
+    db.commit()
+
+    return {
+        "access_token": new_access_token,
+        "refresh_token": new_refresh_token,
         "token_type": "bearer"
     }
+
+
+# -----------------------------
+# Refresh logout
+# -----------------------------
+
+@router.post("/logout")
+def logout(
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    current_user.refresh_token = None
+    db.commit()
+
+    logger.info(
+        f"User logged out: {current_user.username}"
+    )
+
+    return {
+        "message": "Logged out successfully."
+    }
+# -----------------------------
+# Current Logged-in User
+# -----------------------------
+@router.get("/me", response_model=UserResponse)
+def get_me(
+    current_user: User = Depends(get_current_user)
+):
+    return current_user
    
 # -----------------------------
 # Current Logged-in User

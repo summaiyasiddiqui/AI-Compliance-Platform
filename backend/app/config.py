@@ -6,6 +6,7 @@ class Settings(BaseSettings):
     secret_key: str
     algorithm: str
     access_token_expire_minutes: int
+    refresh_token_expire_days: int
 
     resend_api_key: str
     email_from: str
