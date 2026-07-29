@@ -340,3 +340,117 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2026-07-28 09:14:55,164 - INFO - [9f42a6f5] POST /auth/logout | Status: 200 | Time: 48.4 ms | Client: 172.19.0.1
 2026-07-28 09:15:54,791 - INFO - [0b29edec] Incoming Request: POST /auth/refresh | Client: 172.19.0.1
 2026-07-28 09:15:54,859 - INFO - [0b29edec] POST /auth/refresh | Status: 401 | Time: 68.13 ms | Client: 172.19.0.1
+2026-07-29 08:13:15,354 - INFO - [26b004b7] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-29 08:13:15,380 - INFO - [26b004b7] GET /docs | Status: 200 | Time: 26.91 ms | Client: 172.19.0.1
+2026-07-29 08:13:15,623 - INFO - [5b51434d] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-29 08:13:15,717 - INFO - [5b51434d] GET /openapi.json | Status: 200 | Time: 93.75 ms | Client: 172.19.0.1
+2026-07-29 08:23:34,897 - INFO - [75e8e7f1] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 08:23:35,000 - INFO - Login attempt for username: summaiya14
+2026-07-29 08:23:35,113 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-07-29 08:23:35,804 - INFO - User logged in successfully: summaiya14
+2026-07-29 08:23:35,809 - INFO - [75e8e7f1] POST /auth/login | Status: 200 | Time: 912.21 ms | Client: 172.19.0.1
+2026-07-29 08:23:49,812 - INFO - [da125f16] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 08:23:49,825 - INFO - Login attempt for username: summaiya14
+2026-07-29 08:23:50,307 - INFO - User logged in successfully: summaiya14
+2026-07-29 08:23:50,312 - INFO - [da125f16] POST /auth/login | Status: 200 | Time: 499.94 ms | Client: 172.19.0.1
+2026-07-29 08:23:52,676 - INFO - [0c96b238] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 08:23:52,683 - INFO - Login attempt for username: summaiya14
+2026-07-29 08:23:53,196 - INFO - User logged in successfully: summaiya14
+2026-07-29 08:23:53,198 - INFO - [0c96b238] POST /auth/login | Status: 200 | Time: 522.25 ms | Client: 172.19.0.1
+2026-07-29 08:23:55,198 - INFO - [3a7a87dd] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 08:23:55,204 - INFO - Login attempt for username: summaiya14
+2026-07-29 08:23:55,776 - INFO - User logged in successfully: summaiya14
+2026-07-29 08:23:55,778 - INFO - [3a7a87dd] POST /auth/login | Status: 200 | Time: 579.6 ms | Client: 172.19.0.1
+2026-07-29 08:23:57,708 - INFO - [b85225fc] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 08:23:57,714 - INFO - Login attempt for username: summaiya14
+2026-07-29 08:23:58,227 - INFO - User logged in successfully: summaiya14
+2026-07-29 08:23:58,230 - INFO - [b85225fc] POST /auth/login | Status: 200 | Time: 522.69 ms | Client: 172.19.0.1
+2026-07-29 08:24:00,072 - INFO - [07b4e6ba] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 08:24:00,077 - WARNING - ratelimit 5 per 1 minute (172.19.0.1) exceeded at endpoint: /auth/login
+2026-07-29 08:24:00,081 - INFO - [07b4e6ba] POST /auth/login | Status: 429 | Time: 9.43 ms | Client: 172.19.0.1
+2026-07-29 08:28:12,592 - INFO - [997d4f4c] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 08:28:12,682 - INFO - Login attempt for username: summaiya14
+2026-07-29 08:28:12,745 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-07-29 08:28:13,328 - INFO - User logged in successfully: summaiya14
+2026-07-29 08:28:13,330 - INFO - [997d4f4c] POST /auth/login | Status: 200 | Time: 738.25 ms | Client: 172.19.0.1
+2026-07-29 08:28:15,127 - INFO - [52d39587] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 08:28:15,140 - INFO - Login attempt for username: summaiya14
+2026-07-29 08:28:15,682 - INFO - User logged in successfully: summaiya14
+2026-07-29 08:28:15,686 - INFO - [52d39587] POST /auth/login | Status: 200 | Time: 559.7 ms | Client: 172.19.0.1
+2026-07-29 08:28:17,159 - INFO - [26f789db] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 08:28:17,167 - INFO - Login attempt for username: summaiya14
+2026-07-29 08:28:17,675 - INFO - User logged in successfully: summaiya14
+2026-07-29 08:28:17,677 - INFO - [26f789db] POST /auth/login | Status: 200 | Time: 518.07 ms | Client: 172.19.0.1
+2026-07-29 08:28:18,833 - INFO - [e18c8f37] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 08:28:18,839 - INFO - Login attempt for username: summaiya14
+2026-07-29 08:28:19,337 - INFO - User logged in successfully: summaiya14
+2026-07-29 08:28:19,339 - INFO - [e18c8f37] POST /auth/login | Status: 200 | Time: 505.96 ms | Client: 172.19.0.1
+2026-07-29 08:28:20,577 - INFO - [7fc26079] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 08:28:20,584 - INFO - Login attempt for username: summaiya14
+2026-07-29 08:28:21,102 - INFO - User logged in successfully: summaiya14
+2026-07-29 08:28:21,104 - INFO - [7fc26079] POST /auth/login | Status: 200 | Time: 526.85 ms | Client: 172.19.0.1
+2026-07-29 08:28:22,187 - INFO - [815eca1c] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 08:28:22,195 - WARNING - ratelimit 5 per 1 minute (172.19.0.1) exceeded at endpoint: /auth/login
+2026-07-29 08:28:22,197 - INFO - [815eca1c] POST /auth/login | Status: 429 | Time: 10.66 ms | Client: 172.19.0.1
+2026-07-29 09:01:52,202 - INFO - [800d906e] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-29 09:01:52,204 - INFO - [800d906e] GET /docs | Status: 200 | Time: 1.64 ms | Client: 172.19.0.1
+2026-07-29 09:01:52,305 - INFO - [0389eb92] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-29 09:01:52,376 - INFO - [0389eb92] GET /openapi.json | Status: 200 | Time: 71.17 ms | Client: 172.19.0.1
+2026-07-29 09:02:54,692 - INFO - [2ac45a80] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 09:02:54,708 - INFO - Login attempt for username: summaiya14
+2026-07-29 09:02:54,729 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-07-29 09:02:55,038 - INFO - User logged in successfully: summaiya14
+2026-07-29 09:02:55,040 - INFO - [2ac45a80] POST /auth/login | Status: 200 | Time: 348.09 ms | Client: 172.19.0.1
+2026-07-29 09:02:57,361 - INFO - [a191e7c5] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 09:02:57,364 - INFO - Login attempt for username: summaiya14
+2026-07-29 09:02:57,603 - INFO - User logged in successfully: summaiya14
+2026-07-29 09:02:57,604 - INFO - [a191e7c5] POST /auth/login | Status: 200 | Time: 243.72 ms | Client: 172.19.0.1
+2026-07-29 09:02:59,839 - INFO - [6834aa13] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 09:02:59,844 - INFO - Login attempt for username: summaiya14
+2026-07-29 09:03:00,076 - INFO - User logged in successfully: summaiya14
+2026-07-29 09:03:00,077 - INFO - [6834aa13] POST /auth/login | Status: 200 | Time: 237.69 ms | Client: 172.19.0.1
+2026-07-29 09:03:01,746 - INFO - [3b880282] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 09:03:01,749 - INFO - Login attempt for username: summaiya14
+2026-07-29 09:03:02,002 - INFO - User logged in successfully: summaiya14
+2026-07-29 09:03:02,003 - INFO - [3b880282] POST /auth/login | Status: 200 | Time: 257.59 ms | Client: 172.19.0.1
+2026-07-29 09:03:03,137 - INFO - [8ff82c88] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 09:03:03,139 - INFO - Login attempt for username: summaiya14
+2026-07-29 09:03:03,375 - INFO - User logged in successfully: summaiya14
+2026-07-29 09:03:03,376 - INFO - [8ff82c88] POST /auth/login | Status: 200 | Time: 239.53 ms | Client: 172.19.0.1
+2026-07-29 09:03:04,859 - INFO - [ed611963] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-29 09:03:04,862 - WARNING - ratelimit 5 per 1 minute (172.19.0.1) exceeded at endpoint: /auth/login
+2026-07-29 09:03:04,863 - INFO - [ed611963] POST /auth/login | Status: 429 | Time: 4.6 ms | Client: 172.19.0.1
+2026-07-29 09:03:46,082 - INFO - [05932342] Incoming Request: POST /auth/forgot-password | Client: 172.19.0.1
+2026-07-29 09:04:02,725 - INFO - [4a402f39] Incoming Request: POST /auth/forgot-password | Client: 172.19.0.1
+2026-07-29 09:07:26,914 - INFO - [9b69a4c0] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-29 09:07:26,915 - INFO - [9b69a4c0] GET /docs | Status: 200 | Time: 1.52 ms | Client: 172.19.0.1
+2026-07-29 09:07:26,977 - INFO - [cec4635d] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-29 09:07:27,026 - INFO - [cec4635d] GET /openapi.json | Status: 200 | Time: 48.8 ms | Client: 172.19.0.1
+2026-07-29 09:07:44,760 - INFO - [08daee01] Incoming Request: POST /auth/forgot-password | Client: 172.19.0.1
+2026-07-29 09:07:44,802 - INFO - [08daee01] POST /auth/forgot-password | Status: 200 | Time: 42.26 ms | Client: 172.19.0.1
+2026-07-29 09:07:51,564 - INFO - [53519bb1] Incoming Request: POST /auth/forgot-password | Client: 172.19.0.1
+2026-07-29 09:07:51,570 - INFO - [53519bb1] POST /auth/forgot-password | Status: 200 | Time: 5.62 ms | Client: 172.19.0.1
+2026-07-29 09:07:52,884 - INFO - [7db8f71e] Incoming Request: POST /auth/forgot-password | Client: 172.19.0.1
+2026-07-29 09:07:52,890 - INFO - [7db8f71e] POST /auth/forgot-password | Status: 200 | Time: 5.34 ms | Client: 172.19.0.1
+2026-07-29 09:07:53,995 - INFO - [916aabc7] Incoming Request: POST /auth/forgot-password | Client: 172.19.0.1
+2026-07-29 09:07:53,998 - WARNING - ratelimit 3 per 1 minute (172.19.0.1) exceeded at endpoint: /auth/forgot-password
+2026-07-29 09:07:53,999 - INFO - [916aabc7] POST /auth/forgot-password | Status: 429 | Time: 3.85 ms | Client: 172.19.0.1
+2026-07-29 09:08:33,932 - INFO - [212a5044] Incoming Request: GET /.well-known/appspecific/com.chrome.devtools.json | Client: 172.19.0.1
+2026-07-29 09:08:33,934 - INFO - [212a5044] GET /.well-known/appspecific/com.chrome.devtools.json | Status: 404 | Time: 1.19 ms | Client: 172.19.0.1
+2026-07-29 09:14:26,585 - INFO - [b3851c25] Incoming Request: GET /about/ | Client: 172.19.0.1
+2026-07-29 09:14:26,618 - INFO - [b3851c25] GET /about/ | Status: 200 | Time: 33.67 ms | Client: 172.19.0.1

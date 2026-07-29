@@ -1,4 +1,12 @@
-from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks
+from fastapi import (
+     APIRouter,
+     Depends,
+     HTTPException,
+     BackgroundTasks,
+      Request,
+)
+
+from app.limiter import limiter
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 
@@ -25,7 +33,6 @@ router = APIRouter(
     prefix="/auth",
     tags=["Authentication"]
 )
-
 
 # -----------------------------
 # Register User
@@ -87,7 +94,9 @@ def register_user(
 # -----------------------------
 
 @router.post("/login", response_model=Token)
+@limiter.limit("5/minute")
 def login_user(
+    request: Request,
     form_data: OAuth2PasswordRequestForm = Depends(),
     db: Session = Depends(get_db)
 ):
@@ -145,11 +154,13 @@ def login_user(
 # Refresh Access Token
 # -----------------------------
 @router.post("/refresh", response_model=Token)
+@limiter.limit("10/minute")
 def refresh_access_token(
-    request: RefreshTokenRequest,
+    request: Request,
+    refresh_request: RefreshTokenRequest,
     db: Session = Depends(get_db)
 ):
-    payload = decode_refresh_token(request.refresh_token)
+    payload = decode_refresh_token(refresh_request.refresh_token)
 
     if not payload:
         raise HTTPException(
@@ -169,7 +180,7 @@ def refresh_access_token(
             detail="User not found"
         )
 
-    if db_user.refresh_token != request.refresh_token:
+    if db_user.refresh_token != refresh_request.refresh_token:
         raise HTTPException(
             status_code=401,
             detail="Refresh token has been revoked"
@@ -212,14 +223,6 @@ def logout(
     return {
         "message": "Logged out successfully."
     }
-# -----------------------------
-# Current Logged-in User
-# -----------------------------
-@router.get("/me", response_model=UserResponse)
-def get_me(
-    current_user: User = Depends(get_current_user)
-):
-    return current_user
    
 # -----------------------------
 # Current Logged-in User
@@ -229,15 +232,16 @@ def get_me(
     current_user: User = Depends(get_current_user)
 ):
     return current_user
-
 @router.post("/forgot-password")
+@limiter.limit("3/minute")
 def forgot_password(
-    request: ForgotPasswordRequest,
+    request: Request,
+    forgot_request: ForgotPasswordRequest,
     db: Session = Depends(get_db)
 ):
-    print("Received email:", repr(request.email))
+    print("Received email:", repr(forgot_request.email))
 
-    user = db.query(User).filter(User.email == request.email).first()
+    user = db.query(User).filter(User.email == forgot_request.email).first()
 
     print("User found:", user)
 
