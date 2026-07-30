@@ -454,3 +454,28 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2026-07-29 09:08:33,934 - INFO - [212a5044] GET /.well-known/appspecific/com.chrome.devtools.json | Status: 404 | Time: 1.19 ms | Client: 172.19.0.1
 2026-07-29 09:14:26,585 - INFO - [b3851c25] Incoming Request: GET /about/ | Client: 172.19.0.1
 2026-07-29 09:14:26,618 - INFO - [b3851c25] GET /about/ | Status: 200 | Time: 33.67 ms | Client: 172.19.0.1
+2026-07-30 09:08:25,460 - INFO - [89ab2472] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-30 09:08:25,463 - INFO - [89ab2472] GET /docs | Status: 200 | Time: 3.1 ms | Client: 172.19.0.1
+2026-07-30 09:08:25,692 - INFO - [d37af0f5] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-30 09:08:25,829 - INFO - [d37af0f5] GET /openapi.json | Status: 200 | Time: 137.31 ms | Client: 172.19.0.1
+2026-07-30 09:09:23,292 - INFO - [b1fc853c] Incoming Request: POST /auth/register | Client: 172.19.0.1
+2026-07-30 09:09:23,610 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-07-30 09:09:24,204 - INFO - [b1fc853c] POST /auth/register | Status: 201 | Time: 914.57 ms | Client: 172.19.0.1
+2026-07-30 09:09:26,110 - ERROR - Failed to send email: 403 Client Error: Forbidden for url: https://api.resend.com/emails
+2026-07-30 09:09:44,838 - INFO - [5f87e788] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-30 09:09:44,864 - INFO - Login attempt for username: hoorainhaseeb
+2026-07-30 09:09:45,538 - INFO - User logged in successfully: hoorainhaseeb
+2026-07-30 09:09:45,540 - INFO - [5f87e788] POST /auth/login | Status: 200 | Time: 701.58 ms | Client: 172.19.0.1
+2026-07-30 09:10:24,913 - INFO - [260a024a] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-30 09:10:24,921 - INFO - Login attempt for username: hoorainhaseeb
+2026-07-30 09:10:25,496 - INFO - User logged in successfully: hoorainhaseeb
+2026-07-30 09:10:25,501 - INFO - [260a024a] POST /auth/login | Status: 200 | Time: 588.28 ms | Client: 172.19.0.1
+2026-07-30 09:37:50,984 - INFO - [498b049a] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-30 09:37:50,990 - INFO - [498b049a] GET /docs | Status: 200 | Time: 6.17 ms | Client: 172.19.0.1
+2026-07-30 09:37:51,171 - INFO - [3b69a149] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-30 09:37:51,379 - INFO - [3b69a149] GET /openapi.json | Status: 200 | Time: 208.66 ms | Client: 172.19.0.1

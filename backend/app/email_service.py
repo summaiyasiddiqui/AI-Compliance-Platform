@@ -38,3 +38,23 @@ def send_email(to_email: str, subject: str, body: str):
         logger.error(
             f"Failed to send email: {e}"
         )
+def send_welcome_email(to_email: str, username: str):
+    subject = "Welcome to ComplianceAI"
+
+    body = f"""
+Hello {username},
+
+Welcome to ComplianceAI!
+
+Your account has been created successfully.
+
+We're excited to have you on board.
+
+- ComplianceAI Team
+"""
+
+    send_email(
+        to_email=to_email,
+        subject=subject,
+        body=body
+    )

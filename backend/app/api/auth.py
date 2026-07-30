@@ -26,7 +26,7 @@ from app.logger import logger
 import secrets
 from datetime import datetime, timedelta
 from app.schemas.user import ForgotPasswordRequest, ResetPasswordRequest
-from app.email_service import send_email
+from app.email_service import send_email, send_welcome_email
 from app.admin import require_admin
 
 router = APIRouter(
@@ -39,9 +39,23 @@ router = APIRouter(
 # -----------------------------
 @router.post(
     "/register",
+    summary="Register a new user",
+    description="Creates a new user account with a unique username and email address.",
     response_model=UserResponse,
-    status_code=201
+    status_code=201,
+    responses={
+        201: {
+            "description": "User registered successfully"
+        },
+        400: {
+            "description": "Username or email already exists"
+        },
+        500: {
+            "description": "Internal server error"
+        }
+    }
 )
+
 def register_user(
     user: UserCreate,
     background_tasks: BackgroundTasks,
@@ -93,7 +107,24 @@ def register_user(
 # Login User
 # -----------------------------
 
-@router.post("/login", response_model=Token)
+@router.post(
+    "/login",
+    summary="Authenticate a user",
+    description="Authenticates the user and returns an access token and refresh token.",
+    response_model=Token,
+    responses={
+        200: {
+            "description": "Login successful"
+        },
+        401: {
+            "description": "Invalid username or password"
+        },
+        429: {
+            "description": "Too many login attempts"
+        }
+    }
+)
+
 @limiter.limit("5/minute")
 def login_user(
     request: Request,
@@ -153,7 +184,21 @@ def login_user(
 # -----------------------------
 # Refresh Access Token
 # -----------------------------
-@router.post("/refresh", response_model=Token)
+@router.post(
+    "/refresh",
+    summary="Generate a new access token",
+    description="Validates the refresh token and issues a new access token and refresh token.",
+    response_model=Token,
+    responses={
+        200: {
+            "description": "New access token generated"
+        },
+        401: {
+            "description": "Invalid or revoked refresh token"
+        }
+    }
+)
+
 @limiter.limit("10/minute")
 def refresh_access_token(
     request: Request,
@@ -208,7 +253,20 @@ def refresh_access_token(
 # Refresh logout
 # -----------------------------
 
-@router.post("/logout")
+@router.post(
+    "/logout",
+    summary="Logout the current user",
+    description="Logs out the authenticated user by revoking the stored refresh token.",
+    responses={
+    200: {
+        "description": "User logged out successfully"
+    },
+    401: {
+        "description": "Authentication required"
+    }
+}
+)
+
 def logout(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
@@ -227,12 +285,43 @@ def logout(
 # -----------------------------
 # Current Logged-in User
 # -----------------------------
-@router.get("/me", response_model=UserResponse)
+@router.get(
+    "/me",
+    summary="Get the current user",
+    description="Returns the profile information of the currently authenticated user.",
+    response_model=UserResponse,
+    responses={
+        200: {
+            "description": "Current user profile returned"
+        },
+        401: {
+            "description": "Authentication required"
+        }
+    }
+)
 def get_me(
     current_user: User = Depends(get_current_user)
 ):
     return current_user
-@router.post("/forgot-password")
+
+# -----------------------------
+# forget password
+# -----------------------------
+
+@router.post(
+    "/forgot-password",
+    summary="Request a password reset",
+    description="Sends a password reset link to the user's email if an account exists.",
+    responses={
+        200: {
+            "description": "Password reset email processed"
+        },
+        429: {
+            "description": "Too many password reset requests"
+        }
+    }
+)
+
 @limiter.limit("3/minute")
 def forgot_password(
     request: Request,
@@ -287,7 +376,25 @@ If you didn't request this, simply ignore this email.
         "message": "If an account with that email exists, a password reset link has been sent."
     
     }
-@router.post("/reset-password")
+
+# -----------------------------
+# reset password
+# -----------------------------
+
+@router.post(
+    "/reset-password",
+    summary="Reset user password",
+    description="Resets the user's password using a valid password reset token.",
+    responses={
+        200: {
+            "description": "Password reset successfully"
+        },
+        400: {
+            "description": "Invalid or expired reset token"
+        }
+    }
+)
+
 def reset_password(
     request: ResetPasswordRequest,
     db: Session = Depends(get_db)
@@ -321,7 +428,24 @@ def reset_password(
         "message": "Password has been reset successfully."
     }
 
-@router.get("/admin")
+
+# -----------------------------
+# admin dashboard
+# -----------------------------
+
+@router.get(
+    "/admin",
+    summary="Access the admin dashboard",
+    description="Allows administrators to access the protected admin dashboard.",
+    responses={
+        200: {
+            "description": "Admin dashboard accessed successfully"
+        },
+        403: {
+            "description": "Admin privileges required"
+        }
+    }
+)
 def admin_dashboard(
     current_user: User = Depends(require_admin),
 ):

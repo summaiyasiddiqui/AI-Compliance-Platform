@@ -18,6 +18,16 @@ class CompanyCreate(BaseModel):
 
     email: EmailStr
 
+    model_config = {
+        "json_schema_extra": {
+            "example": {
+                "company_name": "Tech Solutions Ltd",
+                "industry": "Information Technology",
+                "email": "contact@techsolutions.com"
+            }
+        }
+    }
+
 
 class CompanyResponse(BaseModel):
     id: int
@@ -26,5 +36,15 @@ class CompanyResponse(BaseModel):
     email: EmailStr
     owner_id: int
 
-    class Config:
-        from_attributes = True
+    model_config = {
+        "from_attributes": True,
+        "json_schema_extra": {
+            "example": {
+                "id": 1,
+                "company_name": "Tech Solutions Ltd",
+                "industry": "Information Technology",
+                "email": "contact@techsolutions.com",
+                "owner_id": 5
+            }
+        }
+    }

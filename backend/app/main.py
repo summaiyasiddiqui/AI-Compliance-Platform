@@ -20,8 +20,33 @@ from app.middleware import (
 )
 app = FastAPI(
     title="ComplianceAI API",
-    description="AI-powered Compliance Management Platform",
-    version="1.0.0"
+    description="""
+## ComplianceAI Backend API
+
+ComplianceAI is an AI-powered Compliance Management Platform designed to help organizations manage compliance requirements efficiently.
+
+### Features
+- 🔐 JWT Authentication
+- 🔄 Refresh Token Authentication
+- 👤 Role-Based Access Control (RBAC)
+- 🏢 Company Management
+- 📧 Email Notifications
+- 🔑 Password Reset
+- 🚦 Rate Limiting
+- 📝 Structured API Responses
+- 📊 OpenAPI Documentation
+
+Built using **FastAPI**, **PostgreSQL**, **SQLAlchemy**, and **Docker**.
+""",
+    version="1.0.0",
+    contact={
+        "name": "Summaiya Nadeem",
+        "email": "summaiyanadeem002@gmail.com",
+    },
+    license_info={
+        "name": "MIT License",
+    },
+    terms_of_service="https://example.com/terms",
 )
 
 app.state.limiter = limiter
@@ -41,7 +66,11 @@ app.add_exception_handler(
     RateLimitExceeded,
     rate_limit_exception_handler
 )
-@app.get("/")
+@app.get(
+    "/",
+    summary="API Home",
+    description="Returns basic information about the ComplianceAI API."
+)
 def home():
     return {
         "project": "ComplianceAI",
