@@ -6,8 +6,6 @@ class RefreshTokenRequest(BaseModel):
 
     model_config = {
         "json_schema_extra": {
-            "example": {
-                "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
-            }
+            "example": {"refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."}
         }
     }

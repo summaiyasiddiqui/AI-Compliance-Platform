@@ -9,10 +9,7 @@ from app.dependencies import get_current_user
 from app.models.user import User
 from fastapi import Query
 
-router = APIRouter(
-    prefix="/companies",
-    tags=["Companies"]
-)
+router = APIRouter(prefix="/companies", tags=["Companies"])
 
 
 # ==========================
@@ -23,45 +20,40 @@ def get_companies(
     search: str | None = None,
     industry: str | None = None,
     page: int = Query(1, ge=1, description="Page number"),
-    limit: int = Query(
-    10,
-    ge=1,
-    le=100,
-    description="Number of companies per page"
-),
+    limit: int = Query(10, ge=1, le=100, description="Number of companies per page"),
     sort_by: str = "id",
     order: str = Query(
-    "asc",
-    pattern="^(asc|desc)$",
-    description="Sort order: asc or desc"
-),
+        "asc", pattern="^(asc|desc)$", description="Sort order: asc or desc"
+    ),
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
     result = company_service.get_all_companies(
-    db=db,
-    current_user=current_user,
-    search=search,
-    industry=industry,
-    page=page,
-    limit=limit,
-    sort_by=sort_by,
-    order=order,
-)
+        db=db,
+        current_user=current_user,
+        search=search,
+        industry=industry,
+        page=page,
+        limit=limit,
+        sort_by=sort_by,
+        order=order,
+    )
 
     return {
-    "success": True,
-    "message": "Companies retrieved successfully",
-    "data": {
-        "companies": result["companies"],
-        "meta": {
-            "total_records": result["total_records"],
-            "current_page": result["current_page"],
-            "page_size": result["page_size"],
-            "total_pages": result["total_pages"],
+        "success": True,
+        "message": "Companies retrieved successfully",
+        "data": {
+            "companies": result["companies"],
+            "meta": {
+                "total_records": result["total_records"],
+                "current_page": result["current_page"],
+                "page_size": result["page_size"],
+                "total_pages": result["total_pages"],
+            },
         },
-    },
-}
+    }
+
+
 # ==========================
 # GET COMPANY BY ID
 # ==========================
@@ -69,18 +61,13 @@ def get_companies(
 def get_company(
     company_id: int,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user)
+    current_user: User = Depends(get_current_user),
 ):
-    company = company_service.get_company_by_id(
-        company_id,
-        db,
-        current_user
-    )
+    company = company_service.get_company_by_id(company_id, db, current_user)
 
     if company is None:
         raise HTTPException(
-            status_code=403,
-            detail="You are not authorized to access this company."
+            status_code=403, detail="You are not authorized to access this company."
         )
 
     return company
@@ -89,92 +76,63 @@ def get_company(
 # ==========================
 # CREATE COMPANY
 # ==========================
-@router.post(
-    "/",
-    response_model=APIResponse,
-    status_code=status.HTTP_201_CREATED
-)
+@router.post("/", response_model=APIResponse, status_code=status.HTTP_201_CREATED)
 def create_company(
     company: CompanyCreate,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user)
+    current_user: User = Depends(get_current_user),
 ):
-    db_company = company_service.create_company(
-        company,
-        db,
-        current_user
-    )
+    db_company = company_service.create_company(company, db, current_user)
 
     if db_company is None:
         raise HTTPException(
-            status_code=400,
-            detail="You already have a company with this name."
+            status_code=400, detail="You already have a company with this name."
         )
 
     return {
-    "success": True,
-    "message": "Company created successfully!",
-    "data": db_company
-}
+        "success": True,
+        "message": "Company created successfully!",
+        "data": db_company,
+    }
+
 
 # ==========================
 # UPDATE COMPANY
 # ==========================
-@router.put(
-    "/{company_id}",
-    response_model=APIResponse
-)
+@router.put("/{company_id}", response_model=APIResponse)
 def update_company(
     company_id: int,
     company: CompanyCreate,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user)
+    current_user: User = Depends(get_current_user),
 ):
-    db_company = company_service.update_company(
-        company_id,
-        company,
-        db,
-        current_user
-    )
+    db_company = company_service.update_company(company_id, company, db, current_user)
 
     if db_company is None:
         raise HTTPException(
-            status_code=403,
-            detail="You are not authorized to update this company."
+            status_code=403, detail="You are not authorized to update this company."
         )
     return {
-    "success": True,
-    "message": "Company updated successfully!",
-    "data": db_company
-}
+        "success": True,
+        "message": "Company updated successfully!",
+        "data": db_company,
+    }
 
 
 # ==========================
 # DELETE COMPANY
 # ==========================
-@router.delete(
-    "/{company_id}",
-    response_model=APIResponse
-)
+@router.delete("/{company_id}", response_model=APIResponse)
 def delete_company(
     company_id: int,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user)
+    current_user: User = Depends(get_current_user),
 ):
-    deleted = company_service.delete_company(
-        company_id,
-        db,
-        current_user
-    )
+    deleted = company_service.delete_company(company_id, db, current_user)
 
     if not deleted:
         raise HTTPException(
-            status_code=403,
-            detail="You are not authorized to delete this company."
+            status_code=403, detail="You are not authorized to delete this company."
         )
 
-    return {
-    "success": True,
-    "message": "Company deleted successfully!",
-    "data": None
-}
+    return {"success": True, "message": "Company deleted successfully!", "data": None}

@@ -5,6 +5,7 @@ from app.models.company import Company
 from app.models.user import User
 from math import ceil
 
+
 # ==========================
 # GET ALL COMPANIES
 # ==========================
@@ -19,22 +20,15 @@ def get_all_companies(
     order: str = "asc",
 ):
     # Base query - only return companies owned by the logged-in user
-    query = (
-        db.query(Company)
-        .filter(Company.owner_id == current_user.id)
-    )
+    query = db.query(Company).filter(Company.owner_id == current_user.id)
 
     # Search by company name
     if search:
-        query = query.filter(
-            Company.company_name.ilike(f"%{search}%")
-        )
+        query = query.filter(Company.company_name.ilike(f"%{search}%"))
 
     # Filter by industry
     if industry:
-        query = query.filter(
-            Company.industry.ilike(industry)
-        )
+        query = query.filter(Company.industry.ilike(industry))
     # Count total records BEFORE pagination
     total_records = query.count()
     total_pages = ceil(total_records / limit) if total_records > 0 else 1
@@ -63,18 +57,15 @@ def get_all_companies(
 
     companies = query.all()
 
-    companies = [
-    CompanyResponse.model_validate(company)
-    for company in companies
-]
+    companies = [CompanyResponse.model_validate(company) for company in companies]
 
     return {
-    "companies": companies,
-    "total_records": total_records,
-    "current_page": page,
-    "page_size": limit,
-    "total_pages": total_pages,
-}
+        "companies": companies,
+        "total_records": total_records,
+        "current_page": page,
+        "page_size": limit,
+        "total_pages": total_pages,
+    }
 
 
 # ==========================
@@ -82,17 +73,11 @@ def get_all_companies(
 # ==========================
 from fastapi import HTTPException
 
-def get_company_by_id(
-    company_id: int,
-    db: Session,
-    current_user: User
-):
+
+def get_company_by_id(company_id: int, db: Session, current_user: User):
     company = (
         db.query(Company)
-        .filter(
-            Company.id == company_id,
-            Company.owner_id == current_user.id
-        )
+        .filter(Company.id == company_id, Company.owner_id == current_user.id)
         .first()
     )
 
@@ -112,18 +97,14 @@ def get_company_by_id(
 # ==========================
 # CREATE COMPANY
 # ==========================
-def create_company(
-    company,
-    db: Session,
-    current_user: User
-):
+def create_company(company, db: Session, current_user: User):
     # Check if the current user already has a company
     # with the same name
     existing_company = (
         db.query(Company)
         .filter(
             Company.company_name == company.company_name,
-            Company.owner_id == current_user.id
+            Company.owner_id == current_user.id,
         )
         .first()
     )
@@ -135,7 +116,7 @@ def create_company(
         company_name=company.company_name,
         industry=company.industry,
         email=company.email,
-        owner_id=current_user.id
+        owner_id=current_user.id,
     )
 
     db.add(db_company)
@@ -148,17 +129,8 @@ def create_company(
 # ==========================
 # UPDATE COMPANY
 # ==========================
-def update_company(
-    company_id: int,
-    company,
-    db: Session,
-    current_user: User
-):
-    db_company = get_company_by_id(
-        company_id,
-        db,
-        current_user
-    )
+def update_company(company_id: int, company, db: Session, current_user: User):
+    db_company = get_company_by_id(company_id, db, current_user)
 
     if db_company is None:
         return None
@@ -176,16 +148,8 @@ def update_company(
 # ==========================
 # DELETE COMPANY
 # ==========================
-def delete_company(
-    company_id: int,
-    db: Session,
-    current_user: User
-):
-    db_company = get_company_by_id(
-        company_id,
-        db,
-        current_user
-    )
+def delete_company(company_id: int, db: Session, current_user: User):
+    db_company = get_company_by_id(company_id, db, current_user)
 
     if db_company is None:
         return None

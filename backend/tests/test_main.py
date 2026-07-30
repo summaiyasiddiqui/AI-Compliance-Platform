@@ -18,6 +18,7 @@ def test_home():
     assert data["message"] == "Welcome to ComplianceAI API!"
     from fastapi.testclient import TestClient
 
+
 from app.main import app
 
 client = TestClient(app)

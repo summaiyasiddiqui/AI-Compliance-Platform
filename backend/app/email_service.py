@@ -30,14 +30,12 @@ def send_email(to_email: str, subject: str, body: str):
 
         response.raise_for_status()
 
-        logger.info(
-            f"Email sent successfully to {to_email}"
-        )
+        logger.info(f"Email sent successfully to {to_email}")
 
     except Exception as e:
-        logger.error(
-            f"Failed to send email: {e}"
-        )
+        logger.error(f"Failed to send email: {e}")
+
+
 def send_welcome_email(to_email: str, username: str):
     subject = "Welcome to ComplianceAI"
 
@@ -53,8 +51,4 @@ We're excited to have you on board.
 - ComplianceAI Team
 """
 
-    send_email(
-        to_email=to_email,
-        subject=subject,
-        body=body
-    )
+    send_email(to_email=to_email, subject=subject, body=body)

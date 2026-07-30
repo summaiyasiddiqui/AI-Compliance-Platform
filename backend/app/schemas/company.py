@@ -3,18 +3,10 @@ from pydantic import BaseModel, EmailStr, Field
 
 class CompanyCreate(BaseModel):
     company_name: str = Field(
-        ...,
-        min_length=2,
-        max_length=100,
-        description="Company name"
+        ..., min_length=2, max_length=100, description="Company name"
     )
 
-    industry: str = Field(
-        ...,
-        min_length=2,
-        max_length=50,
-        description="Industry name"
-    )
+    industry: str = Field(..., min_length=2, max_length=50, description="Industry name")
 
     email: EmailStr
 
@@ -23,7 +15,7 @@ class CompanyCreate(BaseModel):
             "example": {
                 "company_name": "Tech Solutions Ltd",
                 "industry": "Information Technology",
-                "email": "contact@techsolutions.com"
+                "email": "contact@techsolutions.com",
             }
         }
     }
@@ -44,7 +36,7 @@ class CompanyResponse(BaseModel):
                 "company_name": "Tech Solutions Ltd",
                 "industry": "Information Technology",
                 "email": "contact@techsolutions.com",
-                "owner_id": 5
+                "owner_id": 5,
             }
-        }
+        },
     }

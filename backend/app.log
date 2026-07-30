@@ -479,3 +479,12 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2026-07-30 09:37:50,990 - INFO - [498b049a] GET /docs | Status: 200 | Time: 6.17 ms | Client: 172.19.0.1
 2026-07-30 09:37:51,171 - INFO - [3b69a149] Incoming Request: GET /openapi.json | Client: 172.19.0.1
 2026-07-30 09:37:51,379 - INFO - [3b69a149] GET /openapi.json | Status: 200 | Time: 208.66 ms | Client: 172.19.0.1
+2026-07-30 10:45:07,343 - INFO - [fb0c0e01] Incoming Request: GET /health/ | Client: 172.19.0.1
+2026-07-30 10:45:07,390 - INFO - Health endpoint accessed
+2026-07-30 10:45:07,392 - INFO - [fb0c0e01] GET /health/ | Status: 200 | Time: 52.86 ms | Client: 172.19.0.1
+2026-07-30 10:45:07,497 - INFO - [bd37ee12] Incoming Request: GET /favicon.ico | Client: 172.19.0.1
+2026-07-30 10:45:07,594 - INFO - [bd37ee12] GET /favicon.ico | Status: 404 | Time: 97.35 ms | Client: 172.19.0.1
+2026-07-30 10:47:51,932 - INFO - [e78d257f] Incoming Request: GET /ready/ | Client: 172.19.0.1
+2026-07-30 10:47:52,014 - INFO - [e78d257f] GET /ready/ | Status: 200 | Time: 82.22 ms | Client: 172.19.0.1
+2026-07-30 10:50:36,536 - INFO - [cb2ddee9] Incoming Request: GET /ready/ | Client: 172.19.0.1
+2026-07-30 10:50:36,747 - INFO - [cb2ddee9] GET /ready/ | Status: 200 | Time: 210.55 ms | Client: 172.19.0.1

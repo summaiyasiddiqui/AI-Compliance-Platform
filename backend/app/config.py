@@ -2,6 +2,11 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
+    # New settings
+    environment: str = "development"
+    debug: bool = True
+
+    # Existing settings
     database_url: str
     secret_key: str
     algorithm: str
@@ -11,10 +16,7 @@ class Settings(BaseSettings):
     resend_api_key: str
     email_from: str
 
-    model_config = SettingsConfigDict(
-        env_file=".env",
-        extra="ignore"
-    )
+    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 
 settings = Settings()

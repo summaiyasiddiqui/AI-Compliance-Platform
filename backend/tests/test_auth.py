@@ -15,8 +15,8 @@ def test_register_user():
         json={
             "username": f"user_{unique}",
             "email": f"{unique}@example.com",
-            "password": "password123"
-        }
+            "password": "password123",
+        },
     )
 
     assert response.status_code == 201
@@ -30,11 +30,7 @@ def test_register_user():
 
 def test_login_user():
     response = client.post(
-        "/auth/login",
-        data={
-            "username": "summaiya",
-            "password": "mypassword123"
-        }
+        "/auth/login", data={"username": "summaiya", "password": "mypassword123"}
     )
 
     assert response.status_code == 200
@@ -48,11 +44,7 @@ def test_login_user():
 def test_get_current_user():
     # Step 1: Login
     login_response = client.post(
-        "/auth/login",
-        data={
-            "username": "summaiya",
-            "password": "password123"
-        }
+        "/auth/login", data={"username": "summaiya", "password": "password123"}
     )
 
     assert login_response.status_code == 200
@@ -60,12 +52,7 @@ def test_get_current_user():
     token = login_response.json()["access_token"]
 
     # Step 2: Access protected endpoint
-    response = client.get(
-        "/auth/me",
-        headers={
-            "Authorization": f"Bearer {token}"
-        }
-    )
+    response = client.get("/auth/me", headers={"Authorization": f"Bearer {token}"})
 
     assert response.status_code == 200
 

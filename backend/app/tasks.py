@@ -21,10 +21,6 @@ Regards,
 ComplianceAI Team
 """
 
-    send_email(
-        to_email=email,
-        subject=subject,
-        body=body
-    )
+    send_email(to_email=email, subject=subject, body=body)
 
     logger.info(f"Welcome email task completed for {email}")

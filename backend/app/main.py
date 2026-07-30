@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from app.api.health import router as health_router
 from app.api.about import router as about_router
-
+from app.api.ready import router as ready_router
 from app.limiter import limiter
 from slowapi.errors import RateLimitExceeded
 from app.exceptions import (
@@ -9,7 +9,7 @@ from app.exceptions import (
     validation_exception_handler,
     rate_limit_exception_handler,
 )
-
+from fastapi.middleware.cors import CORSMiddleware
 from app.api.company import router as company_router
 from app.api.auth import router as auth_router
 from fastapi import HTTPException
@@ -18,6 +18,7 @@ from app.middleware import (
     LoggingMiddleware,
     SecurityHeadersMiddleware,
 )
+
 app = FastAPI(
     title="ComplianceAI API",
     description="""
@@ -48,38 +49,42 @@ Built using **FastAPI**, **PostgreSQL**, **SQLAlchemy**, and **Docker**.
     },
     terms_of_service="https://example.com/terms",
 )
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",  # React (Create React App)
+        "http://localhost:5173",  # React (Vite)
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 app.state.limiter = limiter
 
 app.add_middleware(LoggingMiddleware)
 app.add_middleware(SecurityHeadersMiddleware)
 
-app.add_exception_handler(
-    HTTPException,
-    http_exception_handler
-)
-app.add_exception_handler(
-    RequestValidationError,
-    validation_exception_handler
-)
-app.add_exception_handler(
-    RateLimitExceeded,
-    rate_limit_exception_handler
-)
+app.add_exception_handler(HTTPException, http_exception_handler)
+app.add_exception_handler(RequestValidationError, validation_exception_handler)
+app.add_exception_handler(RateLimitExceeded, rate_limit_exception_handler)
+
+
 @app.get(
     "/",
     summary="API Home",
-    description="Returns basic information about the ComplianceAI API."
+    description="Returns basic information about the ComplianceAI API.",
 )
 def home():
     return {
         "project": "ComplianceAI",
         "version": "1.0.0",
         "developer": "Summaiya Nadeem",
-        "message": "Welcome to ComplianceAI API!"
+        "message": "Welcome to ComplianceAI API!",
     }
+
 
 app.include_router(health_router)
 app.include_router(about_router)
 app.include_router(company_router)
 app.include_router(auth_router)
+app.include_router(ready_router)
