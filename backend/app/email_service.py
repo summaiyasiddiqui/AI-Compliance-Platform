@@ -1,5 +1,4 @@
 import requests
-
 from app.config import settings
 from app.logger import logger
 
@@ -32,7 +31,7 @@ def send_email(to_email: str, subject: str, body: str):
 
         logger.info(f"Email sent successfully to {to_email}")
 
-    except Exception as e:
+    except requests.RequestException as e:
         logger.error(f"Failed to send email: {e}")
 
 

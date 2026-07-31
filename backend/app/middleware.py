@@ -1,9 +1,9 @@
 import time
 import uuid
-from fastapi import Request
-from starlette.middleware.base import BaseHTTPMiddleware
 
 from app.logger import logger
+from fastapi import Request
+from starlette.middleware.base import BaseHTTPMiddleware
 
 
 class LoggingMiddleware(BaseHTTPMiddleware):

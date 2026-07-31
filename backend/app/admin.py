@@ -1,7 +1,6 @@
-from fastapi import Depends, HTTPException
-
 from app.dependencies import get_current_user
 from app.models.user import User
+from fastapi import Depends, HTTPException
 
 
 def require_admin(

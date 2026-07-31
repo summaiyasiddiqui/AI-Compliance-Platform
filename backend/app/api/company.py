@@ -1,13 +1,11 @@
-from fastapi import APIRouter, HTTPException, Depends, status
-from sqlalchemy.orm import Session
-from app.schemas.response import APIResponse
-
 from app.database import get_db
-from app.schemas.company import CompanyCreate, CompanyResponse
-from app.services import company_service
 from app.dependencies import get_current_user
 from app.models.user import User
-from fastapi import Query
+from app.schemas.company import CompanyCreate, CompanyResponse
+from app.schemas.response import APIResponse
+from app.services import company_service
+from fastapi import APIRouter, Depends, HTTPException, Query, status
+from sqlalchemy.orm import Session
 
 router = APIRouter(prefix="/companies", tags=["Companies"])
 

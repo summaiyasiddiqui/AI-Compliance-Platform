@@ -488,3 +488,17 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2026-07-30 10:47:52,014 - INFO - [e78d257f] GET /ready/ | Status: 200 | Time: 82.22 ms | Client: 172.19.0.1
 2026-07-30 10:50:36,536 - INFO - [cb2ddee9] Incoming Request: GET /ready/ | Client: 172.19.0.1
 2026-07-30 10:50:36,747 - INFO - [cb2ddee9] GET /ready/ | Status: 200 | Time: 210.55 ms | Client: 172.19.0.1
+2026-07-30 14:08:25,172 - INFO - [8bc67de8] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-07-30 14:08:25,181 - INFO - [8bc67de8] GET /docs | Status: 200 | Time: 8.91 ms | Client: 172.19.0.1
+2026-07-30 14:08:25,322 - INFO - [853901d3] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-07-30 14:08:25,478 - INFO - [853901d3] GET /openapi.json | Status: 200 | Time: 156.95 ms | Client: 172.19.0.1
+2026-07-30 14:09:03,379 - INFO - [692f3030] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-07-30 14:09:03,424 - INFO - Login attempt for username: summaiya
+2026-07-30 14:09:03,530 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-07-30 14:09:03,958 - WARNING - Failed login attempt for username: summaiya
+2026-07-30 14:09:03,961 - INFO - [692f3030] POST /auth/login | Status: 401 | Time: 582.26 ms | Client: 172.19.0.1

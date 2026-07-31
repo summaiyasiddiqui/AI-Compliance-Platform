@@ -1,6 +1,5 @@
-from fastapi.testclient import TestClient
-
 from app.main import app
+from fastapi.testclient import TestClient
 
 client = TestClient(app)
 
@@ -12,5 +11,5 @@ def test_health():
 
     data = response.json()
 
-    assert data["status"] == "Running ✅"
+    assert data["status"] == "healthy"
     assert data["message"] == "ComplianceAI API is running successfully"

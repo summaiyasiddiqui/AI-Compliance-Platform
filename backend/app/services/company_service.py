@@ -1,9 +1,10 @@
-from sqlalchemy.orm import Session
-from sqlalchemy import asc, desc
-from app.schemas.company import CompanyResponse
+from math import ceil
+
 from app.models.company import Company
 from app.models.user import User
-from math import ceil
+from app.schemas.company import CompanyResponse
+from sqlalchemy import asc, desc
+from sqlalchemy.orm import Session
 
 
 # ==========================
@@ -12,8 +13,8 @@ from math import ceil
 def get_all_companies(
     db: Session,
     current_user: User,
-    search: str = None,
-    industry: str = None,
+    search: str | None = None,
+    industry: str | None = None,
     page: int = 1,
     limit: int = 10,
     sort_by: str = "id",

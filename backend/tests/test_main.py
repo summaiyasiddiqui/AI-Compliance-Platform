@@ -1,6 +1,5 @@
-from fastapi.testclient import TestClient
-
 from app.main import app
+from fastapi.testclient import TestClient
 
 client = TestClient(app)
 
@@ -16,7 +15,6 @@ def test_home():
     assert data["version"] == "1.0.0"
     assert data["developer"] == "Summaiya Nadeem"
     assert data["message"] == "Welcome to ComplianceAI API!"
-    from fastapi.testclient import TestClient
 
 
 from app.main import app

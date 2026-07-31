@@ -1,4 +1,4 @@
-from typing import Any, Optional
+from typing import Any
 
 from pydantic import BaseModel
 
@@ -6,4 +6,4 @@ from pydantic import BaseModel
 class APIResponse(BaseModel):
     success: bool
     message: str
-    data: Optional[Any] = None
+    data: Any | None = None

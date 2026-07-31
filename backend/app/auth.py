@@ -1,6 +1,7 @@
-from datetime import datetime, timedelta
-from jose import jwt, JWTError
+from datetime import datetime, timedelta, timezone
+
 from app.config import settings
+from jose import JWTError, jwt
 
 SECRET_KEY = settings.secret_key
 ALGORITHM = settings.algorithm
@@ -11,7 +12,7 @@ REFRESH_TOKEN_EXPIRE_DAYS = settings.refresh_token_expire_days
 def create_access_token(data: dict):
     to_encode = data.copy()
 
-    expire = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    expire = datetime.now(timezone.utc) + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
 
     to_encode.update({"exp": expire, "type": "access"})
 
@@ -42,7 +43,7 @@ def decode_refresh_token(token: str):
 def create_refresh_token(data: dict):
     to_encode = data.copy()
 
-    expire = datetime.utcnow() + timedelta(days=REFRESH_TOKEN_EXPIRE_DAYS)
+    expire = datetime.now(timezone.utc) + timedelta(days=REFRESH_TOKEN_EXPIRE_DAYS)
 
     to_encode.update({"exp": expire, "type": "refresh"})
 

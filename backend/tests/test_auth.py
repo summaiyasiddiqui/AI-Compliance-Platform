@@ -1,8 +1,7 @@
 from uuid import uuid4
 
-from fastapi.testclient import TestClient
-
 from app.main import app
+from fastapi.testclient import TestClient
 
 client = TestClient(app)
 
@@ -29,8 +28,26 @@ def test_register_user():
 
 
 def test_login_user():
+    unique = uuid4().hex[:8]
+
+    username = f"user_{unique}"
+    password = "password123"
+
+    client.post(
+        "/auth/register",
+        json={
+            "username": username,
+            "email": f"{unique}@example.com",
+            "password": password,
+        },
+    )
+
     response = client.post(
-        "/auth/login", data={"username": "summaiya", "password": "mypassword123"}
+        "/auth/login",
+        data={
+            "username": username,
+            "password": password,
+        },
     )
 
     assert response.status_code == 200
@@ -40,22 +57,40 @@ def test_login_user():
     assert "access_token" in data
     assert data["token_type"] == "bearer"
 
-
 def test_get_current_user():
-    # Step 1: Login
+    unique = uuid4().hex[:8]
+
+    username = f"user_{unique}"
+    password = "password123"
+
+    client.post(
+        "/auth/register",
+        json={
+            "username": username,
+            "email": f"{unique}@example.com",
+            "password": password,
+        },
+    )
+
     login_response = client.post(
-        "/auth/login", data={"username": "summaiya", "password": "password123"}
+        "/auth/login",
+        data={
+            "username": username,
+            "password": password,
+        },
     )
 
     assert login_response.status_code == 200
 
     token = login_response.json()["access_token"]
 
-    # Step 2: Access protected endpoint
-    response = client.get("/auth/me", headers={"Authorization": f"Bearer {token}"})
+    response = client.get(
+        "/auth/me",
+        headers={"Authorization": f"Bearer {token}"},
+    )
 
     assert response.status_code == 200
 
     data = response.json()
 
-    assert data["username"] == "summaiya"
+    assert data["username"] == username

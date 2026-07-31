@@ -1,29 +1,23 @@
-from fastapi import (
-    APIRouter,
-    Depends,
-    HTTPException,
-    BackgroundTasks,
-    Request,
-)
+import secrets
+from datetime import datetime, timedelta, timezone
 
+from app.admin import require_admin
+from app.auth import (create_access_token, create_refresh_token,
+                      decode_refresh_token)
+from app.database import get_db
+from app.dependencies import get_current_user
+from app.email_service import send_email, send_welcome_email
 from app.limiter import limiter
+from app.logger import logger
+from app.models.user import User
+from app.schemas.refresh_token import RefreshTokenRequest
+from app.schemas.token import Token
+from app.schemas.user import (ForgotPasswordRequest, ResetPasswordRequest,
+                              UserCreate, UserResponse)
+from app.security import hash_password, verify_password
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Request
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
-
-from app.database import get_db
-from app.models.user import User
-from app.schemas.user import UserCreate, UserResponse
-from app.schemas.token import Token
-from app.security import hash_password, verify_password
-from app.auth import create_access_token, create_refresh_token, decode_refresh_token
-from app.schemas.refresh_token import RefreshTokenRequest
-from app.dependencies import get_current_user
-from app.logger import logger
-import secrets
-from datetime import datetime, timedelta
-from app.schemas.user import ForgotPasswordRequest, ResetPasswordRequest
-from app.email_service import send_email, send_welcome_email
-from app.admin import require_admin
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
 
@@ -246,7 +240,7 @@ def forgot_password(
     token = secrets.token_urlsafe(32)
 
     user.reset_token = token
-    user.reset_token_expires = datetime.utcnow() + timedelta(minutes=15)
+    user.reset_token_expires = datetime.now(timezone.utc) + timedelta(minutes=15)
 
     db.commit()
 
@@ -297,7 +291,7 @@ def reset_password(request: ResetPasswordRequest, db: Session = Depends(get_db))
     if not user:
         raise HTTPException(status_code=400, detail="Invalid or expired reset token.")
 
-    if user.reset_token_expires < datetime.utcnow():
+    if user.reset_token_expires < datetime.now(timezone.utc):
         raise HTTPException(status_code=400, detail="Reset token has expired.")
     # Update the password
     user.hashed_password = hash_password(request.new_password)
