@@ -9,6 +9,7 @@ from app.dependencies import get_current_user
 from app.email_service import send_email, send_welcome_email
 from app.limiter import limiter
 from app.logger import logger
+from app.config import settings
 from app.models.user import User
 from app.schemas.refresh_token import RefreshTokenRequest
 from app.schemas.token import Token
@@ -20,7 +21,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
-
+LOGIN_RATE_LIMIT = "5/minute" if settings.environment == "production" else "1000/minute"
 
 # -----------------------------
 # Register User
@@ -83,7 +84,7 @@ def register_user(
         429: {"description": "Too many login attempts"},
     },
 )
-@limiter.limit("5/minute")
+@limiter.limit(LOGIN_RATE_LIMIT)
 def login_user(
     request: Request,
     form_data: OAuth2PasswordRequestForm = Depends(),
@@ -291,7 +292,12 @@ def reset_password(request: ResetPasswordRequest, db: Session = Depends(get_db))
     if not user:
         raise HTTPException(status_code=400, detail="Invalid or expired reset token.")
 
-    if user.reset_token_expires < datetime.now(timezone.utc):
+    expires_at = user.reset_token_expires
+
+    if expires_at.tzinfo is None:
+        expires_at = expires_at.replace(tzinfo=timezone.utc)
+
+    if expires_at < datetime.now(timezone.utc):
         raise HTTPException(status_code=400, detail="Reset token has expired.")
     # Update the password
     user.hashed_password = hash_password(request.new_password)
@@ -324,3 +330,4 @@ def admin_dashboard(
     current_user: User = Depends(require_admin),
 ):
     return {"message": f"Welcome Admin {current_user.username}!"}
+

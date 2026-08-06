@@ -150,7 +150,14 @@ def update_company(company_id: int, company, db: Session, current_user: User):
 # DELETE COMPANY
 # ==========================
 def delete_company(company_id: int, db: Session, current_user: User):
-    db_company = get_company_by_id(company_id, db, current_user)
+    db_company = (
+        db.query(Company)
+        .filter(
+            Company.id == company_id,
+            Company.owner_id == current_user.id,
+        )
+        .first()
+    )
 
     if db_company is None:
         return None
@@ -159,3 +166,4 @@ def delete_company(company_id: int, db: Session, current_user: User):
     db.commit()
 
     return True
+
