@@ -1,7 +1,8 @@
 from datetime import datetime, timedelta, timezone
 
-from app.config import settings
 from jose import JWTError, jwt
+
+from app.config import settings
 
 SECRET_KEY = settings.secret_key
 ALGORITHM = settings.algorithm

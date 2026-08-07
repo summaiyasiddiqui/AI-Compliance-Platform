@@ -1,12 +1,12 @@
+from fastapi import APIRouter, Depends, HTTPException, Query, status
+from sqlalchemy.orm import Session
+
 from app.database import get_db
 from app.dependencies import get_current_user
 from app.models.user import User
 from app.schemas.company import CompanyCreate, CompanyResponse
 from app.schemas.response import APIResponse
 from app.services import company_service
-from fastapi import APIRouter, Depends, HTTPException, Query, status
-from sqlalchemy.orm import Session
-from app.models.company import Company
 
 router = APIRouter(prefix="/companies", tags=["Companies"])
 
@@ -117,6 +117,7 @@ def update_company(
         "data": db_company,
     }
 
+
 # ==========================
 # DELETE COMPANY
 # ==========================
@@ -126,29 +127,26 @@ def delete_company(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
-    company = db.query(Company).filter(Company.id == company_id).first()
+    result = company_service.delete_company(
+        company_id=company_id,
+        db=db,
+        current_user=current_user,
+    )
 
-    # Company does not exist
-    if company is None:
+    if result == "not_found":
         raise HTTPException(
             status_code=403,
             detail="You are not authorized to delete this company.",
         )
 
-    # Company exists, but belongs to another user
-    if company.owner_id != current_user.id:
+    if result == "unauthorized":
         raise HTTPException(
             status_code=404,
             detail="Company not found.",
         )
-
-    # Delete the company
-    db.delete(company)
-    db.commit()
 
     return {
         "success": True,
         "message": "Company deleted successfully!",
         "data": None,
     }
-

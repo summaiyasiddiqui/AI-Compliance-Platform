@@ -1,8 +1,9 @@
-from app.config import settings
-from app.database import get_db
 from fastapi import APIRouter, Depends
 from sqlalchemy import text
 from sqlalchemy.orm import Session
+
+from app.config import settings
+from app.database import get_db
 
 router = APIRouter(prefix="/ready", tags=["Readiness"])
 

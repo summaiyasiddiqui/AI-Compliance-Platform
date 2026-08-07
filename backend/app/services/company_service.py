@@ -1,10 +1,12 @@
 from math import ceil
 
+from fastapi import HTTPException
+from sqlalchemy import asc, desc
+from sqlalchemy.orm import Session
+
 from app.models.company import Company
 from app.models.user import User
 from app.schemas.company import CompanyResponse
-from sqlalchemy import asc, desc
-from sqlalchemy.orm import Session
 
 
 # ==========================
@@ -72,7 +74,6 @@ def get_all_companies(
 # ==========================
 # GET COMPANY BY ID
 # ==========================
-from fastapi import HTTPException
 
 
 def get_company_by_id(company_id: int, db: Session, current_user: User):
@@ -133,9 +134,6 @@ def create_company(company, db: Session, current_user: User):
 def update_company(company_id: int, company, db: Session, current_user: User):
     db_company = get_company_by_id(company_id, db, current_user)
 
-    if db_company is None:
-        return None
-
     db_company.company_name = company.company_name
     db_company.industry = company.industry
     db_company.email = company.email
@@ -150,20 +148,15 @@ def update_company(company_id: int, company, db: Session, current_user: User):
 # DELETE COMPANY
 # ==========================
 def delete_company(company_id: int, db: Session, current_user: User):
-    db_company = (
-        db.query(Company)
-        .filter(
-            Company.id == company_id,
-            Company.owner_id == current_user.id,
-        )
-        .first()
-    )
+    company = db.query(Company).filter(Company.id == company_id).first()
 
-    if db_company is None:
-        return None
+    if company is None:
+        return "not_found"
 
-    db.delete(db_company)
+    if company.owner_id != current_user.id:
+        return "unauthorized"
+
+    db.delete(company)
     db.commit()
 
-    return True
-
+    return "deleted"

@@ -1,27 +1,32 @@
 import secrets
 from datetime import datetime, timedelta, timezone
 
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Request
+from fastapi.security import OAuth2PasswordRequestForm
+from sqlalchemy.orm import Session
+
 from app.admin import require_admin
-from app.auth import (create_access_token, create_refresh_token,
-                      decode_refresh_token)
+from app.auth import create_access_token, create_refresh_token, decode_refresh_token
+from app.config import settings
 from app.database import get_db
 from app.dependencies import get_current_user
 from app.email_service import send_email, send_welcome_email
 from app.limiter import limiter
 from app.logger import logger
-from app.config import settings
 from app.models.user import User
 from app.schemas.refresh_token import RefreshTokenRequest
 from app.schemas.token import Token
-from app.schemas.user import (ForgotPasswordRequest, ResetPasswordRequest,
-                              UserCreate, UserResponse)
+from app.schemas.user import (
+    ForgotPasswordRequest,
+    ResetPasswordRequest,
+    UserCreate,
+    UserResponse,
+)
 from app.security import hash_password, verify_password
-from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Request
-from fastapi.security import OAuth2PasswordRequestForm
-from sqlalchemy.orm import Session
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
 LOGIN_RATE_LIMIT = "5/minute" if settings.environment == "production" else "1000/minute"
+
 
 # -----------------------------
 # Register User
@@ -330,4 +335,3 @@ def admin_dashboard(
     current_user: User = Depends(require_admin),
 ):
     return {"message": f"Welcome Admin {current_user.username}!"}
-

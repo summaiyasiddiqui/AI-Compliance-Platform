@@ -1,8 +1,9 @@
-from app.logger import logger
 from fastapi import HTTPException, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from slowapi.errors import RateLimitExceeded
+
+from app.logger import logger
 
 
 async def http_exception_handler(

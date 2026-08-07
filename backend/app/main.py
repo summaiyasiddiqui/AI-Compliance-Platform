@@ -1,17 +1,20 @@
+from fastapi import FastAPI, HTTPException
+from fastapi.exceptions import RequestValidationError
+from fastapi.middleware.cors import CORSMiddleware
+from slowapi.errors import RateLimitExceeded
+
 from app.api.about import router as about_router
 from app.api.auth import router as auth_router
 from app.api.company import router as company_router
 from app.api.health import router as health_router
 from app.api.ready import router as ready_router
-from app.exceptions import (http_exception_handler,
-                            rate_limit_exception_handler,
-                            validation_exception_handler)
+from app.exceptions import (
+    http_exception_handler,
+    rate_limit_exception_handler,
+    validation_exception_handler,
+)
 from app.limiter import limiter
 from app.middleware import LoggingMiddleware, SecurityHeadersMiddleware
-from fastapi import FastAPI, HTTPException
-from fastapi.exceptions import RequestValidationError
-from fastapi.middleware.cors import CORSMiddleware
-from slowapi.errors import RateLimitExceeded
 
 app = FastAPI(
     title="ComplianceAI API",
