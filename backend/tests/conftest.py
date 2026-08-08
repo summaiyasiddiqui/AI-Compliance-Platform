@@ -7,8 +7,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from uuid import uuid4
 
 import pytest
-from app.main import app
 from fastapi.testclient import TestClient
+
+from app.main import app
 
 
 @pytest.fixture
@@ -45,4 +46,3 @@ def auth_token(client):
     assert login_response.status_code == 200
 
     return login_response.json()["access_token"]
-

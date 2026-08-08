@@ -1,7 +1,8 @@
 from uuid import uuid4
 
-from app.main import app
 from fastapi.testclient import TestClient
+
+from app.main import app
 
 client = TestClient(app)
 
@@ -57,6 +58,7 @@ def test_login_user():
     assert "access_token" in data
     assert data["token_type"] == "bearer"
 
+
 def test_get_current_user():
     unique = uuid4().hex[:8]
 
@@ -94,6 +96,8 @@ def test_get_current_user():
     data = response.json()
 
     assert data["username"] == username
+
+
 def test_login_wrong_password():
     unique = uuid4().hex[:8]
 
@@ -175,6 +179,8 @@ def test_register_missing_password():
     )
 
     assert response.status_code == 422
+
+
 def test_get_current_user_without_token():
     response = client.get("/auth/me")
 
@@ -197,6 +203,7 @@ def test_get_current_user_with_malformed_auth_header():
     )
 
     assert response.status_code == 401
+
 
 def test_refresh_token():
     unique = uuid4().hex[:8]
@@ -242,6 +249,7 @@ def test_refresh_token():
     assert "refresh_token" in data
     assert data["token_type"] == "bearer"
 
+
 def test_refresh_token_invalid():
     response = client.post(
         "/auth/refresh",
@@ -251,6 +259,8 @@ def test_refresh_token_invalid():
     )
 
     assert response.status_code == 401
+
+
 def test_logout(client, auth_token):
     response = client.post(
         "/auth/logout",
@@ -263,10 +273,12 @@ def test_logout(client, auth_token):
 
     assert data["message"] == "Logged out successfully."
 
+
 def test_logout_without_token(client):
     response = client.post("/auth/logout")
 
     assert response.status_code == 401
+
 
 def test_forgot_password(client):
     unique = uuid4().hex[:8]
@@ -299,7 +311,9 @@ def test_forgot_password(client):
         data["message"]
         == "If an account with that email exists, a password reset link has been sent."
     )
-def test_logout():
+
+
+def test_logout_after_login():
     unique = uuid4().hex[:8]
 
     username = f"user_{unique}"
@@ -335,6 +349,7 @@ def test_logout():
 
     assert response.status_code == 200
     assert response.json()["message"] == "Logged out successfully."
+
 
 def test_refresh_token_after_logout():
     unique = uuid4().hex[:8]
@@ -384,6 +399,7 @@ def test_refresh_token_after_logout():
 
     assert refresh_response.status_code == 401
 
+
 def test_register_duplicate_email():
     unique = uuid4().hex[:8]
 
@@ -416,6 +432,7 @@ def test_register_duplicate_email():
     assert data["success"] is False
     assert data["message"] == "Email already exists"
     assert data["data"] is None
+
 
 def test_refresh_token_user_not_found():
     unique = uuid4().hex[:8]
@@ -473,6 +490,8 @@ def test_refresh_token_user_not_found():
 
     assert response.status_code == 401
     assert response.json()["message"] == "User not found"
+
+
 def test_forgot_password_nonexistent_email():
     unique = uuid4().hex[:8]
 
@@ -491,6 +510,8 @@ def test_forgot_password_nonexistent_email():
         data["message"]
         == "If an account with that email exists, a password reset link has been sent."
     )
+
+
 def test_reset_password_invalid_token():
     response = client.post(
         "/auth/reset-password",
@@ -505,6 +526,7 @@ def test_reset_password_invalid_token():
     data = response.json()
 
     assert data["message"] == "Invalid or expired reset token."
+
 
 def test_reset_password_expired_token():
     unique = uuid4().hex[:8]
@@ -558,6 +580,8 @@ def test_reset_password_expired_token():
     data = response.json()
 
     assert data["message"] == "Reset token has expired."
+
+
 def test_reset_password_success():
     unique = uuid4().hex[:8]
 
@@ -610,6 +634,8 @@ def test_reset_password_success():
     data = response.json()
 
     assert data["message"] == "Password has been reset successfully."
+
+
 def test_admin_dashboard():
     unique = uuid4().hex[:8]
 
@@ -669,6 +695,7 @@ def test_admin_dashboard():
     data = response.json()
 
     assert data["message"] == f"Welcome Admin {username}!"
+
 
 def test_admin_dashboard_non_admin():
     unique = uuid4().hex[:8]
