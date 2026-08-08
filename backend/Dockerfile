@@ -7,6 +7,9 @@ ENV PYTHONDONTWRITEBYTECODE=1
 # Show logs immediately
 ENV PYTHONUNBUFFERED=1
 
+# Create non-root application user
+RUN useradd --create-home --shell /bin/bash complianceai
+
 # Create working directory
 WORKDIR /app
 
@@ -19,11 +22,17 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy project files
 COPY . .
 
-# Make the startup script executable
+# Make startup script executable
 RUN chmod +x entrypoint.sh
+
+# Give application user ownership of application files
+RUN chown -R complianceai:complianceai /app
+
+# Switch to non-root user
+USER complianceai
 
 # Expose FastAPI port
 EXPOSE 8000
 
-# Run the startup script
+# Run startup script
 CMD ["./entrypoint.sh"]

@@ -4,7 +4,8 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     # New settings
     environment: str = "development"
-    debug: bool = True
+    debug: bool = False
+    frontend_url: str = "http://localhost:5173"
 
     # Existing settings
     database_url: str

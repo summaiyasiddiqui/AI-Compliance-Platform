@@ -8,6 +8,7 @@ from app.api.auth import router as auth_router
 from app.api.company import router as company_router
 from app.api.health import router as health_router
 from app.api.ready import router as ready_router
+from app.config import settings
 from app.exceptions import (
     http_exception_handler,
     rate_limit_exception_handler,
@@ -48,10 +49,7 @@ Built using **FastAPI**, **PostgreSQL**, **SQLAlchemy**, and **Docker**.
 )
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",  # React (Create React App)
-        "http://localhost:5173",  # React (Vite)
-    ],
+    allow_origins=[settings.frontend_url],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

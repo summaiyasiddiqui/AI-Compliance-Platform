@@ -15134,3 +15134,965 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2026-08-08 02:07:23,458 - INFO - [5fa8d101] Incoming Request: GET / | Client: testclient
 2026-08-08 02:07:23,466 - INFO - [5fa8d101] GET / | Status: 200 | Time: 8.15 ms | Client: testclient
 2026-08-08 02:07:23,466 - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-08-08 14:42:09,741 - INFO - [be2e16ee] Incoming Request: GET /health/ | Client: 172.19.0.1
+2026-08-08 14:42:09,769 - INFO - Health endpoint accessed
+2026-08-08 14:42:09,771 - INFO - [be2e16ee] GET /health/ | Status: 200 | Time: 29.82 ms | Client: 172.19.0.1
+2026-08-08 14:42:30,258 - INFO - [026793eb] Incoming Request: GET /ready/ | Client: 172.19.0.1
+2026-08-08 15:02:33,837 - INFO - [f34abb68] Incoming Request: GET /ready/ | Client: 172.19.0.1
+2026-08-08 15:02:33,913 - INFO - [f34abb68] GET /ready/ | Status: 200 | Time: 76.05 ms | Client: 172.19.0.1
+2026-08-08 15:09:00,534 - INFO - [cfbfaf69] Incoming Request: GET /health/ | Client: 172.19.0.1
+2026-08-08 15:09:00,572 - INFO - Health endpoint accessed
+2026-08-08 15:09:00,600 - INFO - [cfbfaf69] GET /health/ | Status: 200 | Time: 66.31 ms | Client: 172.19.0.1
+2026-08-08 15:09:06,995 - INFO - [c431aeb3] Incoming Request: GET /ready/ | Client: 172.19.0.1
+2026-08-08 15:09:07,083 - INFO - [c431aeb3] GET /ready/ | Status: 200 | Time: 88.35 ms | Client: 172.19.0.1
+2026-08-08 15:14:43,177 - INFO - [74e57618] Incoming Request: GET /health/ | Client: 172.19.0.1
+2026-08-08 15:14:43,209 - INFO - Health endpoint accessed
+2026-08-08 15:14:43,211 - INFO - [74e57618] GET /health/ | Status: 200 | Time: 33.75 ms | Client: 172.19.0.1
+2026-08-08 15:14:47,836 - INFO - [841c655e] Incoming Request: GET /ready/ | Client: 172.19.0.1
+2026-08-08 15:14:47,915 - INFO - [841c655e] GET /ready/ | Status: 200 | Time: 79.53 ms | Client: 172.19.0.1
+2026-08-08 15:23:46,864 - INFO - [828582c8] Incoming Request: GET /health/ | Client: 172.19.0.1
+2026-08-08 15:23:46,900 - INFO - Health endpoint accessed
+2026-08-08 15:23:46,901 - INFO - [828582c8] GET /health/ | Status: 200 | Time: 36.93 ms | Client: 172.19.0.1
+2026-08-08 15:23:52,595 - INFO - [90b097a7] Incoming Request: GET /ready/ | Client: 172.19.0.1
+2026-08-08 15:23:52,694 - INFO - [90b097a7] GET /ready/ | Status: 200 | Time: 99.12 ms | Client: 172.19.0.1
+2026-08-08 15:28:56,392 - INFO - [0069b4be] Incoming Request: GET /health/ | Client: 172.19.0.1
+2026-08-08 15:28:56,425 - INFO - Health endpoint accessed
+2026-08-08 15:28:56,427 - INFO - [0069b4be] GET /health/ | Status: 200 | Time: 35.42 ms | Client: 172.19.0.1
+2026-08-08 15:29:02,661 - INFO - [edd60d56] Incoming Request: GET /ready/ | Client: 172.19.0.1
+2026-08-08 15:29:02,746 - INFO - [edd60d56] GET /ready/ | Status: 200 | Time: 85.22 ms | Client: 172.19.0.1
+2026-08-08 08:29:13,410 - INFO - [0afdf116] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:13,499 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\HP\OneDrive\Documents\AI-compliance-platform\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-08-08 08:29:13,948 - INFO - [0afdf116] POST /auth/register | Status: 201 | Time: 537.48 ms | Client: testclient
+2026-08-08 08:29:15,455 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:15,470 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:15,479 - INFO - [7a2cfd92] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:15,886 - INFO - [7a2cfd92] POST /auth/register | Status: 201 | Time: 407.49 ms | Client: testclient
+2026-08-08 08:29:17,014 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:17,030 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:17,035 - INFO - [7772ff35] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:29:17,042 - INFO - Login attempt for username: user_928fe406
+2026-08-08 08:29:17,624 - INFO - User logged in successfully: user_928fe406
+2026-08-08 08:29:17,627 - INFO - [7772ff35] POST /auth/login | Status: 200 | Time: 591.22 ms | Client: testclient
+2026-08-08 08:29:17,633 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:29:17,644 - INFO - [cf3caffb] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:18,430 - INFO - [cf3caffb] POST /auth/register | Status: 201 | Time: 787.27 ms | Client: testclient
+2026-08-08 08:29:19,725 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:19,737 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:19,743 - INFO - [e52adc35] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:29:19,744 - INFO - Login attempt for username: user_d07f52b0
+2026-08-08 08:29:20,315 - INFO - User logged in successfully: user_d07f52b0
+2026-08-08 08:29:20,317 - INFO - [e52adc35] POST /auth/login | Status: 200 | Time: 574.6 ms | Client: testclient
+2026-08-08 08:29:20,324 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:29:20,331 - INFO - [d7b14137] Incoming Request: GET /auth/me | Client: testclient
+2026-08-08 08:29:20,345 - INFO - [d7b14137] GET /auth/me | Status: 200 | Time: 14.23 ms | Client: testclient
+2026-08-08 08:29:20,351 - INFO - HTTP Request: GET http://testserver/auth/me "HTTP/1.1 200 OK"
+2026-08-08 08:29:20,356 - INFO - [672c24d1] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:20,788 - INFO - [672c24d1] POST /auth/register | Status: 201 | Time: 432.3 ms | Client: testclient
+2026-08-08 08:29:21,537 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:21,548 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:21,552 - INFO - [0253319b] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:29:21,556 - INFO - Login attempt for username: user_5baa1879
+2026-08-08 08:29:21,884 - WARNING - Failed login attempt for username: user_5baa1879
+2026-08-08 08:29:21,895 - INFO - [0253319b] POST /auth/login | Status: 401 | Time: 343.5 ms | Client: testclient
+2026-08-08 08:29:21,898 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:29:21,904 - INFO - [cec36ee2] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:29:21,908 - INFO - Login attempt for username: nonexistent_ca638ace
+2026-08-08 08:29:21,916 - WARNING - Failed login attempt for username: nonexistent_ca638ace
+2026-08-08 08:29:21,919 - INFO - [cec36ee2] POST /auth/login | Status: 401 | Time: 15.09 ms | Client: testclient
+2026-08-08 08:29:21,925 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:29:21,931 - INFO - [509130a4] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:22,358 - INFO - [509130a4] POST /auth/register | Status: 201 | Time: 426.44 ms | Client: testclient
+2026-08-08 08:29:23,190 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:23,206 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:23,210 - INFO - [fcbc2e40] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:23,221 - INFO - [fcbc2e40] POST /auth/register | Status: 400 | Time: 10.67 ms | Client: testclient
+2026-08-08 08:29:23,223 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 400 Bad Request"
+2026-08-08 08:29:23,230 - INFO - [c09d52ab] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:23,232 - WARNING - Validation Error: [{'field': 'body.password', 'message': 'Field required'}]
+2026-08-08 08:29:23,232 - INFO - [c09d52ab] POST /auth/register | Status: 422 | Time: 2.45 ms | Client: testclient
+2026-08-08 08:29:23,236 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 422 Unprocessable Entity"
+2026-08-08 08:29:23,247 - INFO - [9f6880c4] Incoming Request: GET /auth/me | Client: testclient
+2026-08-08 08:29:23,250 - INFO - [9f6880c4] GET /auth/me | Status: 401 | Time: 3.21 ms | Client: testclient
+2026-08-08 08:29:23,252 - INFO - HTTP Request: GET http://testserver/auth/me "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:29:23,262 - INFO - [a0ce558e] Incoming Request: GET /auth/me | Client: testclient
+2026-08-08 08:29:23,262 - INFO - [a0ce558e] GET /auth/me | Status: 401 | Time: 0.0 ms | Client: testclient
+2026-08-08 08:29:23,270 - INFO - HTTP Request: GET http://testserver/auth/me "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:29:23,274 - INFO - [21979e49] Incoming Request: GET /auth/me | Client: testclient
+2026-08-08 08:29:23,274 - INFO - [21979e49] GET /auth/me | Status: 401 | Time: 0.0 ms | Client: testclient
+2026-08-08 08:29:23,274 - INFO - HTTP Request: GET http://testserver/auth/me "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:29:23,288 - INFO - [7a8eabe1] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:23,746 - INFO - [7a8eabe1] POST /auth/register | Status: 201 | Time: 458.49 ms | Client: testclient
+2026-08-08 08:29:24,789 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:24,802 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:24,807 - INFO - [915915d8] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:29:24,809 - INFO - Login attempt for username: user_7bfbeba8
+2026-08-08 08:29:25,166 - INFO - User logged in successfully: user_7bfbeba8
+2026-08-08 08:29:25,167 - INFO - [915915d8] POST /auth/login | Status: 200 | Time: 360.17 ms | Client: testclient
+2026-08-08 08:29:25,171 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:29:25,175 - INFO - [31ed0ff0] Incoming Request: POST /auth/refresh | Client: testclient
+2026-08-08 08:29:25,186 - INFO - [31ed0ff0] POST /auth/refresh | Status: 200 | Time: 11.7 ms | Client: testclient
+2026-08-08 08:29:25,189 - INFO - HTTP Request: POST http://testserver/auth/refresh "HTTP/1.1 200 OK"
+2026-08-08 08:29:25,195 - INFO - [e1b1369d] Incoming Request: POST /auth/refresh | Client: testclient
+2026-08-08 08:29:25,197 - INFO - [e1b1369d] POST /auth/refresh | Status: 401 | Time: 1.91 ms | Client: testclient
+2026-08-08 08:29:25,202 - INFO - HTTP Request: POST http://testserver/auth/refresh "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:29:25,212 - INFO - [508544a2] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:25,619 - INFO - [508544a2] POST /auth/register | Status: 201 | Time: 407.45 ms | Client: testclient
+2026-08-08 08:29:26,284 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:26,308 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:26,312 - INFO - [4dbc1156] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:29:26,316 - INFO - Login attempt for username: test_user_ba4ebbf5
+2026-08-08 08:29:26,776 - INFO - User logged in successfully: test_user_ba4ebbf5
+2026-08-08 08:29:26,778 - INFO - [4dbc1156] POST /auth/login | Status: 200 | Time: 465.61 ms | Client: testclient
+2026-08-08 08:29:26,782 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:29:26,786 - INFO - [d292d38a] Incoming Request: POST /auth/logout | Client: testclient
+2026-08-08 08:29:26,805 - INFO - User logged out: test_user_ba4ebbf5
+2026-08-08 08:29:26,806 - INFO - [d292d38a] POST /auth/logout | Status: 200 | Time: 20.06 ms | Client: testclient
+2026-08-08 08:29:26,811 - INFO - HTTP Request: POST http://testserver/auth/logout "HTTP/1.1 200 OK"
+2026-08-08 08:29:26,817 - INFO - [e9a21359] Incoming Request: POST /auth/logout | Client: testclient
+2026-08-08 08:29:26,818 - INFO - [e9a21359] POST /auth/logout | Status: 401 | Time: 1.74 ms | Client: testclient
+2026-08-08 08:29:26,820 - INFO - HTTP Request: POST http://testserver/auth/logout "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:29:26,825 - INFO - [eb730997] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:27,314 - INFO - [eb730997] POST /auth/register | Status: 201 | Time: 488.43 ms | Client: testclient
+2026-08-08 08:29:29,063 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:29,076 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:29,081 - INFO - [784ad85d] Incoming Request: POST /auth/forgot-password | Client: testclient
+2026-08-08 08:29:29,871 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:29,883 - INFO - [784ad85d] POST /auth/forgot-password | Status: 200 | Time: 802.3 ms | Client: testclient
+2026-08-08 08:29:29,891 - INFO - HTTP Request: POST http://testserver/auth/forgot-password "HTTP/1.1 200 OK"
+2026-08-08 08:29:29,898 - INFO - [a19c2b8a] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:30,330 - INFO - [a19c2b8a] POST /auth/register | Status: 201 | Time: 431.89 ms | Client: testclient
+2026-08-08 08:29:31,044 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:31,051 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:31,055 - INFO - [22a1f6e1] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:29:31,059 - INFO - Login attempt for username: user_61c7b472
+2026-08-08 08:29:31,406 - INFO - User logged in successfully: user_61c7b472
+2026-08-08 08:29:31,408 - INFO - [22a1f6e1] POST /auth/login | Status: 200 | Time: 352.88 ms | Client: testclient
+2026-08-08 08:29:31,412 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:29:31,415 - INFO - [bd26a203] Incoming Request: POST /auth/logout | Client: testclient
+2026-08-08 08:29:31,431 - INFO - User logged out: user_61c7b472
+2026-08-08 08:29:31,432 - INFO - [bd26a203] POST /auth/logout | Status: 200 | Time: 17.68 ms | Client: testclient
+2026-08-08 08:29:31,437 - INFO - HTTP Request: POST http://testserver/auth/logout "HTTP/1.1 200 OK"
+2026-08-08 08:29:31,441 - INFO - [4c460d6e] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:31,972 - INFO - [4c460d6e] POST /auth/register | Status: 201 | Time: 530.84 ms | Client: testclient
+2026-08-08 08:29:32,934 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:32,950 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:32,955 - INFO - [f3536ca8] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:29:32,958 - INFO - Login attempt for username: user_0e3bffed
+2026-08-08 08:29:33,340 - INFO - User logged in successfully: user_0e3bffed
+2026-08-08 08:29:33,342 - INFO - [f3536ca8] POST /auth/login | Status: 200 | Time: 387.33 ms | Client: testclient
+2026-08-08 08:29:33,346 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:29:33,349 - INFO - [0bd64271] Incoming Request: POST /auth/logout | Client: testclient
+2026-08-08 08:29:33,365 - INFO - User logged out: user_0e3bffed
+2026-08-08 08:29:33,366 - INFO - [0bd64271] POST /auth/logout | Status: 200 | Time: 16.68 ms | Client: testclient
+2026-08-08 08:29:33,371 - INFO - HTTP Request: POST http://testserver/auth/logout "HTTP/1.1 200 OK"
+2026-08-08 08:29:33,374 - INFO - [3f3c1032] Incoming Request: POST /auth/refresh | Client: testclient
+2026-08-08 08:29:33,386 - INFO - [3f3c1032] POST /auth/refresh | Status: 401 | Time: 11.19 ms | Client: testclient
+2026-08-08 08:29:33,388 - INFO - HTTP Request: POST http://testserver/auth/refresh "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:29:33,393 - INFO - [7a65e298] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:33,775 - INFO - [7a65e298] POST /auth/register | Status: 201 | Time: 381.49 ms | Client: testclient
+2026-08-08 08:29:34,527 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:34,544 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:34,584 - INFO - [3edc168d] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:34,616 - INFO - [3edc168d] POST /auth/register | Status: 400 | Time: 31.42 ms | Client: testclient
+2026-08-08 08:29:34,619 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 400 Bad Request"
+2026-08-08 08:29:34,640 - INFO - [c111db84] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:35,612 - INFO - [c111db84] POST /auth/register | Status: 201 | Time: 975.58 ms | Client: testclient
+2026-08-08 08:29:36,987 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:36,997 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:37,002 - INFO - [a35b2d99] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:29:37,010 - INFO - Login attempt for username: deleted_user_380a0065
+2026-08-08 08:29:37,929 - INFO - User logged in successfully: deleted_user_380a0065
+2026-08-08 08:29:37,932 - INFO - [a35b2d99] POST /auth/login | Status: 200 | Time: 929.0 ms | Client: testclient
+2026-08-08 08:29:37,940 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:29:37,974 - INFO - [78c9e6f4] Incoming Request: POST /auth/refresh | Client: testclient
+2026-08-08 08:29:37,990 - INFO - [78c9e6f4] POST /auth/refresh | Status: 401 | Time: 15.88 ms | Client: testclient
+2026-08-08 08:29:37,995 - INFO - HTTP Request: POST http://testserver/auth/refresh "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:29:38,002 - INFO - [a6e9587d] Incoming Request: POST /auth/forgot-password | Client: testclient
+2026-08-08 08:29:38,021 - INFO - [a6e9587d] POST /auth/forgot-password | Status: 200 | Time: 18.64 ms | Client: testclient
+2026-08-08 08:29:38,028 - INFO - HTTP Request: POST http://testserver/auth/forgot-password "HTTP/1.1 200 OK"
+2026-08-08 08:29:38,039 - INFO - [56e9f4c0] Incoming Request: POST /auth/reset-password | Client: testclient
+2026-08-08 08:29:38,073 - INFO - [56e9f4c0] POST /auth/reset-password | Status: 400 | Time: 34.85 ms | Client: testclient
+2026-08-08 08:29:38,079 - INFO - HTTP Request: POST http://testserver/auth/reset-password "HTTP/1.1 400 Bad Request"
+2026-08-08 08:29:38,084 - INFO - [192da336] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:39,041 - INFO - [192da336] POST /auth/register | Status: 201 | Time: 956.41 ms | Client: testclient
+2026-08-08 08:29:40,875 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:40,895 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:40,934 - INFO - [77da9a42] Incoming Request: POST /auth/reset-password | Client: testclient
+2026-08-08 08:29:40,950 - INFO - [77da9a42] POST /auth/reset-password | Status: 400 | Time: 16.29 ms | Client: testclient
+2026-08-08 08:29:40,954 - INFO - HTTP Request: POST http://testserver/auth/reset-password "HTTP/1.1 400 Bad Request"
+2026-08-08 08:29:40,963 - INFO - [63a631cd] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:41,928 - INFO - [63a631cd] POST /auth/register | Status: 201 | Time: 965.15 ms | Client: testclient
+2026-08-08 08:29:43,267 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:43,281 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:43,299 - INFO - [1422fb1f] Incoming Request: POST /auth/reset-password | Client: testclient
+2026-08-08 08:29:44,217 - INFO - [1422fb1f] POST /auth/reset-password | Status: 200 | Time: 918.01 ms | Client: testclient
+2026-08-08 08:29:44,223 - INFO - HTTP Request: POST http://testserver/auth/reset-password "HTTP/1.1 200 OK"
+2026-08-08 08:29:44,232 - INFO - [885762e6] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:45,123 - INFO - [885762e6] POST /auth/register | Status: 201 | Time: 891.25 ms | Client: testclient
+2026-08-08 08:29:46,599 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:46,616 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:46,639 - INFO - [9715d259] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:29:46,645 - INFO - Login attempt for username: admin_d76a7e16
+2026-08-08 08:29:47,405 - INFO - User logged in successfully: admin_d76a7e16
+2026-08-08 08:29:47,407 - INFO - [9715d259] POST /auth/login | Status: 200 | Time: 768.46 ms | Client: testclient
+2026-08-08 08:29:47,415 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:29:47,420 - INFO - [13f0c3e8] Incoming Request: GET /auth/admin | Client: testclient
+2026-08-08 08:29:47,434 - INFO - [13f0c3e8] GET /auth/admin | Status: 200 | Time: 14.04 ms | Client: testclient
+2026-08-08 08:29:47,442 - INFO - HTTP Request: GET http://testserver/auth/admin "HTTP/1.1 200 OK"
+2026-08-08 08:29:47,449 - INFO - [b08dffba] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:48,337 - INFO - [b08dffba] POST /auth/register | Status: 201 | Time: 887.98 ms | Client: testclient
+2026-08-08 08:29:51,559 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:51,572 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:51,579 - INFO - [6001acbe] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:29:51,586 - INFO - Login attempt for username: user_36e7af38
+2026-08-08 08:29:52,543 - INFO - User logged in successfully: user_36e7af38
+2026-08-08 08:29:52,546 - INFO - [6001acbe] POST /auth/login | Status: 200 | Time: 966.86 ms | Client: testclient
+2026-08-08 08:29:52,551 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:29:52,558 - INFO - [0926cee7] Incoming Request: GET /auth/admin | Client: testclient
+2026-08-08 08:29:52,573 - INFO - [0926cee7] GET /auth/admin | Status: 403 | Time: 20.54 ms | Client: testclient
+2026-08-08 08:29:52,577 - INFO - HTTP Request: GET http://testserver/auth/admin "HTTP/1.1 403 Forbidden"
+2026-08-08 08:29:52,584 - INFO - [d1970b10] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:29:53,571 - INFO - [d1970b10] POST /auth/register | Status: 201 | Time: 986.47 ms | Client: testclient
+2026-08-08 08:29:58,284 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:29:58,299 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:29:58,305 - INFO - [cfa1f1f5] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:29:58,311 - INFO - Login attempt for username: test_user_80c41643
+2026-08-08 08:29:59,279 - INFO - User logged in successfully: test_user_80c41643
+2026-08-08 08:29:59,282 - INFO - [cfa1f1f5] POST /auth/login | Status: 200 | Time: 975.78 ms | Client: testclient
+2026-08-08 08:29:59,289 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:29:59,297 - INFO - [87deb591] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:29:59,352 - INFO - [87deb591] POST /companies/ | Status: 201 | Time: 54.87 ms | Client: testclient
+2026-08-08 08:29:59,359 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:29:59,367 - INFO - [ec6fc2b6] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:30:00,425 - INFO - [ec6fc2b6] POST /auth/register | Status: 201 | Time: 1058.63 ms | Client: testclient
+2026-08-08 08:30:05,954 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:30:05,970 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:30:05,977 - INFO - [30a89ed7] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:30:05,981 - INFO - Login attempt for username: test_user_3c98c52a
+2026-08-08 08:30:06,908 - INFO - User logged in successfully: test_user_3c98c52a
+2026-08-08 08:30:06,910 - INFO - [30a89ed7] POST /auth/login | Status: 200 | Time: 932.63 ms | Client: testclient
+2026-08-08 08:30:06,914 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:30:06,921 - INFO - [783f927f] Incoming Request: GET /companies/ | Client: testclient
+2026-08-08 08:30:06,967 - INFO - [783f927f] GET /companies/ | Status: 200 | Time: 46.4 ms | Client: testclient
+2026-08-08 08:30:06,974 - INFO - HTTP Request: GET http://testserver/companies/ "HTTP/1.1 200 OK"
+2026-08-08 08:30:06,988 - INFO - [ca293bd7] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:30:07,947 - INFO - [ca293bd7] POST /auth/register | Status: 201 | Time: 959.66 ms | Client: testclient
+2026-08-08 08:30:09,334 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:30:09,346 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:30:09,353 - INFO - [f7dd52fa] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:30:09,358 - INFO - Login attempt for username: test_user_d4b6afd2
+2026-08-08 08:30:10,224 - INFO - User logged in successfully: test_user_d4b6afd2
+2026-08-08 08:30:10,227 - INFO - [f7dd52fa] POST /auth/login | Status: 200 | Time: 873.59 ms | Client: testclient
+2026-08-08 08:30:10,234 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:30:10,236 - INFO - [c295d35e] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:30:10,269 - INFO - [c295d35e] POST /companies/ | Status: 201 | Time: 32.84 ms | Client: testclient
+2026-08-08 08:30:10,276 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:30:10,282 - INFO - [16a02825] Incoming Request: GET /companies/ | Client: testclient
+2026-08-08 08:30:10,312 - INFO - [16a02825] GET /companies/ | Status: 200 | Time: 29.9 ms | Client: testclient
+2026-08-08 08:30:10,318 - INFO - HTTP Request: GET http://testserver/companies/?search=Searchable "HTTP/1.1 200 OK"
+2026-08-08 08:30:10,328 - INFO - [cb402c08] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:30:11,188 - INFO - [cb402c08] POST /auth/register | Status: 201 | Time: 860.04 ms | Client: testclient
+2026-08-08 08:30:12,611 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:30:12,622 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:30:12,630 - INFO - [c7794003] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:30:12,632 - INFO - Login attempt for username: test_user_eb268422
+2026-08-08 08:30:13,537 - INFO - User logged in successfully: test_user_eb268422
+2026-08-08 08:30:13,539 - INFO - [c7794003] POST /auth/login | Status: 200 | Time: 908.61 ms | Client: testclient
+2026-08-08 08:30:13,548 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:30:13,549 - INFO - [9075ac81] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:30:13,593 - INFO - [9075ac81] POST /companies/ | Status: 201 | Time: 44.47 ms | Client: testclient
+2026-08-08 08:30:13,601 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:30:13,606 - INFO - [1204d5ba] Incoming Request: GET /companies/ | Client: testclient
+2026-08-08 08:30:13,644 - INFO - [1204d5ba] GET /companies/ | Status: 200 | Time: 37.81 ms | Client: testclient
+2026-08-08 08:30:13,655 - INFO - HTTP Request: GET http://testserver/companies/?industry=Healthcare "HTTP/1.1 200 OK"
+2026-08-08 08:30:13,681 - INFO - [ad1319cf] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:30:14,683 - INFO - [ad1319cf] POST /auth/register | Status: 201 | Time: 1002.46 ms | Client: testclient
+2026-08-08 08:30:18,548 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:30:18,562 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:30:18,568 - INFO - [0cfcb2a6] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:30:18,580 - INFO - Login attempt for username: test_user_4e1f48ce
+2026-08-08 08:30:19,649 - INFO - User logged in successfully: test_user_4e1f48ce
+2026-08-08 08:30:19,651 - INFO - [0cfcb2a6] POST /auth/login | Status: 200 | Time: 1083.02 ms | Client: testclient
+2026-08-08 08:30:19,657 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:30:19,664 - INFO - [a55abadb] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:30:19,715 - INFO - [a55abadb] POST /companies/ | Status: 201 | Time: 50.28 ms | Client: testclient
+2026-08-08 08:30:19,722 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:30:19,730 - INFO - [a72670fd] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:30:19,770 - INFO - [a72670fd] POST /companies/ | Status: 201 | Time: 39.12 ms | Client: testclient
+2026-08-08 08:30:19,780 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:30:19,786 - INFO - [529b77f4] Incoming Request: GET /companies/ | Client: testclient
+2026-08-08 08:30:19,817 - INFO - [529b77f4] GET /companies/ | Status: 200 | Time: 31.06 ms | Client: testclient
+2026-08-08 08:30:19,826 - INFO - HTTP Request: GET http://testserver/companies/?sort_by=company_name&order=desc "HTTP/1.1 200 OK"
+2026-08-08 08:30:19,837 - INFO - [0708922f] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:30:20,948 - INFO - [0708922f] POST /auth/register | Status: 201 | Time: 1110.7 ms | Client: testclient
+2026-08-08 08:30:22,610 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:30:22,625 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:30:22,631 - INFO - [a7d45b2f] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:30:22,636 - INFO - Login attempt for username: test_user_212685c9
+2026-08-08 08:30:23,565 - INFO - User logged in successfully: test_user_212685c9
+2026-08-08 08:30:23,568 - INFO - [a7d45b2f] POST /auth/login | Status: 200 | Time: 937.02 ms | Client: testclient
+2026-08-08 08:30:23,573 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:30:23,575 - INFO - [f4bc5f91] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:30:23,614 - INFO - [f4bc5f91] POST /companies/ | Status: 201 | Time: 39.14 ms | Client: testclient
+2026-08-08 08:30:23,622 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:30:23,627 - INFO - [bf1c52af] Incoming Request: GET /companies/390 | Client: testclient
+2026-08-08 08:30:23,649 - INFO - [bf1c52af] GET /companies/390 | Status: 200 | Time: 22.15 ms | Client: testclient
+2026-08-08 08:30:23,656 - INFO - HTTP Request: GET http://testserver/companies/390 "HTTP/1.1 200 OK"
+2026-08-08 08:30:23,662 - INFO - [138bb5de] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:30:23,674 - INFO - [138bb5de] POST /companies/ | Status: 401 | Time: 10.3 ms | Client: testclient
+2026-08-08 08:30:23,678 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:30:23,697 - INFO - [50f636ae] Incoming Request: GET /companies/ | Client: testclient
+2026-08-08 08:30:23,705 - INFO - [50f636ae] GET /companies/ | Status: 401 | Time: 7.39 ms | Client: testclient
+2026-08-08 08:30:23,713 - INFO - HTTP Request: GET http://testserver/companies/ "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:30:23,726 - INFO - [9d97caac] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:30:24,698 - INFO - [9d97caac] POST /auth/register | Status: 201 | Time: 972.01 ms | Client: testclient
+2026-08-08 08:30:26,228 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:30:26,242 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:30:26,248 - INFO - [99b2b584] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:30:26,254 - INFO - Login attempt for username: test_user_c358c6ef
+2026-08-08 08:30:27,213 - INFO - User logged in successfully: test_user_c358c6ef
+2026-08-08 08:30:27,215 - INFO - [99b2b584] POST /auth/login | Status: 200 | Time: 966.77 ms | Client: testclient
+2026-08-08 08:30:27,222 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:30:27,223 - INFO - [194e35b2] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:30:27,244 - WARNING - Validation Error: [{'field': 'body.email', 'message': 'Field required'}]
+2026-08-08 08:30:27,245 - INFO - [194e35b2] POST /companies/ | Status: 422 | Time: 21.74 ms | Client: testclient
+2026-08-08 08:30:27,249 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 422 Unprocessable Entity"
+2026-08-08 08:30:27,261 - INFO - [254f3089] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:30:28,233 - INFO - [254f3089] POST /auth/register | Status: 201 | Time: 971.97 ms | Client: testclient
+2026-08-08 08:30:29,602 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:30:29,622 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:30:29,628 - INFO - [4178d69c] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:30:29,634 - INFO - Login attempt for username: test_user_1e52b647
+2026-08-08 08:30:30,525 - INFO - User logged in successfully: test_user_1e52b647
+2026-08-08 08:30:30,527 - INFO - [4178d69c] POST /auth/login | Status: 200 | Time: 899.66 ms | Client: testclient
+2026-08-08 08:30:30,534 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:30:30,535 - INFO - [369e5b3d] Incoming Request: GET /companies/999999 | Client: testclient
+2026-08-08 08:30:30,561 - INFO - [369e5b3d] GET /companies/999999 | Status: 404 | Time: 25.9 ms | Client: testclient
+2026-08-08 08:30:30,566 - INFO - HTTP Request: GET http://testserver/companies/999999 "HTTP/1.1 404 Not Found"
+2026-08-08 08:30:30,568 - INFO - [58b6f22c] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:30:31,533 - INFO - [58b6f22c] POST /auth/register | Status: 201 | Time: 965.24 ms | Client: testclient
+2026-08-08 08:30:32,883 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:30:32,897 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:30:32,903 - INFO - [8b3d0aee] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:30:32,903 - INFO - Login attempt for username: test_user_02fbcc49
+2026-08-08 08:30:33,861 - INFO - User logged in successfully: test_user_02fbcc49
+2026-08-08 08:30:33,864 - INFO - [8b3d0aee] POST /auth/login | Status: 200 | Time: 960.77 ms | Client: testclient
+2026-08-08 08:30:33,871 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:30:33,878 - INFO - [27decfce] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:30:33,910 - INFO - [27decfce] POST /companies/ | Status: 201 | Time: 31.99 ms | Client: testclient
+2026-08-08 08:30:33,919 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:30:33,924 - INFO - [8bfa4030] Incoming Request: PUT /companies/391 | Client: testclient
+2026-08-08 08:30:33,959 - INFO - [8bfa4030] PUT /companies/391 | Status: 200 | Time: 35.37 ms | Client: testclient
+2026-08-08 08:30:33,967 - INFO - HTTP Request: PUT http://testserver/companies/391 "HTTP/1.1 200 OK"
+2026-08-08 08:30:33,968 - INFO - [90b24e32] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:30:34,916 - INFO - [90b24e32] POST /auth/register | Status: 201 | Time: 947.23 ms | Client: testclient
+2026-08-08 08:30:36,565 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:30:36,583 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:30:36,590 - INFO - [bf5c8cbf] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:30:36,596 - INFO - Login attempt for username: test_user_07c90c96
+2026-08-08 08:30:37,554 - INFO - User logged in successfully: test_user_07c90c96
+2026-08-08 08:30:37,556 - INFO - [bf5c8cbf] POST /auth/login | Status: 200 | Time: 967.02 ms | Client: testclient
+2026-08-08 08:30:37,563 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:30:37,565 - INFO - [0644e58b] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:30:37,603 - INFO - [0644e58b] POST /companies/ | Status: 201 | Time: 38.24 ms | Client: testclient
+2026-08-08 08:30:37,611 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:30:37,617 - INFO - [731fc9f6] Incoming Request: DELETE /companies/392 | Client: testclient
+2026-08-08 08:30:37,645 - INFO - [731fc9f6] DELETE /companies/392 | Status: 200 | Time: 28.02 ms | Client: testclient
+2026-08-08 08:30:37,646 - INFO - HTTP Request: DELETE http://testserver/companies/392 "HTTP/1.1 200 OK"
+2026-08-08 08:30:37,661 - INFO - [2937f5f1] Incoming Request: DELETE /companies/999999 | Client: testclient
+2026-08-08 08:30:37,662 - INFO - [2937f5f1] DELETE /companies/999999 | Status: 401 | Time: 1.37 ms | Client: testclient
+2026-08-08 08:30:37,670 - INFO - HTTP Request: DELETE http://testserver/companies/999999 "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:30:37,682 - INFO - [88df6ca6] Incoming Request: PUT /companies/999999 | Client: testclient
+2026-08-08 08:30:37,695 - INFO - [88df6ca6] PUT /companies/999999 | Status: 401 | Time: 12.18 ms | Client: testclient
+2026-08-08 08:30:37,698 - INFO - HTTP Request: PUT http://testserver/companies/999999 "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:30:37,711 - INFO - [237f466c] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:30:38,660 - INFO - [237f466c] POST /auth/register | Status: 201 | Time: 949.24 ms | Client: testclient
+2026-08-08 08:30:39,950 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:30:39,963 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:30:39,970 - INFO - [98042fed] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:30:39,979 - INFO - Login attempt for username: test_user_480ba372
+2026-08-08 08:30:40,920 - INFO - User logged in successfully: test_user_480ba372
+2026-08-08 08:30:40,923 - INFO - [98042fed] POST /auth/login | Status: 200 | Time: 952.04 ms | Client: testclient
+2026-08-08 08:30:40,929 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:30:40,932 - INFO - [650b8f6f] Incoming Request: PUT /companies/999999 | Client: testclient
+2026-08-08 08:30:40,956 - INFO - [650b8f6f] PUT /companies/999999 | Status: 404 | Time: 24.17 ms | Client: testclient
+2026-08-08 08:30:40,960 - INFO - HTTP Request: PUT http://testserver/companies/999999 "HTTP/1.1 404 Not Found"
+2026-08-08 08:30:40,968 - INFO - [8636500e] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:30:41,943 - INFO - [8636500e] POST /auth/register | Status: 201 | Time: 974.53 ms | Client: testclient
+2026-08-08 08:30:43,324 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:30:43,342 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:30:43,349 - INFO - [47c709b1] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:30:43,357 - INFO - Login attempt for username: test_user_52895437
+2026-08-08 08:30:44,296 - INFO - User logged in successfully: test_user_52895437
+2026-08-08 08:30:44,298 - INFO - [47c709b1] POST /auth/login | Status: 200 | Time: 949.3 ms | Client: testclient
+2026-08-08 08:30:44,305 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:30:44,312 - INFO - [4aa4cbf7] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:30:44,349 - INFO - [4aa4cbf7] POST /companies/ | Status: 201 | Time: 37.44 ms | Client: testclient
+2026-08-08 08:30:44,358 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:30:44,363 - INFO - [e9c37b4f] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:30:45,349 - INFO - [e9c37b4f] POST /auth/register | Status: 201 | Time: 985.32 ms | Client: testclient
+2026-08-08 08:30:50,826 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:30:50,839 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:30:50,845 - INFO - [90f88b65] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:30:50,852 - INFO - Login attempt for username: other_user_0374bdd5
+2026-08-08 08:30:51,835 - INFO - User logged in successfully: other_user_0374bdd5
+2026-08-08 08:30:51,837 - INFO - [90f88b65] POST /auth/login | Status: 200 | Time: 992.36 ms | Client: testclient
+2026-08-08 08:30:51,845 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:30:51,849 - INFO - [32f98b7a] Incoming Request: GET /companies/393 | Client: testclient
+2026-08-08 08:30:51,866 - INFO - [32f98b7a] GET /companies/393 | Status: 404 | Time: 16.87 ms | Client: testclient
+2026-08-08 08:30:51,870 - INFO - HTTP Request: GET http://testserver/companies/393 "HTTP/1.1 404 Not Found"
+2026-08-08 08:30:51,882 - INFO - [80f0217b] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:30:52,850 - INFO - [80f0217b] POST /auth/register | Status: 201 | Time: 968.05 ms | Client: testclient
+2026-08-08 08:30:54,289 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:30:54,308 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:30:54,313 - INFO - [45429c31] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:30:54,314 - INFO - Login attempt for username: test_user_aaf554d1
+2026-08-08 08:30:55,280 - INFO - User logged in successfully: test_user_aaf554d1
+2026-08-08 08:30:55,284 - INFO - [45429c31] POST /auth/login | Status: 200 | Time: 971.12 ms | Client: testclient
+2026-08-08 08:30:55,292 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:30:55,300 - INFO - [3bc20c67] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:30:55,335 - INFO - [3bc20c67] POST /companies/ | Status: 201 | Time: 36.48 ms | Client: testclient
+2026-08-08 08:30:55,341 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:30:55,349 - INFO - [43f1fce9] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:30:55,372 - INFO - [43f1fce9] POST /companies/ | Status: 400 | Time: 23.71 ms | Client: testclient
+2026-08-08 08:30:55,377 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 400 Bad Request"
+2026-08-08 08:30:55,386 - INFO - [9a600da1] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:30:56,369 - INFO - [9a600da1] POST /auth/register | Status: 201 | Time: 982.22 ms | Client: testclient
+2026-08-08 08:30:57,847 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:30:57,866 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:30:57,870 - INFO - [a8ec27b8] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:30:57,879 - INFO - Login attempt for username: test_user_9518aaa8
+2026-08-08 08:30:58,886 - INFO - User logged in successfully: test_user_9518aaa8
+2026-08-08 08:30:58,886 - INFO - [a8ec27b8] POST /auth/login | Status: 200 | Time: 1015.88 ms | Client: testclient
+2026-08-08 08:30:58,902 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:30:58,909 - INFO - [1be981f1] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:30:58,959 - INFO - [1be981f1] POST /companies/ | Status: 201 | Time: 49.33 ms | Client: testclient
+2026-08-08 08:30:58,965 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:30:58,969 - INFO - [8d0a3bbf] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:30:59,926 - INFO - [8d0a3bbf] POST /auth/register | Status: 201 | Time: 956.53 ms | Client: testclient
+2026-08-08 08:31:01,547 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:31:01,565 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:31:01,569 - INFO - [3b422004] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:31:01,583 - INFO - Login attempt for username: other_update_b0b28fca
+2026-08-08 08:31:02,601 - INFO - User logged in successfully: other_update_b0b28fca
+2026-08-08 08:31:02,604 - INFO - [3b422004] POST /auth/login | Status: 200 | Time: 1034.68 ms | Client: testclient
+2026-08-08 08:31:02,613 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:31:02,616 - INFO - [12c33427] Incoming Request: PUT /companies/395 | Client: testclient
+2026-08-08 08:31:02,638 - INFO - [12c33427] PUT /companies/395 | Status: 404 | Time: 22.09 ms | Client: testclient
+2026-08-08 08:31:02,642 - INFO - HTTP Request: PUT http://testserver/companies/395 "HTTP/1.1 404 Not Found"
+2026-08-08 08:31:02,655 - INFO - [aaaff0d3] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:31:03,663 - INFO - [aaaff0d3] POST /auth/register | Status: 201 | Time: 1008.4 ms | Client: testclient
+2026-08-08 08:31:05,526 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:31:05,541 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:31:05,548 - INFO - [be6273c8] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:31:05,556 - INFO - Login attempt for username: test_user_b3dbd9f7
+2026-08-08 08:31:06,519 - INFO - User logged in successfully: test_user_b3dbd9f7
+2026-08-08 08:31:06,521 - INFO - [be6273c8] POST /auth/login | Status: 200 | Time: 972.7 ms | Client: testclient
+2026-08-08 08:31:06,528 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:31:06,534 - INFO - [cf84244d] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:31:06,570 - INFO - [cf84244d] POST /companies/ | Status: 201 | Time: 36.13 ms | Client: testclient
+2026-08-08 08:31:06,578 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:31:06,584 - INFO - [31ea8266] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:31:07,582 - INFO - [31ea8266] POST /auth/register | Status: 201 | Time: 998.1 ms | Client: testclient
+2026-08-08 08:31:09,030 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:31:09,045 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:31:09,051 - INFO - [4c320837] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:31:09,059 - INFO - Login attempt for username: other_delete_b0704a13
+2026-08-08 08:31:10,024 - INFO - User logged in successfully: other_delete_b0704a13
+2026-08-08 08:31:10,026 - INFO - [4c320837] POST /auth/login | Status: 200 | Time: 973.7 ms | Client: testclient
+2026-08-08 08:31:10,032 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:31:10,037 - INFO - [f3f1eac1] Incoming Request: DELETE /companies/396 | Client: testclient
+2026-08-08 08:31:10,052 - INFO - [f3f1eac1] DELETE /companies/396 | Status: 404 | Time: 15.86 ms | Client: testclient
+2026-08-08 08:31:10,057 - INFO - HTTP Request: DELETE http://testserver/companies/396 "HTTP/1.1 404 Not Found"
+2026-08-08 08:31:10,066 - INFO - [0037ff76] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:31:11,019 - INFO - [0037ff76] POST /auth/register | Status: 201 | Time: 952.76 ms | Client: testclient
+2026-08-08 08:31:12,733 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:31:12,759 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:31:12,765 - INFO - [5ad74fdc] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:31:12,765 - INFO - Login attempt for username: test_user_47cfa958
+2026-08-08 08:31:13,729 - INFO - User logged in successfully: test_user_47cfa958
+2026-08-08 08:31:13,732 - INFO - [5ad74fdc] POST /auth/login | Status: 200 | Time: 966.61 ms | Client: testclient
+2026-08-08 08:31:13,739 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:31:13,747 - INFO - [9938e239] Incoming Request: DELETE /companies/999999 | Client: testclient
+2026-08-08 08:31:13,767 - INFO - [9938e239] DELETE /companies/999999 | Status: 403 | Time: 20.49 ms | Client: testclient
+2026-08-08 08:31:13,773 - INFO - HTTP Request: DELETE http://testserver/companies/999999 "HTTP/1.1 403 Forbidden"
+2026-08-08 08:31:13,781 - INFO - [f43bdcf9] Incoming Request: GET /health/ | Client: testclient
+2026-08-08 08:31:13,795 - INFO - Health endpoint accessed
+2026-08-08 08:31:13,797 - INFO - [f43bdcf9] GET /health/ | Status: 200 | Time: 15.54 ms | Client: testclient
+2026-08-08 08:31:13,808 - INFO - HTTP Request: GET http://testserver/health/ "HTTP/1.1 200 OK"
+2026-08-08 08:31:13,822 - INFO - [04ed4af8] Incoming Request: GET / | Client: testclient
+2026-08-08 08:31:13,828 - INFO - [04ed4af8] GET / | Status: 200 | Time: 6.39 ms | Client: testclient
+2026-08-08 08:31:13,831 - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-08-08 08:34:38,813 - INFO - [28b66c04] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:34:39,064 - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\HP\OneDrive\Documents\AI-compliance-platform\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-08-08 08:34:40,120 - INFO - [28b66c04] POST /auth/register | Status: 201 | Time: 1306.12 ms | Client: testclient
+2026-08-08 08:34:41,816 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:34:41,857 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:34:41,879 - INFO - [f1f39701] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:34:42,850 - INFO - [f1f39701] POST /auth/register | Status: 201 | Time: 970.92 ms | Client: testclient
+2026-08-08 08:34:44,276 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:34:44,293 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:34:44,300 - INFO - [cefffac5] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:34:44,325 - INFO - Login attempt for username: user_a90389f9
+2026-08-08 08:34:45,315 - INFO - User logged in successfully: user_a90389f9
+2026-08-08 08:34:45,320 - INFO - [cefffac5] POST /auth/login | Status: 200 | Time: 1020.61 ms | Client: testclient
+2026-08-08 08:34:45,332 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:34:45,340 - INFO - [ab964b0e] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:34:46,328 - INFO - [ab964b0e] POST /auth/register | Status: 201 | Time: 987.72 ms | Client: testclient
+2026-08-08 08:34:48,270 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:34:48,290 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:34:48,300 - INFO - [003c79bd] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:34:48,311 - INFO - Login attempt for username: user_310d0466
+2026-08-08 08:34:49,256 - INFO - User logged in successfully: user_310d0466
+2026-08-08 08:34:49,260 - INFO - [003c79bd] POST /auth/login | Status: 200 | Time: 960.7 ms | Client: testclient
+2026-08-08 08:34:49,276 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:34:49,281 - INFO - [bbc3d7c9] Incoming Request: GET /auth/me | Client: testclient
+2026-08-08 08:34:49,310 - INFO - [bbc3d7c9] GET /auth/me | Status: 200 | Time: 29.61 ms | Client: testclient
+2026-08-08 08:34:49,323 - INFO - HTTP Request: GET http://testserver/auth/me "HTTP/1.1 200 OK"
+2026-08-08 08:34:49,343 - INFO - [de872cc4] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:34:50,287 - INFO - [de872cc4] POST /auth/register | Status: 201 | Time: 944.67 ms | Client: testclient
+2026-08-08 08:34:52,364 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:34:52,380 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:34:52,390 - INFO - [66de82ce] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:34:52,400 - INFO - Login attempt for username: user_e86db2ad
+2026-08-08 08:34:53,268 - WARNING - Failed login attempt for username: user_e86db2ad
+2026-08-08 08:34:53,283 - INFO - [66de82ce] POST /auth/login | Status: 401 | Time: 893.21 ms | Client: testclient
+2026-08-08 08:34:53,291 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:34:53,299 - INFO - [4623ae1f] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:34:53,322 - INFO - Login attempt for username: nonexistent_e4417c37
+2026-08-08 08:34:53,333 - WARNING - Failed login attempt for username: nonexistent_e4417c37
+2026-08-08 08:34:53,340 - INFO - [4623ae1f] POST /auth/login | Status: 401 | Time: 41.12 ms | Client: testclient
+2026-08-08 08:34:53,348 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:34:53,367 - INFO - [3feeabef] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:34:54,336 - INFO - [3feeabef] POST /auth/register | Status: 201 | Time: 969.34 ms | Client: testclient
+2026-08-08 08:34:55,663 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:34:55,678 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:34:55,687 - INFO - [057fc243] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:34:55,709 - INFO - [057fc243] POST /auth/register | Status: 400 | Time: 21.57 ms | Client: testclient
+2026-08-08 08:34:55,716 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 400 Bad Request"
+2026-08-08 08:34:55,732 - INFO - [b11e2c35] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:34:55,747 - WARNING - Validation Error: [{'field': 'body.password', 'message': 'Field required'}]
+2026-08-08 08:34:55,751 - INFO - [b11e2c35] POST /auth/register | Status: 422 | Time: 18.53 ms | Client: testclient
+2026-08-08 08:34:55,762 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 422 Unprocessable Entity"
+2026-08-08 08:34:55,780 - INFO - [45fbf5f2] Incoming Request: GET /auth/me | Client: testclient
+2026-08-08 08:34:55,787 - INFO - [45fbf5f2] GET /auth/me | Status: 401 | Time: 6.87 ms | Client: testclient
+2026-08-08 08:34:55,798 - INFO - HTTP Request: GET http://testserver/auth/me "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:34:55,818 - INFO - [0a41856a] Incoming Request: GET /auth/me | Client: testclient
+2026-08-08 08:34:55,836 - INFO - [0a41856a] GET /auth/me | Status: 401 | Time: 18.24 ms | Client: testclient
+2026-08-08 08:34:55,846 - INFO - HTTP Request: GET http://testserver/auth/me "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:34:55,863 - INFO - [85ccbe44] Incoming Request: GET /auth/me | Client: testclient
+2026-08-08 08:34:55,867 - INFO - [85ccbe44] GET /auth/me | Status: 401 | Time: 4.69 ms | Client: testclient
+2026-08-08 08:34:55,877 - INFO - HTTP Request: GET http://testserver/auth/me "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:34:55,903 - INFO - [4a68cabc] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:34:56,857 - INFO - [4a68cabc] POST /auth/register | Status: 201 | Time: 954.56 ms | Client: testclient
+2026-08-08 08:34:58,707 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:34:58,729 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:34:58,739 - INFO - [b1c74e80] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:34:58,739 - INFO - Login attempt for username: user_567164ac
+2026-08-08 08:34:59,709 - INFO - User logged in successfully: user_567164ac
+2026-08-08 08:34:59,714 - INFO - [b1c74e80] POST /auth/login | Status: 200 | Time: 974.06 ms | Client: testclient
+2026-08-08 08:34:59,720 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:34:59,732 - INFO - [64ed6cc1] Incoming Request: POST /auth/refresh | Client: testclient
+2026-08-08 08:34:59,765 - INFO - [64ed6cc1] POST /auth/refresh | Status: 200 | Time: 33.19 ms | Client: testclient
+2026-08-08 08:34:59,773 - INFO - HTTP Request: POST http://testserver/auth/refresh "HTTP/1.1 200 OK"
+2026-08-08 08:34:59,791 - INFO - [0100c47a] Incoming Request: POST /auth/refresh | Client: testclient
+2026-08-08 08:34:59,806 - INFO - [0100c47a] POST /auth/refresh | Status: 401 | Time: 19.01 ms | Client: testclient
+2026-08-08 08:34:59,819 - INFO - HTTP Request: POST http://testserver/auth/refresh "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:34:59,840 - INFO - [7abcb6aa] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:00,781 - INFO - [7abcb6aa] POST /auth/register | Status: 201 | Time: 940.76 ms | Client: testclient
+2026-08-08 08:35:02,196 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:02,213 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:02,222 - INFO - [0ab4b14d] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:35:02,233 - INFO - Login attempt for username: test_user_b56b7aa9
+2026-08-08 08:35:03,158 - INFO - User logged in successfully: test_user_b56b7aa9
+2026-08-08 08:35:03,162 - INFO - [0ab4b14d] POST /auth/login | Status: 200 | Time: 939.82 ms | Client: testclient
+2026-08-08 08:35:03,168 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:35:03,179 - INFO - [2f8a1004] Incoming Request: POST /auth/logout | Client: testclient
+2026-08-08 08:35:03,218 - INFO - User logged out: test_user_b56b7aa9
+2026-08-08 08:35:03,218 - INFO - [2f8a1004] POST /auth/logout | Status: 200 | Time: 38.59 ms | Client: testclient
+2026-08-08 08:35:03,232 - INFO - HTTP Request: POST http://testserver/auth/logout "HTTP/1.1 200 OK"
+2026-08-08 08:35:03,254 - INFO - [50d12390] Incoming Request: POST /auth/logout | Client: testclient
+2026-08-08 08:35:03,259 - INFO - [50d12390] POST /auth/logout | Status: 401 | Time: 5.33 ms | Client: testclient
+2026-08-08 08:35:03,270 - INFO - HTTP Request: POST http://testserver/auth/logout "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:35:03,292 - INFO - [8ef243c7] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:04,240 - INFO - [8ef243c7] POST /auth/register | Status: 201 | Time: 948.05 ms | Client: testclient
+2026-08-08 08:35:05,977 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:05,999 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:06,003 - INFO - [269733d2] Incoming Request: POST /auth/forgot-password | Client: testclient
+2026-08-08 08:35:07,416 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:07,416 - INFO - [269733d2] POST /auth/forgot-password | Status: 200 | Time: 1413.26 ms | Client: testclient
+2026-08-08 08:35:07,437 - INFO - HTTP Request: POST http://testserver/auth/forgot-password "HTTP/1.1 200 OK"
+2026-08-08 08:35:07,450 - INFO - [fafbcb88] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:08,329 - INFO - [fafbcb88] POST /auth/register | Status: 201 | Time: 879.55 ms | Client: testclient
+2026-08-08 08:35:15,782 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:15,803 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:15,815 - INFO - [3da50011] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:35:15,835 - INFO - Login attempt for username: user_8399f302
+2026-08-08 08:35:16,893 - INFO - User logged in successfully: user_8399f302
+2026-08-08 08:35:16,899 - INFO - [3da50011] POST /auth/login | Status: 200 | Time: 1085.65 ms | Client: testclient
+2026-08-08 08:35:16,916 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:35:16,930 - INFO - [fe907f9b] Incoming Request: POST /auth/logout | Client: testclient
+2026-08-08 08:35:16,970 - INFO - User logged out: user_8399f302
+2026-08-08 08:35:16,972 - INFO - [fe907f9b] POST /auth/logout | Status: 200 | Time: 42.2 ms | Client: testclient
+2026-08-08 08:35:16,985 - INFO - HTTP Request: POST http://testserver/auth/logout "HTTP/1.1 200 OK"
+2026-08-08 08:35:17,002 - INFO - [9074d735] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:17,993 - INFO - [9074d735] POST /auth/register | Status: 201 | Time: 991.21 ms | Client: testclient
+2026-08-08 08:35:19,399 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:19,416 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:19,420 - INFO - [369cbad5] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:35:19,432 - INFO - Login attempt for username: user_02f6e965
+2026-08-08 08:35:19,969 - INFO - User logged in successfully: user_02f6e965
+2026-08-08 08:35:19,971 - INFO - [369cbad5] POST /auth/login | Status: 200 | Time: 551.51 ms | Client: testclient
+2026-08-08 08:35:19,983 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:35:19,993 - INFO - [3ba00c5e] Incoming Request: POST /auth/logout | Client: testclient
+2026-08-08 08:35:20,021 - INFO - User logged out: user_02f6e965
+2026-08-08 08:35:20,024 - INFO - [3ba00c5e] POST /auth/logout | Status: 200 | Time: 32.32 ms | Client: testclient
+2026-08-08 08:35:20,032 - INFO - HTTP Request: POST http://testserver/auth/logout "HTTP/1.1 200 OK"
+2026-08-08 08:35:20,038 - INFO - [b085c586] Incoming Request: POST /auth/refresh | Client: testclient
+2026-08-08 08:35:20,060 - INFO - [b085c586] POST /auth/refresh | Status: 401 | Time: 21.34 ms | Client: testclient
+2026-08-08 08:35:20,066 - INFO - HTTP Request: POST http://testserver/auth/refresh "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:35:20,078 - INFO - [efa05e3e] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:20,696 - INFO - [efa05e3e] POST /auth/register | Status: 201 | Time: 617.07 ms | Client: testclient
+2026-08-08 08:35:21,648 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:21,660 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:21,664 - INFO - [55d584ff] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:21,680 - INFO - [55d584ff] POST /auth/register | Status: 400 | Time: 15.81 ms | Client: testclient
+2026-08-08 08:35:21,683 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 400 Bad Request"
+2026-08-08 08:35:21,691 - INFO - [535ddeb9] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:22,105 - INFO - [535ddeb9] POST /auth/register | Status: 201 | Time: 414.09 ms | Client: testclient
+2026-08-08 08:35:22,871 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:22,889 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:22,895 - INFO - [43363025] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:35:22,900 - INFO - Login attempt for username: deleted_user_cba5a8c7
+2026-08-08 08:35:23,445 - INFO - User logged in successfully: deleted_user_cba5a8c7
+2026-08-08 08:35:23,448 - INFO - [43363025] POST /auth/login | Status: 200 | Time: 551.59 ms | Client: testclient
+2026-08-08 08:35:23,454 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:35:23,475 - INFO - [2879f8ff] Incoming Request: POST /auth/refresh | Client: testclient
+2026-08-08 08:35:23,487 - INFO - [2879f8ff] POST /auth/refresh | Status: 401 | Time: 12.26 ms | Client: testclient
+2026-08-08 08:35:23,492 - INFO - HTTP Request: POST http://testserver/auth/refresh "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:35:23,497 - INFO - [f2d685db] Incoming Request: POST /auth/forgot-password | Client: testclient
+2026-08-08 08:35:23,512 - INFO - [f2d685db] POST /auth/forgot-password | Status: 200 | Time: 14.63 ms | Client: testclient
+2026-08-08 08:35:23,519 - INFO - HTTP Request: POST http://testserver/auth/forgot-password "HTTP/1.1 200 OK"
+2026-08-08 08:35:23,527 - INFO - [cb8d16df] Incoming Request: POST /auth/reset-password | Client: testclient
+2026-08-08 08:35:23,554 - INFO - [cb8d16df] POST /auth/reset-password | Status: 400 | Time: 27.1 ms | Client: testclient
+2026-08-08 08:35:23,559 - INFO - HTTP Request: POST http://testserver/auth/reset-password "HTTP/1.1 400 Bad Request"
+2026-08-08 08:35:23,568 - INFO - [dc222cfe] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:24,039 - INFO - [dc222cfe] POST /auth/register | Status: 201 | Time: 470.95 ms | Client: testclient
+2026-08-08 08:35:24,891 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:24,901 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:24,941 - INFO - [d647d62a] Incoming Request: POST /auth/reset-password | Client: testclient
+2026-08-08 08:35:24,959 - INFO - [d647d62a] POST /auth/reset-password | Status: 400 | Time: 18.66 ms | Client: testclient
+2026-08-08 08:35:24,964 - INFO - HTTP Request: POST http://testserver/auth/reset-password "HTTP/1.1 400 Bad Request"
+2026-08-08 08:35:24,970 - INFO - [37b6693a] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:25,446 - INFO - [37b6693a] POST /auth/register | Status: 201 | Time: 476.29 ms | Client: testclient
+2026-08-08 08:35:26,975 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:26,992 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:27,033 - INFO - [e4318ff3] Incoming Request: POST /auth/reset-password | Client: testclient
+2026-08-08 08:35:27,593 - INFO - [e4318ff3] POST /auth/reset-password | Status: 200 | Time: 559.9 ms | Client: testclient
+2026-08-08 08:35:27,602 - INFO - HTTP Request: POST http://testserver/auth/reset-password "HTTP/1.1 200 OK"
+2026-08-08 08:35:27,618 - INFO - [1d3f3c81] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:28,220 - INFO - [1d3f3c81] POST /auth/register | Status: 201 | Time: 603.39 ms | Client: testclient
+2026-08-08 08:35:29,176 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:29,194 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:29,237 - INFO - [5e5ca39f] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:35:29,255 - INFO - Login attempt for username: admin_fab8b3b2
+2026-08-08 08:35:29,724 - INFO - User logged in successfully: admin_fab8b3b2
+2026-08-08 08:35:29,726 - INFO - [5e5ca39f] POST /auth/login | Status: 200 | Time: 489.43 ms | Client: testclient
+2026-08-08 08:35:29,733 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:35:29,739 - INFO - [f6e67b50] Incoming Request: GET /auth/admin | Client: testclient
+2026-08-08 08:35:29,758 - INFO - [f6e67b50] GET /auth/admin | Status: 200 | Time: 19.28 ms | Client: testclient
+2026-08-08 08:35:29,767 - INFO - HTTP Request: GET http://testserver/auth/admin "HTTP/1.1 200 OK"
+2026-08-08 08:35:29,774 - INFO - [a5dc4c53] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:30,372 - INFO - [a5dc4c53] POST /auth/register | Status: 201 | Time: 598.05 ms | Client: testclient
+2026-08-08 08:35:31,684 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:31,705 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:31,711 - INFO - [aa0738e3] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:35:31,727 - INFO - Login attempt for username: user_45fb021e
+2026-08-08 08:35:32,665 - INFO - User logged in successfully: user_45fb021e
+2026-08-08 08:35:32,669 - INFO - [aa0738e3] POST /auth/login | Status: 200 | Time: 957.53 ms | Client: testclient
+2026-08-08 08:35:32,681 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:35:32,686 - INFO - [6f80cdf0] Incoming Request: GET /auth/admin | Client: testclient
+2026-08-08 08:35:32,711 - INFO - [6f80cdf0] GET /auth/admin | Status: 403 | Time: 24.71 ms | Client: testclient
+2026-08-08 08:35:32,719 - INFO - HTTP Request: GET http://testserver/auth/admin "HTTP/1.1 403 Forbidden"
+2026-08-08 08:35:32,735 - INFO - [fd6b964f] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:33,687 - INFO - [fd6b964f] POST /auth/register | Status: 201 | Time: 951.51 ms | Client: testclient
+2026-08-08 08:35:34,962 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:34,982 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:34,985 - INFO - [a8130953] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:35:35,002 - INFO - Login attempt for username: test_user_4936936c
+2026-08-08 08:35:35,949 - INFO - User logged in successfully: test_user_4936936c
+2026-08-08 08:35:35,954 - INFO - [a8130953] POST /auth/login | Status: 200 | Time: 968.49 ms | Client: testclient
+2026-08-08 08:35:35,960 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:35:35,973 - INFO - [51bb9bd4] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:35:36,033 - INFO - [51bb9bd4] POST /companies/ | Status: 201 | Time: 60.65 ms | Client: testclient
+2026-08-08 08:35:36,045 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:35:36,057 - INFO - [0d9f464d] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:36,947 - INFO - [0d9f464d] POST /auth/register | Status: 201 | Time: 890.35 ms | Client: testclient
+2026-08-08 08:35:39,190 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:39,212 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:39,221 - INFO - [4db6fd4b] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:35:39,229 - INFO - Login attempt for username: test_user_a8d518ca
+2026-08-08 08:35:40,046 - INFO - User logged in successfully: test_user_a8d518ca
+2026-08-08 08:35:40,050 - INFO - [4db6fd4b] POST /auth/login | Status: 200 | Time: 828.72 ms | Client: testclient
+2026-08-08 08:35:40,065 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:35:40,087 - INFO - [1db6d3ba] Incoming Request: GET /companies/ | Client: testclient
+2026-08-08 08:35:40,156 - INFO - [1db6d3ba] GET /companies/ | Status: 200 | Time: 69.52 ms | Client: testclient
+2026-08-08 08:35:40,173 - INFO - HTTP Request: GET http://testserver/companies/ "HTTP/1.1 200 OK"
+2026-08-08 08:35:40,193 - INFO - [1e7c83f3] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:41,063 - INFO - [1e7c83f3] POST /auth/register | Status: 201 | Time: 869.27 ms | Client: testclient
+2026-08-08 08:35:42,748 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:42,768 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:42,775 - INFO - [4c9135a6] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:35:42,794 - INFO - Login attempt for username: test_user_625a4b76
+2026-08-08 08:35:43,749 - INFO - User logged in successfully: test_user_625a4b76
+2026-08-08 08:35:43,753 - INFO - [4c9135a6] POST /auth/login | Status: 200 | Time: 977.75 ms | Client: testclient
+2026-08-08 08:35:43,764 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:35:43,773 - INFO - [625adc6a] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:35:43,824 - INFO - [625adc6a] POST /companies/ | Status: 201 | Time: 50.5 ms | Client: testclient
+2026-08-08 08:35:43,839 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:35:43,843 - INFO - [8a6c9c41] Incoming Request: GET /companies/ | Client: testclient
+2026-08-08 08:35:43,893 - INFO - [8a6c9c41] GET /companies/ | Status: 200 | Time: 50.04 ms | Client: testclient
+2026-08-08 08:35:43,908 - INFO - HTTP Request: GET http://testserver/companies/?search=Searchable "HTTP/1.1 200 OK"
+2026-08-08 08:35:43,922 - INFO - [20914ef6] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:44,880 - INFO - [20914ef6] POST /auth/register | Status: 201 | Time: 958.72 ms | Client: testclient
+2026-08-08 08:35:46,506 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:46,524 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:46,534 - INFO - [6daa53f0] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:35:46,551 - INFO - Login attempt for username: test_user_8d39e077
+2026-08-08 08:35:47,414 - INFO - User logged in successfully: test_user_8d39e077
+2026-08-08 08:35:47,419 - INFO - [6daa53f0] POST /auth/login | Status: 200 | Time: 884.3 ms | Client: testclient
+2026-08-08 08:35:47,428 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:35:47,439 - INFO - [4d1cb6b4] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:35:47,487 - INFO - [4d1cb6b4] POST /companies/ | Status: 201 | Time: 48.93 ms | Client: testclient
+2026-08-08 08:35:47,501 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:35:47,507 - INFO - [2e436871] Incoming Request: GET /companies/ | Client: testclient
+2026-08-08 08:35:47,552 - INFO - [2e436871] GET /companies/ | Status: 200 | Time: 43.87 ms | Client: testclient
+2026-08-08 08:35:47,565 - INFO - HTTP Request: GET http://testserver/companies/?industry=Healthcare "HTTP/1.1 200 OK"
+2026-08-08 08:35:47,582 - INFO - [89fe8007] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:48,512 - INFO - [89fe8007] POST /auth/register | Status: 201 | Time: 930.08 ms | Client: testclient
+2026-08-08 08:35:50,116 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:50,134 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:50,139 - INFO - [f8f986f2] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:35:50,150 - INFO - Login attempt for username: test_user_e77b41b6
+2026-08-08 08:35:51,064 - INFO - User logged in successfully: test_user_e77b41b6
+2026-08-08 08:35:51,070 - INFO - [f8f986f2] POST /auth/login | Status: 200 | Time: 930.31 ms | Client: testclient
+2026-08-08 08:35:51,090 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:35:51,103 - INFO - [67112aa4] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:35:51,156 - INFO - [67112aa4] POST /companies/ | Status: 201 | Time: 53.29 ms | Client: testclient
+2026-08-08 08:35:51,170 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:35:51,177 - INFO - [bdd996da] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:35:51,226 - INFO - [bdd996da] POST /companies/ | Status: 201 | Time: 48.74 ms | Client: testclient
+2026-08-08 08:35:51,240 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:35:51,255 - INFO - [2a2cbccf] Incoming Request: GET /companies/ | Client: testclient
+2026-08-08 08:35:51,308 - INFO - [2a2cbccf] GET /companies/ | Status: 200 | Time: 55.08 ms | Client: testclient
+2026-08-08 08:35:51,334 - INFO - HTTP Request: GET http://testserver/companies/?sort_by=company_name&order=desc "HTTP/1.1 200 OK"
+2026-08-08 08:35:51,357 - INFO - [7025172f] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:52,217 - INFO - [7025172f] POST /auth/register | Status: 201 | Time: 860.72 ms | Client: testclient
+2026-08-08 08:35:53,186 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:53,199 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:53,204 - INFO - [a54d7824] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:35:53,212 - INFO - Login attempt for username: test_user_5009c0f2
+2026-08-08 08:35:53,666 - INFO - User logged in successfully: test_user_5009c0f2
+2026-08-08 08:35:53,669 - INFO - [a54d7824] POST /auth/login | Status: 200 | Time: 465.19 ms | Client: testclient
+2026-08-08 08:35:53,676 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:35:53,680 - INFO - [453d211f] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:35:53,713 - INFO - [453d211f] POST /companies/ | Status: 201 | Time: 32.8 ms | Client: testclient
+2026-08-08 08:35:53,719 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:35:53,723 - INFO - [59fc5f62] Incoming Request: GET /companies/402 | Client: testclient
+2026-08-08 08:35:53,740 - INFO - [59fc5f62] GET /companies/402 | Status: 200 | Time: 16.84 ms | Client: testclient
+2026-08-08 08:35:53,748 - INFO - HTTP Request: GET http://testserver/companies/402 "HTTP/1.1 200 OK"
+2026-08-08 08:35:53,755 - INFO - [66275e15] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:35:53,759 - INFO - [66275e15] POST /companies/ | Status: 401 | Time: 4.03 ms | Client: testclient
+2026-08-08 08:35:53,761 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:35:53,771 - INFO - [dc51e4d8] Incoming Request: GET /companies/ | Client: testclient
+2026-08-08 08:35:53,784 - INFO - [dc51e4d8] GET /companies/ | Status: 401 | Time: 13.09 ms | Client: testclient
+2026-08-08 08:35:53,786 - INFO - HTTP Request: GET http://testserver/companies/ "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:35:53,803 - INFO - [5ba362d6] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:54,232 - INFO - [5ba362d6] POST /auth/register | Status: 201 | Time: 429.86 ms | Client: testclient
+2026-08-08 08:35:55,440 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:55,452 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:55,461 - INFO - [37b6b28c] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:35:55,468 - INFO - Login attempt for username: test_user_544542aa
+2026-08-08 08:35:55,921 - INFO - User logged in successfully: test_user_544542aa
+2026-08-08 08:35:55,924 - INFO - [37b6b28c] POST /auth/login | Status: 200 | Time: 462.7 ms | Client: testclient
+2026-08-08 08:35:55,934 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:35:55,944 - INFO - [a7e43be3] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:35:56,040 - WARNING - Validation Error: [{'field': 'body.email', 'message': 'Field required'}]
+2026-08-08 08:35:56,042 - INFO - [a7e43be3] POST /companies/ | Status: 422 | Time: 97.48 ms | Client: testclient
+2026-08-08 08:35:56,047 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 422 Unprocessable Entity"
+2026-08-08 08:35:56,053 - INFO - [ecf7f669] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:56,511 - INFO - [ecf7f669] POST /auth/register | Status: 201 | Time: 457.89 ms | Client: testclient
+2026-08-08 08:35:57,510 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:35:57,522 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:35:57,529 - INFO - [56dff835] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:35:57,539 - INFO - Login attempt for username: test_user_431d74e3
+2026-08-08 08:35:58,028 - INFO - User logged in successfully: test_user_431d74e3
+2026-08-08 08:35:58,030 - INFO - [56dff835] POST /auth/login | Status: 200 | Time: 500.35 ms | Client: testclient
+2026-08-08 08:35:58,037 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:35:58,039 - INFO - [da6ee7d7] Incoming Request: GET /companies/999999 | Client: testclient
+2026-08-08 08:35:58,064 - INFO - [da6ee7d7] GET /companies/999999 | Status: 404 | Time: 24.45 ms | Client: testclient
+2026-08-08 08:35:58,077 - INFO - HTTP Request: GET http://testserver/companies/999999 "HTTP/1.1 404 Not Found"
+2026-08-08 08:35:58,088 - INFO - [d07ffd70] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:35:58,606 - INFO - [d07ffd70] POST /auth/register | Status: 201 | Time: 518.09 ms | Client: testclient
+2026-08-08 08:36:03,292 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:36:03,305 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:36:03,314 - INFO - [809f3aba] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:36:03,320 - INFO - Login attempt for username: test_user_5ad3c5d8
+2026-08-08 08:36:03,729 - INFO - User logged in successfully: test_user_5ad3c5d8
+2026-08-08 08:36:03,732 - INFO - [809f3aba] POST /auth/login | Status: 200 | Time: 416.78 ms | Client: testclient
+2026-08-08 08:36:03,741 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:36:03,743 - INFO - [f9b081dd] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:36:03,779 - INFO - [f9b081dd] POST /companies/ | Status: 201 | Time: 36.38 ms | Client: testclient
+2026-08-08 08:36:03,787 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:36:03,787 - INFO - [2dbaf910] Incoming Request: PUT /companies/403 | Client: testclient
+2026-08-08 08:36:03,828 - INFO - [2dbaf910] PUT /companies/403 | Status: 200 | Time: 40.14 ms | Client: testclient
+2026-08-08 08:36:03,835 - INFO - HTTP Request: PUT http://testserver/companies/403 "HTTP/1.1 200 OK"
+2026-08-08 08:36:03,843 - INFO - [951fcd35] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:36:04,376 - INFO - [951fcd35] POST /auth/register | Status: 201 | Time: 532.82 ms | Client: testclient
+2026-08-08 08:36:05,435 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:36:05,458 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:36:05,465 - INFO - [1ddcd34c] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:36:05,480 - INFO - Login attempt for username: test_user_73139528
+2026-08-08 08:36:06,426 - INFO - User logged in successfully: test_user_73139528
+2026-08-08 08:36:06,430 - INFO - [1ddcd34c] POST /auth/login | Status: 200 | Time: 964.27 ms | Client: testclient
+2026-08-08 08:36:06,437 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:36:06,448 - INFO - [2d2d0fad] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:36:06,501 - INFO - [2d2d0fad] POST /companies/ | Status: 201 | Time: 53.4 ms | Client: testclient
+2026-08-08 08:36:06,512 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:36:06,519 - INFO - [e47fd4f7] Incoming Request: DELETE /companies/404 | Client: testclient
+2026-08-08 08:36:06,561 - INFO - [e47fd4f7] DELETE /companies/404 | Status: 200 | Time: 42.39 ms | Client: testclient
+2026-08-08 08:36:06,569 - INFO - HTTP Request: DELETE http://testserver/companies/404 "HTTP/1.1 200 OK"
+2026-08-08 08:36:06,587 - INFO - [f73a3aa0] Incoming Request: DELETE /companies/999999 | Client: testclient
+2026-08-08 08:36:06,602 - INFO - [f73a3aa0] DELETE /companies/999999 | Status: 401 | Time: 15.03 ms | Client: testclient
+2026-08-08 08:36:06,612 - INFO - HTTP Request: DELETE http://testserver/companies/999999 "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:36:06,634 - INFO - [a84840ba] Incoming Request: PUT /companies/999999 | Client: testclient
+2026-08-08 08:36:06,648 - INFO - [a84840ba] PUT /companies/999999 | Status: 401 | Time: 14.01 ms | Client: testclient
+2026-08-08 08:36:06,654 - INFO - HTTP Request: PUT http://testserver/companies/999999 "HTTP/1.1 401 Unauthorized"
+2026-08-08 08:36:06,674 - INFO - [adc242ba] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:36:07,693 - INFO - [adc242ba] POST /auth/register | Status: 201 | Time: 1018.74 ms | Client: testclient
+2026-08-08 08:36:09,571 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:36:09,590 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:36:09,594 - INFO - [1b54ba2b] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:36:09,600 - INFO - Login attempt for username: test_user_be3585e2
+2026-08-08 08:36:10,530 - INFO - User logged in successfully: test_user_be3585e2
+2026-08-08 08:36:10,534 - INFO - [1b54ba2b] POST /auth/login | Status: 200 | Time: 939.36 ms | Client: testclient
+2026-08-08 08:36:10,541 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:36:10,554 - INFO - [10f5d0f7] Incoming Request: PUT /companies/999999 | Client: testclient
+2026-08-08 08:36:10,587 - INFO - [10f5d0f7] PUT /companies/999999 | Status: 404 | Time: 32.68 ms | Client: testclient
+2026-08-08 08:36:10,597 - INFO - HTTP Request: PUT http://testserver/companies/999999 "HTTP/1.1 404 Not Found"
+2026-08-08 08:36:10,613 - INFO - [d3f0c039] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:36:11,547 - INFO - [d3f0c039] POST /auth/register | Status: 201 | Time: 933.14 ms | Client: testclient
+2026-08-08 08:36:13,136 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:36:13,152 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:36:13,162 - INFO - [b8838afc] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:36:13,169 - INFO - Login attempt for username: test_user_f3dd1375
+2026-08-08 08:36:13,980 - INFO - User logged in successfully: test_user_f3dd1375
+2026-08-08 08:36:13,984 - INFO - [b8838afc] POST /auth/login | Status: 200 | Time: 822.58 ms | Client: testclient
+2026-08-08 08:36:13,997 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:36:14,006 - INFO - [ef0d10fa] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:36:14,056 - INFO - [ef0d10fa] POST /companies/ | Status: 201 | Time: 49.55 ms | Client: testclient
+2026-08-08 08:36:14,069 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:36:14,073 - INFO - [73dc3299] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:36:14,971 - INFO - [73dc3299] POST /auth/register | Status: 201 | Time: 898.59 ms | Client: testclient
+2026-08-08 08:36:16,943 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:36:16,956 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:36:16,972 - INFO - [d62469b2] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:36:16,984 - INFO - Login attempt for username: other_user_24c4f8bc
+2026-08-08 08:36:17,968 - INFO - User logged in successfully: other_user_24c4f8bc
+2026-08-08 08:36:17,974 - INFO - [d62469b2] POST /auth/login | Status: 200 | Time: 1002.18 ms | Client: testclient
+2026-08-08 08:36:17,989 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:36:17,998 - INFO - [9612f4a9] Incoming Request: GET /companies/405 | Client: testclient
+2026-08-08 08:36:18,029 - INFO - [9612f4a9] GET /companies/405 | Status: 404 | Time: 30.58 ms | Client: testclient
+2026-08-08 08:36:18,039 - INFO - HTTP Request: GET http://testserver/companies/405 "HTTP/1.1 404 Not Found"
+2026-08-08 08:36:18,050 - INFO - [cf582e36] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:36:19,029 - INFO - [cf582e36] POST /auth/register | Status: 201 | Time: 979.57 ms | Client: testclient
+2026-08-08 08:36:24,105 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:36:24,130 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:36:24,137 - INFO - [c0efabfd] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:36:24,153 - INFO - Login attempt for username: test_user_47b8ba2f
+2026-08-08 08:36:25,122 - INFO - User logged in successfully: test_user_47b8ba2f
+2026-08-08 08:36:25,126 - INFO - [c0efabfd] POST /auth/login | Status: 200 | Time: 988.27 ms | Client: testclient
+2026-08-08 08:36:25,137 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:36:25,142 - INFO - [0db64bee] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:36:25,194 - INFO - [0db64bee] POST /companies/ | Status: 201 | Time: 51.82 ms | Client: testclient
+2026-08-08 08:36:25,206 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:36:25,210 - INFO - [0f6738d5] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:36:25,245 - INFO - [0f6738d5] POST /companies/ | Status: 400 | Time: 34.49 ms | Client: testclient
+2026-08-08 08:36:25,253 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 400 Bad Request"
+2026-08-08 08:36:25,272 - INFO - [7a4e5ae3] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:36:26,275 - INFO - [7a4e5ae3] POST /auth/register | Status: 201 | Time: 1003.31 ms | Client: testclient
+2026-08-08 08:36:27,702 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:36:27,717 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:36:27,722 - INFO - [f1584755] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:36:27,738 - INFO - Login attempt for username: test_user_10f2125d
+2026-08-08 08:36:28,724 - INFO - User logged in successfully: test_user_10f2125d
+2026-08-08 08:36:28,730 - INFO - [f1584755] POST /auth/login | Status: 200 | Time: 1006.91 ms | Client: testclient
+2026-08-08 08:36:28,735 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:36:28,748 - INFO - [68fa0737] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:36:28,797 - INFO - [68fa0737] POST /companies/ | Status: 201 | Time: 47.74 ms | Client: testclient
+2026-08-08 08:36:28,808 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:36:28,813 - INFO - [c97f411d] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:36:29,811 - INFO - [c97f411d] POST /auth/register | Status: 201 | Time: 997.65 ms | Client: testclient
+2026-08-08 08:36:31,579 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:36:31,606 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:36:31,611 - INFO - [b179bf2e] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:36:31,623 - INFO - Login attempt for username: other_update_06ea708a
+2026-08-08 08:36:32,608 - INFO - User logged in successfully: other_update_06ea708a
+2026-08-08 08:36:32,612 - INFO - [b179bf2e] POST /auth/login | Status: 200 | Time: 1001.03 ms | Client: testclient
+2026-08-08 08:36:32,623 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:36:32,634 - INFO - [5fbc4cc7] Incoming Request: PUT /companies/407 | Client: testclient
+2026-08-08 08:36:32,664 - INFO - [5fbc4cc7] PUT /companies/407 | Status: 404 | Time: 32.17 ms | Client: testclient
+2026-08-08 08:36:32,673 - INFO - HTTP Request: PUT http://testserver/companies/407 "HTTP/1.1 404 Not Found"
+2026-08-08 08:36:32,687 - INFO - [a97c83e6] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:36:33,768 - INFO - [a97c83e6] POST /auth/register | Status: 201 | Time: 1080.59 ms | Client: testclient
+2026-08-08 08:36:36,809 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:36:36,828 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:36:36,833 - INFO - [d0344e1b] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:36:36,849 - INFO - Login attempt for username: test_user_58cbaed4
+2026-08-08 08:36:37,831 - INFO - User logged in successfully: test_user_58cbaed4
+2026-08-08 08:36:37,834 - INFO - [d0344e1b] POST /auth/login | Status: 200 | Time: 1001.27 ms | Client: testclient
+2026-08-08 08:36:37,845 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:36:37,857 - INFO - [b2f3d9cc] Incoming Request: POST /companies/ | Client: testclient
+2026-08-08 08:36:37,900 - INFO - [b2f3d9cc] POST /companies/ | Status: 201 | Time: 50.46 ms | Client: testclient
+2026-08-08 08:36:37,906 - INFO - HTTP Request: POST http://testserver/companies/ "HTTP/1.1 201 Created"
+2026-08-08 08:36:37,920 - INFO - [43f75dea] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:36:38,930 - INFO - [43f75dea] POST /auth/register | Status: 201 | Time: 1009.89 ms | Client: testclient
+2026-08-08 08:36:40,498 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:36:40,514 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:36:40,522 - INFO - [94fac6be] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:36:40,534 - INFO - Login attempt for username: other_delete_e00b9c92
+2026-08-08 08:36:41,499 - INFO - User logged in successfully: other_delete_e00b9c92
+2026-08-08 08:36:41,503 - INFO - [94fac6be] POST /auth/login | Status: 200 | Time: 980.8 ms | Client: testclient
+2026-08-08 08:36:41,509 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:36:41,517 - INFO - [0bba3332] Incoming Request: DELETE /companies/408 | Client: testclient
+2026-08-08 08:36:41,550 - INFO - [0bba3332] DELETE /companies/408 | Status: 404 | Time: 32.94 ms | Client: testclient
+2026-08-08 08:36:41,559 - INFO - HTTP Request: DELETE http://testserver/companies/408 "HTTP/1.1 404 Not Found"
+2026-08-08 08:36:41,562 - INFO - [d1e2878e] Incoming Request: POST /auth/register | Client: testclient
+2026-08-08 08:36:42,563 - INFO - [d1e2878e] POST /auth/register | Status: 201 | Time: 1000.62 ms | Client: testclient
+2026-08-08 08:36:44,184 - ERROR - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-08 08:36:44,201 - INFO - HTTP Request: POST http://testserver/auth/register "HTTP/1.1 201 Created"
+2026-08-08 08:36:44,205 - INFO - [1102f462] Incoming Request: POST /auth/login | Client: testclient
+2026-08-08 08:36:44,222 - INFO - Login attempt for username: test_user_4e14f576
+2026-08-08 08:36:45,205 - INFO - User logged in successfully: test_user_4e14f576
+2026-08-08 08:36:45,208 - INFO - [1102f462] POST /auth/login | Status: 200 | Time: 1003.46 ms | Client: testclient
+2026-08-08 08:36:45,215 - INFO - HTTP Request: POST http://testserver/auth/login "HTTP/1.1 200 OK"
+2026-08-08 08:36:45,228 - INFO - [bf29d961] Incoming Request: DELETE /companies/999999 | Client: testclient
+2026-08-08 08:36:45,255 - INFO - [bf29d961] DELETE /companies/999999 | Status: 403 | Time: 27.55 ms | Client: testclient
+2026-08-08 08:36:45,262 - INFO - HTTP Request: DELETE http://testserver/companies/999999 "HTTP/1.1 403 Forbidden"
+2026-08-08 08:36:45,284 - INFO - [fad0f50f] Incoming Request: GET /health/ | Client: testclient
+2026-08-08 08:36:45,297 - INFO - Health endpoint accessed
+2026-08-08 08:36:45,300 - INFO - [fad0f50f] GET /health/ | Status: 200 | Time: 15.57 ms | Client: testclient
+2026-08-08 08:36:45,305 - INFO - HTTP Request: GET http://testserver/health/ "HTTP/1.1 200 OK"
+2026-08-08 08:36:45,337 - INFO - [b3cf8e64] Incoming Request: GET / | Client: testclient
+2026-08-08 08:36:45,354 - INFO - [b3cf8e64] GET / | Status: 200 | Time: 17.33 ms | Client: testclient
+2026-08-08 08:36:45,365 - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
