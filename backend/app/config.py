@@ -1,13 +1,12 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic import validator
 
 
 class Settings(BaseSettings):
-    # New settings
     environment: str = "development"
     debug: bool = False
     frontend_url: str = "http://localhost:5173"
 
-    # Existing settings
     database_url: str
     secret_key: str
     algorithm: str
@@ -17,7 +16,16 @@ class Settings(BaseSettings):
     resend_api_key: str
     email_from: str
 
-    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        extra="ignore",
+    )
+
+    @validator("debug")
+    def validate_debug(cls, value, values):
+        if values.get("environment", "").lower() == "production" and value:
+            raise ValueError("DEBUG must be False in production.")
+        return value
 
 
 settings = Settings()

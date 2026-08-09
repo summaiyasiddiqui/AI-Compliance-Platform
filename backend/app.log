@@ -16096,3 +16096,706 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2026-08-08 08:36:45,337 - INFO - [b3cf8e64] Incoming Request: GET / | Client: testclient
 2026-08-08 08:36:45,354 - INFO - [b3cf8e64] GET / | Status: 200 | Time: 17.33 ms | Client: testclient
 2026-08-08 08:36:45,365 - INFO - HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-08-09 08:32:09,152 - INFO - [d07351cb] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:32:09,164 - INFO - Health endpoint accessed
+2026-08-09 08:32:09,165 - INFO - [d07351cb] GET /health/ | Status: 200 | Time: 12.74 ms | Client: 127.0.0.1
+2026-08-09 08:32:19,429 - INFO - [bc7de65a] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:32:19,430 - INFO - Health endpoint accessed
+2026-08-09 08:32:19,430 - INFO - [bc7de65a] GET /health/ | Status: 200 | Time: 1.71 ms | Client: 127.0.0.1
+2026-08-09 08:32:29,708 - INFO - [b9b6fdea] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:32:29,709 - INFO - Health endpoint accessed
+2026-08-09 08:32:29,710 - INFO - [b9b6fdea] GET /health/ | Status: 200 | Time: 2.4 ms | Client: 127.0.0.1
+2026-08-09 08:32:39,983 - INFO - [90e94f3e] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:32:39,984 - INFO - Health endpoint accessed
+2026-08-09 08:32:39,985 - INFO - [90e94f3e] GET /health/ | Status: 200 | Time: 1.99 ms | Client: 127.0.0.1
+2026-08-09 08:32:41,915 - INFO - [82cfbb1a] Incoming Request: GET /health/ | Client: 172.19.0.1
+2026-08-09 08:32:41,916 - INFO - Health endpoint accessed
+2026-08-09 08:32:41,917 - INFO - [82cfbb1a] GET /health/ | Status: 200 | Time: 1.46 ms | Client: 172.19.0.1
+2026-08-09 08:32:50,218 - INFO - [854f5522] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:32:50,218 - INFO - Health endpoint accessed
+2026-08-09 08:32:50,219 - INFO - [854f5522] GET /health/ | Status: 200 | Time: 1.44 ms | Client: 127.0.0.1
+2026-08-09 08:33:00,518 - INFO - [23b0cfb6] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:33:00,519 - INFO - Health endpoint accessed
+2026-08-09 08:33:00,520 - INFO - [23b0cfb6] GET /health/ | Status: 200 | Time: 2.15 ms | Client: 127.0.0.1
+2026-08-09 08:33:10,785 - INFO - [7007a90e] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:33:10,786 - INFO - Health endpoint accessed
+2026-08-09 08:33:10,787 - INFO - [7007a90e] GET /health/ | Status: 200 | Time: 2.02 ms | Client: 127.0.0.1
+2026-08-09 08:33:21,047 - INFO - [eab2e835] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:33:21,048 - INFO - Health endpoint accessed
+2026-08-09 08:33:21,048 - INFO - [eab2e835] GET /health/ | Status: 200 | Time: 1.45 ms | Client: 127.0.0.1
+2026-08-09 08:33:30,260 - INFO - [a2d693cb] Incoming Request: GET /ready/ | Client: 172.19.0.1
+2026-08-09 08:33:30,324 - INFO - [a2d693cb] GET /ready/ | Status: 200 | Time: 64.6 ms | Client: 172.19.0.1
+2026-08-09 08:33:31,320 - INFO - [e6ac3782] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:33:31,321 - INFO - Health endpoint accessed
+2026-08-09 08:33:31,322 - INFO - [e6ac3782] GET /health/ | Status: 200 | Time: 1.65 ms | Client: 127.0.0.1
+2026-08-09 08:33:41,639 - INFO - [e6fa5680] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:33:41,640 - INFO - Health endpoint accessed
+2026-08-09 08:33:41,641 - INFO - [e6fa5680] GET /health/ | Status: 200 | Time: 2.43 ms | Client: 127.0.0.1
+2026-08-09 08:33:51,904 - INFO - [1f1cd0a1] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:33:51,905 - INFO - Health endpoint accessed
+2026-08-09 08:33:51,905 - INFO - [1f1cd0a1] GET /health/ | Status: 200 | Time: 1.45 ms | Client: 127.0.0.1
+2026-08-09 08:34:02,204 - INFO - [1ce62d09] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:34:02,205 - INFO - Health endpoint accessed
+2026-08-09 08:34:02,206 - INFO - [1ce62d09] GET /health/ | Status: 200 | Time: 1.45 ms | Client: 127.0.0.1
+2026-08-09 08:34:12,469 - INFO - [b77d5920] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:34:12,470 - INFO - Health endpoint accessed
+2026-08-09 08:34:12,471 - INFO - [b77d5920] GET /health/ | Status: 200 | Time: 1.62 ms | Client: 127.0.0.1
+2026-08-09 08:34:22,737 - INFO - [4080a439] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:34:22,738 - INFO - Health endpoint accessed
+2026-08-09 08:34:22,738 - INFO - [4080a439] GET /health/ | Status: 200 | Time: 1.46 ms | Client: 127.0.0.1
+2026-08-09 08:34:33,063 - INFO - [c4a0a8a9] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:34:33,064 - INFO - Health endpoint accessed
+2026-08-09 08:34:33,065 - INFO - [c4a0a8a9] GET /health/ | Status: 200 | Time: 2.05 ms | Client: 127.0.0.1
+2026-08-09 08:34:43,383 - INFO - [7ce90b7a] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:34:43,384 - INFO - Health endpoint accessed
+2026-08-09 08:34:43,384 - INFO - [7ce90b7a] GET /health/ | Status: 200 | Time: 2.14 ms | Client: 127.0.0.1
+2026-08-09 08:34:53,664 - INFO - [72735b63] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:34:53,666 - INFO - Health endpoint accessed
+2026-08-09 08:34:53,667 - INFO - [72735b63] GET /health/ | Status: 200 | Time: 2.87 ms | Client: 127.0.0.1
+2026-08-09 08:35:03,929 - INFO - [d996d4d6] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:35:03,932 - INFO - Health endpoint accessed
+2026-08-09 08:35:03,932 - INFO - [d996d4d6] GET /health/ | Status: 200 | Time: 3.49 ms | Client: 127.0.0.1
+2026-08-09 08:35:14,171 - INFO - [a72a5a9d] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:35:14,172 - INFO - Health endpoint accessed
+2026-08-09 08:35:14,172 - INFO - [a72a5a9d] GET /health/ | Status: 200 | Time: 1.52 ms | Client: 127.0.0.1
+2026-08-09 08:35:24,433 - INFO - [749326f2] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:35:24,434 - INFO - Health endpoint accessed
+2026-08-09 08:35:24,435 - INFO - [749326f2] GET /health/ | Status: 200 | Time: 2.26 ms | Client: 127.0.0.1
+2026-08-09 08:35:34,738 - INFO - [24191cd8] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:35:34,740 - INFO - Health endpoint accessed
+2026-08-09 08:35:34,740 - INFO - [24191cd8] GET /health/ | Status: 200 | Time: 1.79 ms | Client: 127.0.0.1
+2026-08-09 08:35:45,039 - INFO - [80a6ab17] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:35:45,040 - INFO - Health endpoint accessed
+2026-08-09 08:35:45,041 - INFO - [80a6ab17] GET /health/ | Status: 200 | Time: 1.6 ms | Client: 127.0.0.1
+2026-08-09 08:35:55,385 - INFO - [cd83ad90] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:35:55,386 - INFO - Health endpoint accessed
+2026-08-09 08:35:55,387 - INFO - [cd83ad90] GET /health/ | Status: 200 | Time: 1.76 ms | Client: 127.0.0.1
+2026-08-09 08:36:05,675 - INFO - [06ce81fd] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:36:05,675 - INFO - Health endpoint accessed
+2026-08-09 08:36:05,676 - INFO - [06ce81fd] GET /health/ | Status: 200 | Time: 1.53 ms | Client: 127.0.0.1
+2026-08-09 08:36:15,922 - INFO - [4ac579fb] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:36:15,923 - INFO - Health endpoint accessed
+2026-08-09 08:36:15,923 - INFO - [4ac579fb] GET /health/ | Status: 200 | Time: 1.5 ms | Client: 127.0.0.1
+2026-08-09 08:36:26,204 - INFO - [7f34bae2] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:36:26,206 - INFO - Health endpoint accessed
+2026-08-09 08:36:26,206 - INFO - [7f34bae2] GET /health/ | Status: 200 | Time: 1.79 ms | Client: 127.0.0.1
+2026-08-09 08:36:36,493 - INFO - [c378b44c] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:36:36,494 - INFO - Health endpoint accessed
+2026-08-09 08:36:36,495 - INFO - [c378b44c] GET /health/ | Status: 200 | Time: 1.63 ms | Client: 127.0.0.1
+2026-08-09 08:36:46,750 - INFO - [467d7315] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:36:46,751 - INFO - Health endpoint accessed
+2026-08-09 08:36:46,752 - INFO - [467d7315] GET /health/ | Status: 200 | Time: 2.0 ms | Client: 127.0.0.1
+2026-08-09 08:36:57,030 - INFO - [f7311840] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:36:57,032 - INFO - Health endpoint accessed
+2026-08-09 08:36:57,033 - INFO - [f7311840] GET /health/ | Status: 200 | Time: 2.26 ms | Client: 127.0.0.1
+2026-08-09 08:37:08,042 - INFO - [6e26b732] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:37:08,057 - INFO - Health endpoint accessed
+2026-08-09 08:37:08,058 - INFO - [6e26b732] GET /health/ | Status: 200 | Time: 16.35 ms | Client: 127.0.0.1
+2026-08-09 08:37:18,298 - INFO - [0497057c] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:37:18,299 - INFO - Health endpoint accessed
+2026-08-09 08:37:18,300 - INFO - [0497057c] GET /health/ | Status: 200 | Time: 1.53 ms | Client: 127.0.0.1
+2026-08-09 08:37:28,559 - INFO - [70b2dea2] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:37:28,561 - INFO - Health endpoint accessed
+2026-08-09 08:37:28,561 - INFO - [70b2dea2] GET /health/ | Status: 200 | Time: 1.93 ms | Client: 127.0.0.1
+2026-08-09 08:37:38,814 - INFO - [ef0159f0] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:37:38,815 - INFO - Health endpoint accessed
+2026-08-09 08:37:38,816 - INFO - [ef0159f0] GET /health/ | Status: 200 | Time: 1.63 ms | Client: 127.0.0.1
+2026-08-09 08:37:49,041 - INFO - [928d20da] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:37:49,042 - INFO - Health endpoint accessed
+2026-08-09 08:37:49,042 - INFO - [928d20da] GET /health/ | Status: 200 | Time: 1.38 ms | Client: 127.0.0.1
+2026-08-09 08:37:59,404 - INFO - [8c5e4996] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:37:59,406 - INFO - Health endpoint accessed
+2026-08-09 08:37:59,407 - INFO - [8c5e4996] GET /health/ | Status: 200 | Time: 2.59 ms | Client: 127.0.0.1
+2026-08-09 08:38:09,669 - INFO - [a4da3fbe] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:38:09,670 - INFO - Health endpoint accessed
+2026-08-09 08:38:09,670 - INFO - [a4da3fbe] GET /health/ | Status: 200 | Time: 1.83 ms | Client: 127.0.0.1
+2026-08-09 08:38:19,914 - INFO - [5dfefde4] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:38:19,915 - INFO - Health endpoint accessed
+2026-08-09 08:38:19,916 - INFO - [5dfefde4] GET /health/ | Status: 200 | Time: 1.52 ms | Client: 127.0.0.1
+2026-08-09 08:38:30,160 - INFO - [531fc818] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:38:30,162 - INFO - Health endpoint accessed
+2026-08-09 08:38:30,162 - INFO - [531fc818] GET /health/ | Status: 200 | Time: 1.96 ms | Client: 127.0.0.1
+2026-08-09 08:38:40,428 - INFO - [21b95b57] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:38:40,431 - INFO - Health endpoint accessed
+2026-08-09 08:38:40,431 - INFO - [21b95b57] GET /health/ | Status: 200 | Time: 3.26 ms | Client: 127.0.0.1
+2026-08-09 08:38:50,669 - INFO - [5071f94d] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:38:50,670 - INFO - Health endpoint accessed
+2026-08-09 08:38:50,671 - INFO - [5071f94d] GET /health/ | Status: 200 | Time: 1.98 ms | Client: 127.0.0.1
+2026-08-09 08:39:00,939 - INFO - [f0057e86] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:39:00,940 - INFO - Health endpoint accessed
+2026-08-09 08:39:00,940 - INFO - [f0057e86] GET /health/ | Status: 200 | Time: 1.6 ms | Client: 127.0.0.1
+2026-08-09 08:39:10,143 - INFO - complianceai - [36024c85] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:39:10,155 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:39:10,156 - INFO - complianceai - [36024c85] GET /health/ | Status: 200 | Time: 13.38 ms | Client: 127.0.0.1
+2026-08-09 08:39:15,680 - INFO - complianceai - [f3f684b9] Incoming Request: GET /health/ | Client: 172.19.0.1
+2026-08-09 08:39:15,682 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:39:15,683 - INFO - complianceai - [f3f684b9] GET /health/ | Status: 200 | Time: 2.97 ms | Client: 172.19.0.1
+2026-08-09 08:39:20,410 - INFO - complianceai - [25654812] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:39:20,411 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:39:20,412 - INFO - complianceai - [25654812] GET /health/ | Status: 200 | Time: 2.24 ms | Client: 127.0.0.1
+2026-08-09 08:39:30,665 - INFO - complianceai - [19f41c6f] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:39:30,667 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:39:30,668 - INFO - complianceai - [19f41c6f] GET /health/ | Status: 200 | Time: 3.4 ms | Client: 127.0.0.1
+2026-08-09 08:39:40,905 - INFO - complianceai - [8d88e4d7] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:39:40,906 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:39:40,907 - INFO - complianceai - [8d88e4d7] GET /health/ | Status: 200 | Time: 2.4 ms | Client: 127.0.0.1
+2026-08-09 08:39:51,169 - INFO - complianceai - [c27135f0] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:39:51,171 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:39:51,172 - INFO - complianceai - [c27135f0] GET /health/ | Status: 200 | Time: 2.75 ms | Client: 127.0.0.1
+2026-08-09 08:40:01,399 - INFO - complianceai - [0593ad42] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:40:01,401 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:40:01,402 - INFO - complianceai - [0593ad42] GET /health/ | Status: 200 | Time: 2.97 ms | Client: 127.0.0.1
+2026-08-09 08:40:11,655 - INFO - complianceai - [04c474dd] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:40:11,656 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:40:11,657 - INFO - complianceai - [04c474dd] GET /health/ | Status: 200 | Time: 2.45 ms | Client: 127.0.0.1
+2026-08-09 08:40:21,901 - INFO - complianceai - [c3a0056b] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:40:21,902 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:40:21,903 - INFO - complianceai - [c3a0056b] GET /health/ | Status: 200 | Time: 2.46 ms | Client: 127.0.0.1
+2026-08-09 08:40:32,155 - INFO - complianceai - [9402aa61] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:40:32,157 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:40:32,158 - INFO - complianceai - [9402aa61] GET /health/ | Status: 200 | Time: 2.69 ms | Client: 127.0.0.1
+2026-08-09 08:40:42,412 - INFO - complianceai - [b3b94e2d] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:40:42,414 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:40:42,416 - INFO - complianceai - [b3b94e2d] GET /health/ | Status: 200 | Time: 3.87 ms | Client: 127.0.0.1
+2026-08-09 08:40:52,638 - INFO - complianceai - [8d583b95] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:40:52,639 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:40:52,640 - INFO - complianceai - [8d583b95] GET /health/ | Status: 200 | Time: 2.74 ms | Client: 127.0.0.1
+2026-08-09 08:41:02,892 - INFO - complianceai - [8fd76c74] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:41:02,894 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:41:02,895 - INFO - complianceai - [8fd76c74] GET /health/ | Status: 200 | Time: 2.44 ms | Client: 127.0.0.1
+2026-08-09 08:41:13,195 - INFO - complianceai - [7e5cd932] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:41:13,196 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:41:13,198 - INFO - complianceai - [7e5cd932] GET /health/ | Status: 200 | Time: 2.64 ms | Client: 127.0.0.1
+2026-08-09 08:41:23,456 - INFO - complianceai - [5b9aba2a] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:41:23,458 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:41:23,459 - INFO - complianceai - [5b9aba2a] GET /health/ | Status: 200 | Time: 2.54 ms | Client: 127.0.0.1
+2026-08-09 08:41:33,712 - INFO - complianceai - [7a1d7a53] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:41:33,713 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:41:33,714 - INFO - complianceai - [7a1d7a53] GET /health/ | Status: 200 | Time: 2.5 ms | Client: 127.0.0.1
+2026-08-09 08:41:43,939 - INFO - complianceai - [24ececd5] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:41:43,941 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:41:43,942 - INFO - complianceai - [24ececd5] GET /health/ | Status: 200 | Time: 2.64 ms | Client: 127.0.0.1
+2026-08-09 08:41:54,219 - INFO - complianceai - [d9245c5e] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:41:54,221 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:41:54,221 - INFO - complianceai - [d9245c5e] GET /health/ | Status: 200 | Time: 2.43 ms | Client: 127.0.0.1
+2026-08-09 08:42:04,471 - INFO - complianceai - [ba61bbf9] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:42:04,473 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:42:04,474 - INFO - complianceai - [ba61bbf9] GET /health/ | Status: 200 | Time: 3.02 ms | Client: 127.0.0.1
+2026-08-09 08:42:14,730 - INFO - complianceai - [c17ad8bd] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:42:14,731 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:42:14,732 - INFO - complianceai - [c17ad8bd] GET /health/ | Status: 200 | Time: 2.12 ms | Client: 127.0.0.1
+2026-08-09 08:42:25,015 - INFO - complianceai - [74a0c094] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:42:25,016 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:42:25,017 - INFO - complianceai - [74a0c094] GET /health/ | Status: 200 | Time: 2.83 ms | Client: 127.0.0.1
+2026-08-09 08:42:35,262 - INFO - complianceai - [590e81af] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:42:35,264 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:42:35,265 - INFO - complianceai - [590e81af] GET /health/ | Status: 200 | Time: 3.0 ms | Client: 127.0.0.1
+2026-08-09 08:42:45,517 - INFO - complianceai - [729865df] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:42:45,519 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:42:45,520 - INFO - complianceai - [729865df] GET /health/ | Status: 200 | Time: 2.86 ms | Client: 127.0.0.1
+2026-08-09 08:42:55,774 - INFO - complianceai - [8cf08f6c] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:42:55,776 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:42:55,777 - INFO - complianceai - [8cf08f6c] GET /health/ | Status: 200 | Time: 3.07 ms | Client: 127.0.0.1
+2026-08-09 08:43:06,011 - INFO - complianceai - [ce90310f] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:43:06,013 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:43:06,014 - INFO - complianceai - [ce90310f] GET /health/ | Status: 200 | Time: 2.71 ms | Client: 127.0.0.1
+2026-08-09 08:43:16,293 - INFO - complianceai - [7d6367ef] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:43:16,295 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:43:16,296 - INFO - complianceai - [7d6367ef] GET /health/ | Status: 200 | Time: 3.24 ms | Client: 127.0.0.1
+2026-08-09 08:43:26,538 - INFO - complianceai - [43c5d31f] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:43:26,539 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:43:26,540 - INFO - complianceai - [43c5d31f] GET /health/ | Status: 200 | Time: 2.27 ms | Client: 127.0.0.1
+2026-08-09 08:43:36,771 - INFO - complianceai - [62801bbf] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:43:36,773 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:43:36,774 - INFO - complianceai - [62801bbf] GET /health/ | Status: 200 | Time: 2.43 ms | Client: 127.0.0.1
+2026-08-09 08:43:47,035 - INFO - complianceai - [7d8c4107] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:43:47,036 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:43:47,038 - INFO - complianceai - [7d8c4107] GET /health/ | Status: 200 | Time: 2.88 ms | Client: 127.0.0.1
+2026-08-09 08:43:57,304 - INFO - complianceai - [5cf84d2c] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:43:57,306 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:43:57,307 - INFO - complianceai - [5cf84d2c] GET /health/ | Status: 200 | Time: 3.76 ms | Client: 127.0.0.1
+2026-08-09 08:44:07,608 - INFO - complianceai - [2c585163] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:44:07,609 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:44:07,610 - INFO - complianceai - [2c585163] GET /health/ | Status: 200 | Time: 2.61 ms | Client: 127.0.0.1
+2026-08-09 08:44:17,859 - INFO - complianceai - [9a48c795] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:44:17,860 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:44:17,861 - INFO - complianceai - [9a48c795] GET /health/ | Status: 200 | Time: 2.12 ms | Client: 127.0.0.1
+2026-08-09 08:44:28,103 - INFO - complianceai - [a0b5e6a3] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:44:28,104 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:44:28,106 - INFO - complianceai - [a0b5e6a3] GET /health/ | Status: 200 | Time: 3.19 ms | Client: 127.0.0.1
+2026-08-09 08:44:38,328 - INFO - complianceai - [1905d7e0] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:44:38,329 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:44:38,330 - INFO - complianceai - [1905d7e0] GET /health/ | Status: 200 | Time: 2.19 ms | Client: 127.0.0.1
+2026-08-09 08:44:48,558 - INFO - complianceai - [a960db42] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:44:48,559 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:44:48,560 - INFO - complianceai - [a960db42] GET /health/ | Status: 200 | Time: 2.25 ms | Client: 127.0.0.1
+2026-08-09 08:44:58,785 - INFO - complianceai - [c28f538a] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:44:58,787 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:44:58,788 - INFO - complianceai - [c28f538a] GET /health/ | Status: 200 | Time: 2.88 ms | Client: 127.0.0.1
+2026-08-09 08:45:09,011 - INFO - complianceai - [2785b6b1] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:45:09,013 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:45:09,014 - INFO - complianceai - [2785b6b1] GET /health/ | Status: 200 | Time: 3.41 ms | Client: 127.0.0.1
+2026-08-09 08:45:19,268 - INFO - complianceai - [d59e7539] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:45:19,269 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:45:19,271 - INFO - complianceai - [d59e7539] GET /health/ | Status: 200 | Time: 2.76 ms | Client: 127.0.0.1
+2026-08-09 08:45:29,508 - INFO - complianceai - [7733d30d] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:45:29,509 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:45:29,510 - INFO - complianceai - [7733d30d] GET /health/ | Status: 200 | Time: 2.88 ms | Client: 127.0.0.1
+2026-08-09 08:45:39,740 - INFO - complianceai - [d53f4d21] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:45:39,742 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:45:39,743 - INFO - complianceai - [d53f4d21] GET /health/ | Status: 200 | Time: 2.78 ms | Client: 127.0.0.1
+2026-08-09 08:45:49,973 - INFO - complianceai - [019f186e] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:45:49,975 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:45:49,976 - INFO - complianceai - [019f186e] GET /health/ | Status: 200 | Time: 2.28 ms | Client: 127.0.0.1
+2026-08-09 08:46:00,210 - INFO - complianceai - [fc2e6668] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:46:00,211 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:46:00,212 - INFO - complianceai - [fc2e6668] GET /health/ | Status: 200 | Time: 2.86 ms | Client: 127.0.0.1
+2026-08-09 08:46:10,434 - INFO - complianceai - [4e9ff9b4] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:46:10,435 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:46:10,436 - INFO - complianceai - [4e9ff9b4] GET /health/ | Status: 200 | Time: 2.32 ms | Client: 127.0.0.1
+2026-08-09 08:46:20,677 - INFO - complianceai - [889d2a05] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:46:20,679 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:46:20,680 - INFO - complianceai - [889d2a05] GET /health/ | Status: 200 | Time: 2.23 ms | Client: 127.0.0.1
+2026-08-09 08:46:30,926 - INFO - complianceai - [7ddee366] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:46:30,927 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:46:30,928 - INFO - complianceai - [7ddee366] GET /health/ | Status: 200 | Time: 2.18 ms | Client: 127.0.0.1
+2026-08-09 08:46:41,184 - INFO - complianceai - [7fa90464] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:46:41,185 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:46:41,186 - INFO - complianceai - [7fa90464] GET /health/ | Status: 200 | Time: 2.6 ms | Client: 127.0.0.1
+2026-08-09 08:46:51,421 - INFO - complianceai - [04956d9d] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:46:51,423 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:46:51,424 - INFO - complianceai - [04956d9d] GET /health/ | Status: 200 | Time: 2.6 ms | Client: 127.0.0.1
+2026-08-09 08:47:01,637 - INFO - complianceai - [5d962739] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:47:01,638 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:47:01,639 - INFO - complianceai - [5d962739] GET /health/ | Status: 200 | Time: 2.84 ms | Client: 127.0.0.1
+2026-08-09 08:47:11,871 - INFO - complianceai - [c30d98fd] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:47:11,872 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:47:11,873 - INFO - complianceai - [c30d98fd] GET /health/ | Status: 200 | Time: 2.65 ms | Client: 127.0.0.1
+2026-08-09 08:47:22,098 - INFO - complianceai - [c6219363] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:47:22,099 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:47:22,100 - INFO - complianceai - [c6219363] GET /health/ | Status: 200 | Time: 2.79 ms | Client: 127.0.0.1
+2026-08-09 08:47:32,399 - INFO - complianceai - [0f38bf45] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:47:32,401 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:47:32,402 - INFO - complianceai - [0f38bf45] GET /health/ | Status: 200 | Time: 2.58 ms | Client: 127.0.0.1
+2026-08-09 08:47:42,614 - INFO - complianceai - [4652efdb] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:47:42,615 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:47:42,616 - INFO - complianceai - [4652efdb] GET /health/ | Status: 200 | Time: 2.16 ms | Client: 127.0.0.1
+2026-08-09 08:47:52,848 - INFO - complianceai - [2537d508] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:47:52,849 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:47:52,849 - INFO - complianceai - [2537d508] GET /health/ | Status: 200 | Time: 1.86 ms | Client: 127.0.0.1
+2026-08-09 08:48:03,072 - INFO - complianceai - [ca4f4315] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:48:03,073 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:48:03,074 - INFO - complianceai - [ca4f4315] GET /health/ | Status: 200 | Time: 2.35 ms | Client: 127.0.0.1
+2026-08-09 08:48:13,293 - INFO - complianceai - [a82bd9fd] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:48:13,296 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:48:13,297 - INFO - complianceai - [a82bd9fd] GET /health/ | Status: 200 | Time: 3.99 ms | Client: 127.0.0.1
+2026-08-09 08:48:23,507 - INFO - complianceai - [bd6b8754] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:48:23,508 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:48:23,509 - INFO - complianceai - [bd6b8754] GET /health/ | Status: 200 | Time: 2.12 ms | Client: 127.0.0.1
+2026-08-09 08:48:33,772 - INFO - complianceai - [a5b7d587] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:48:33,774 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:48:33,775 - INFO - complianceai - [a5b7d587] GET /health/ | Status: 200 | Time: 2.59 ms | Client: 127.0.0.1
+2026-08-09 08:48:44,025 - INFO - complianceai - [0d44901e] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:48:44,026 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:48:44,027 - INFO - complianceai - [0d44901e] GET /health/ | Status: 200 | Time: 2.28 ms | Client: 127.0.0.1
+2026-08-09 08:48:54,330 - INFO - complianceai - [2f30ec6c] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:48:54,332 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:48:54,333 - INFO - complianceai - [2f30ec6c] GET /health/ | Status: 200 | Time: 3.07 ms | Client: 127.0.0.1
+2026-08-09 08:49:04,578 - INFO - complianceai - [12d0cffa] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:49:04,579 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:49:04,580 - INFO - complianceai - [12d0cffa] GET /health/ | Status: 200 | Time: 2.81 ms | Client: 127.0.0.1
+2026-08-09 08:49:14,893 - INFO - complianceai - [504e6b6c] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:49:14,899 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:49:14,900 - INFO - complianceai - [504e6b6c] GET /health/ | Status: 200 | Time: 7.76 ms | Client: 127.0.0.1
+2026-08-09 08:49:41,035 - INFO - complianceai - [fde9cc5c] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:49:41,048 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:49:41,048 - INFO - complianceai - [fde9cc5c] GET /health/ | Status: 200 | Time: 13.34 ms | Client: 127.0.0.1
+2026-08-09 08:49:47,936 - INFO - complianceai - [13e3d791] Incoming Request: GET /health/ | Client: 172.19.0.1
+2026-08-09 08:49:47,938 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:49:47,939 - INFO - complianceai - [13e3d791] GET /health/ | Status: 200 | Time: 2.32 ms | Client: 172.19.0.1
+2026-08-09 08:49:51,305 - INFO - complianceai - [ba8a2798] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:49:51,307 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:49:51,309 - INFO - complianceai - [ba8a2798] GET /health/ | Status: 200 | Time: 3.19 ms | Client: 127.0.0.1
+2026-08-09 08:49:53,334 - INFO - complianceai - [7661dbe5] Incoming Request: GET /ready/ | Client: 172.19.0.1
+2026-08-09 08:49:53,365 - INFO - complianceai - [7661dbe5] GET /ready/ | Status: 200 | Time: 31.62 ms | Client: 172.19.0.1
+2026-08-09 08:50:01,551 - INFO - complianceai - [9ede668f] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:50:01,553 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:50:01,554 - INFO - complianceai - [9ede668f] GET /health/ | Status: 200 | Time: 2.59 ms | Client: 127.0.0.1
+2026-08-09 08:50:11,835 - INFO - complianceai - [90551ebe] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:50:11,837 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:50:11,838 - INFO - complianceai - [90551ebe] GET /health/ | Status: 200 | Time: 3.17 ms | Client: 127.0.0.1
+2026-08-09 08:50:22,083 - INFO - complianceai - [3447f8dc] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:50:22,085 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:50:22,086 - INFO - complianceai - [3447f8dc] GET /health/ | Status: 200 | Time: 2.84 ms | Client: 127.0.0.1
+2026-08-09 08:50:32,413 - INFO - complianceai - [64ea0a64] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:50:32,415 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:50:32,416 - INFO - complianceai - [64ea0a64] GET /health/ | Status: 200 | Time: 2.95 ms | Client: 127.0.0.1
+2026-08-09 01:50:34,080 - INFO - complianceai - [b41551f5] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:34,373 - INFO - complianceai - [b41551f5] POST /auth/register | Status: 201 | Time: 293.15 ms | Client: testclient
+2026-08-09 01:50:36,104 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:36,111 - INFO - complianceai - [25504f64] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:36,353 - INFO - complianceai - [25504f64] POST /auth/register | Status: 201 | Time: 241.86 ms | Client: testclient
+2026-08-09 01:50:37,496 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:37,507 - INFO - complianceai - [5a9bba60] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:50:37,511 - INFO - complianceai - Login attempt for username: user_f577c4ca
+2026-08-09 01:50:37,741 - INFO - complianceai - User logged in successfully: user_f577c4ca
+2026-08-09 01:50:37,743 - INFO - complianceai - [5a9bba60] POST /auth/login | Status: 200 | Time: 235.74 ms | Client: testclient
+2026-08-09 01:50:37,749 - INFO - complianceai - [744b9d06] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:37,971 - INFO - complianceai - [744b9d06] POST /auth/register | Status: 201 | Time: 221.67 ms | Client: testclient
+2026-08-09 01:50:39,181 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:39,192 - INFO - complianceai - [b63a8825] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:50:39,196 - INFO - complianceai - Login attempt for username: user_48c724d6
+2026-08-09 01:50:39,413 - INFO - complianceai - User logged in successfully: user_48c724d6
+2026-08-09 01:50:39,414 - INFO - complianceai - [b63a8825] POST /auth/login | Status: 200 | Time: 221.75 ms | Client: testclient
+2026-08-09 01:50:39,418 - INFO - complianceai - [7ebf7d6b] Incoming Request: GET /auth/me | Client: testclient
+2026-08-09 01:50:39,423 - INFO - complianceai - [7ebf7d6b] GET /auth/me | Status: 200 | Time: 4.91 ms | Client: testclient
+2026-08-09 01:50:39,428 - INFO - complianceai - [aafb1036] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:39,649 - INFO - complianceai - [aafb1036] POST /auth/register | Status: 201 | Time: 220.91 ms | Client: testclient
+2026-08-09 01:50:40,258 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:40,265 - INFO - complianceai - [6a96ee79] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:50:40,266 - INFO - complianceai - Login attempt for username: user_f2777ad2
+2026-08-09 01:50:40,477 - WARNING - complianceai - Failed login attempt for username: user_f2777ad2
+2026-08-09 01:50:40,480 - INFO - complianceai - [6a96ee79] POST /auth/login | Status: 401 | Time: 215.37 ms | Client: testclient
+2026-08-09 01:50:40,486 - INFO - complianceai - [4081811f] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:50:40,488 - INFO - complianceai - Login attempt for username: nonexistent_b1114fc3
+2026-08-09 01:50:40,491 - WARNING - complianceai - Failed login attempt for username: nonexistent_b1114fc3
+2026-08-09 01:50:40,494 - INFO - complianceai - [4081811f] POST /auth/login | Status: 401 | Time: 8.48 ms | Client: testclient
+2026-08-09 01:50:40,499 - INFO - complianceai - [de8e8465] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:40,730 - INFO - complianceai - [de8e8465] POST /auth/register | Status: 201 | Time: 231.53 ms | Client: testclient
+2026-08-09 01:50:41,391 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:41,416 - INFO - complianceai - [d1cb1dd6] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:41,424 - INFO - complianceai - [d1cb1dd6] POST /auth/register | Status: 400 | Time: 6.85 ms | Client: testclient
+2026-08-09 01:50:41,428 - INFO - complianceai - [651f50fd] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:41,430 - WARNING - complianceai - Validation Error: [{'field': 'body.password', 'message': 'Field required'}]
+2026-08-09 01:50:41,431 - INFO - complianceai - [651f50fd] POST /auth/register | Status: 422 | Time: 2.74 ms | Client: testclient
+2026-08-09 01:50:41,435 - INFO - complianceai - [b9525051] Incoming Request: GET /auth/me | Client: testclient
+2026-08-09 01:50:41,436 - INFO - complianceai - [b9525051] GET /auth/me | Status: 401 | Time: 1.32 ms | Client: testclient
+2026-08-09 01:50:41,440 - INFO - complianceai - [5cd1d9e9] Incoming Request: GET /auth/me | Client: testclient
+2026-08-09 01:50:41,440 - INFO - complianceai - [5cd1d9e9] GET /auth/me | Status: 401 | Time: 0.0 ms | Client: testclient
+2026-08-09 01:50:41,448 - INFO - complianceai - [a1b2ecfc] Incoming Request: GET /auth/me | Client: testclient
+2026-08-09 01:50:41,449 - INFO - complianceai - [a1b2ecfc] GET /auth/me | Status: 401 | Time: 1.01 ms | Client: testclient
+2026-08-09 01:50:41,454 - INFO - complianceai - [3e3320f4] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:41,681 - INFO - complianceai - [3e3320f4] POST /auth/register | Status: 201 | Time: 226.05 ms | Client: testclient
+2026-08-09 01:50:42,226 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:42,241 - INFO - complianceai - [ae8d5710] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:50:42,245 - INFO - complianceai - Login attempt for username: user_267dbfa0
+2026-08-09 01:50:42,465 - INFO - complianceai - User logged in successfully: user_267dbfa0
+2026-08-09 01:50:42,466 - INFO - complianceai - [ae8d5710] POST /auth/login | Status: 200 | Time: 225.02 ms | Client: testclient
+2026-08-09 01:50:42,469 - INFO - complianceai - [4e45fb24] Incoming Request: POST /auth/refresh | Client: testclient
+2026-08-09 01:50:42,478 - INFO - complianceai - [4e45fb24] POST /auth/refresh | Status: 200 | Time: 8.12 ms | Client: testclient
+2026-08-09 01:50:42,479 - INFO - complianceai - [910fa7a9] Incoming Request: POST /auth/refresh | Client: testclient
+2026-08-09 01:50:42,485 - INFO - complianceai - [910fa7a9] POST /auth/refresh | Status: 401 | Time: 6.03 ms | Client: testclient
+2026-08-09 01:50:42,490 - INFO - complianceai - [08c56e4a] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 08:50:42,660 - INFO - complianceai - [cd33f122] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:50:42,662 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:50:42,663 - INFO - complianceai - [cd33f122] GET /health/ | Status: 200 | Time: 2.67 ms | Client: 127.0.0.1
+2026-08-09 01:50:42,727 - INFO - complianceai - [08c56e4a] POST /auth/register | Status: 201 | Time: 236.89 ms | Client: testclient
+2026-08-09 01:50:43,276 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:43,298 - INFO - complianceai - [2e361bc1] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:50:43,302 - INFO - complianceai - Login attempt for username: test_user_2c4327db
+2026-08-09 01:50:43,523 - INFO - complianceai - User logged in successfully: test_user_2c4327db
+2026-08-09 01:50:43,524 - INFO - complianceai - [2e361bc1] POST /auth/login | Status: 200 | Time: 225.56 ms | Client: testclient
+2026-08-09 01:50:43,529 - INFO - complianceai - [9d83be57] Incoming Request: POST /auth/logout | Client: testclient
+2026-08-09 01:50:43,538 - INFO - complianceai - User logged out: test_user_2c4327db
+2026-08-09 01:50:43,539 - INFO - complianceai - [9d83be57] POST /auth/logout | Status: 200 | Time: 10.19 ms | Client: testclient
+2026-08-09 01:50:43,544 - INFO - complianceai - [61acf583] Incoming Request: POST /auth/logout | Client: testclient
+2026-08-09 01:50:43,545 - INFO - complianceai - [61acf583] POST /auth/logout | Status: 401 | Time: 1.1 ms | Client: testclient
+2026-08-09 01:50:43,550 - INFO - complianceai - [95e44d4f] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:43,775 - INFO - complianceai - [95e44d4f] POST /auth/register | Status: 201 | Time: 225.03 ms | Client: testclient
+2026-08-09 01:50:47,919 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:47,930 - INFO - complianceai - [81f165e6] Incoming Request: POST /auth/forgot-password | Client: testclient
+2026-08-09 01:50:52,066 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:52,066 - INFO - complianceai - [81f165e6] POST /auth/forgot-password | Status: 200 | Time: 4135.5 ms | Client: testclient
+2026-08-09 01:50:52,088 - INFO - complianceai - [7823629d] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:52,326 - INFO - complianceai - [7823629d] POST /auth/register | Status: 201 | Time: 237.21 ms | Client: testclient
+2026-08-09 01:50:52,848 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:52,856 - INFO - complianceai - [c83e86e6] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:50:52,858 - INFO - complianceai - Login attempt for username: user_747e36fb
+2026-08-09 08:50:52,891 - INFO - complianceai - [ee2b7ec1] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:50:52,893 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:50:52,893 - INFO - complianceai - [ee2b7ec1] GET /health/ | Status: 200 | Time: 2.39 ms | Client: 127.0.0.1
+2026-08-09 01:50:53,079 - INFO - complianceai - User logged in successfully: user_747e36fb
+2026-08-09 01:50:53,081 - INFO - complianceai - [c83e86e6] POST /auth/login | Status: 200 | Time: 225.51 ms | Client: testclient
+2026-08-09 01:50:53,085 - INFO - complianceai - [ff15f348] Incoming Request: POST /auth/logout | Client: testclient
+2026-08-09 01:50:53,094 - INFO - complianceai - User logged out: user_747e36fb
+2026-08-09 01:50:53,094 - INFO - complianceai - [ff15f348] POST /auth/logout | Status: 200 | Time: 9.65 ms | Client: testclient
+2026-08-09 01:50:53,100 - INFO - complianceai - [e0fa0983] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:53,320 - INFO - complianceai - [e0fa0983] POST /auth/register | Status: 201 | Time: 220.35 ms | Client: testclient
+2026-08-09 01:50:53,828 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:53,837 - INFO - complianceai - [8cd4f6b2] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:50:53,839 - INFO - complianceai - Login attempt for username: user_55531f14
+2026-08-09 01:50:54,056 - INFO - complianceai - User logged in successfully: user_55531f14
+2026-08-09 01:50:54,057 - INFO - complianceai - [8cd4f6b2] POST /auth/login | Status: 200 | Time: 220.07 ms | Client: testclient
+2026-08-09 01:50:54,061 - INFO - complianceai - [52866ee8] Incoming Request: POST /auth/logout | Client: testclient
+2026-08-09 01:50:54,069 - INFO - complianceai - User logged out: user_55531f14
+2026-08-09 01:50:54,070 - INFO - complianceai - [52866ee8] POST /auth/logout | Status: 200 | Time: 8.89 ms | Client: testclient
+2026-08-09 01:50:54,073 - INFO - complianceai - [b55d2922] Incoming Request: POST /auth/refresh | Client: testclient
+2026-08-09 01:50:54,079 - INFO - complianceai - [b55d2922] POST /auth/refresh | Status: 401 | Time: 5.33 ms | Client: testclient
+2026-08-09 01:50:54,083 - INFO - complianceai - [d7da8d77] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:54,303 - INFO - complianceai - [d7da8d77] POST /auth/register | Status: 201 | Time: 220.33 ms | Client: testclient
+2026-08-09 01:50:54,892 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:54,904 - INFO - complianceai - [817886d6] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:54,912 - INFO - complianceai - [817886d6] POST /auth/register | Status: 400 | Time: 8.19 ms | Client: testclient
+2026-08-09 01:50:54,917 - INFO - complianceai - [947fea3b] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:55,138 - INFO - complianceai - [947fea3b] POST /auth/register | Status: 201 | Time: 221.69 ms | Client: testclient
+2026-08-09 01:50:55,684 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:55,708 - INFO - complianceai - [74ee4bf8] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:50:55,710 - INFO - complianceai - Login attempt for username: deleted_user_be3845ba
+2026-08-09 01:50:55,928 - INFO - complianceai - User logged in successfully: deleted_user_be3845ba
+2026-08-09 01:50:55,929 - INFO - complianceai - [74ee4bf8] POST /auth/login | Status: 200 | Time: 221.0 ms | Client: testclient
+2026-08-09 01:50:55,943 - INFO - complianceai - [d550f945] Incoming Request: POST /auth/refresh | Client: testclient
+2026-08-09 01:50:55,948 - INFO - complianceai - [d550f945] POST /auth/refresh | Status: 401 | Time: 5.93 ms | Client: testclient
+2026-08-09 01:50:55,952 - INFO - complianceai - [2fec71c0] Incoming Request: POST /auth/forgot-password | Client: testclient
+2026-08-09 01:50:55,957 - INFO - complianceai - [2fec71c0] POST /auth/forgot-password | Status: 200 | Time: 4.85 ms | Client: testclient
+2026-08-09 01:50:55,962 - INFO - complianceai - [e9c19bfe] Incoming Request: POST /auth/reset-password | Client: testclient
+2026-08-09 01:50:55,973 - INFO - complianceai - [e9c19bfe] POST /auth/reset-password | Status: 400 | Time: 11.4 ms | Client: testclient
+2026-08-09 01:50:55,978 - INFO - complianceai - [b0de680c] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:56,200 - INFO - complianceai - [b0de680c] POST /auth/register | Status: 201 | Time: 222.61 ms | Client: testclient
+2026-08-09 01:50:56,784 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:56,802 - INFO - complianceai - [cba0b7b9] Incoming Request: POST /auth/reset-password | Client: testclient
+2026-08-09 01:50:56,808 - INFO - complianceai - [cba0b7b9] POST /auth/reset-password | Status: 400 | Time: 5.91 ms | Client: testclient
+2026-08-09 01:50:56,808 - INFO - complianceai - [5e878b0e] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:57,034 - INFO - complianceai - [5e878b0e] POST /auth/register | Status: 201 | Time: 225.92 ms | Client: testclient
+2026-08-09 01:50:57,575 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:57,593 - INFO - complianceai - [3796d40a] Incoming Request: POST /auth/reset-password | Client: testclient
+2026-08-09 01:50:57,809 - INFO - complianceai - [3796d40a] POST /auth/reset-password | Status: 200 | Time: 215.6 ms | Client: testclient
+2026-08-09 01:50:57,814 - INFO - complianceai - [692cfaae] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:58,037 - INFO - complianceai - [692cfaae] POST /auth/register | Status: 201 | Time: 223.07 ms | Client: testclient
+2026-08-09 01:50:58,572 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:58,596 - INFO - complianceai - [b09b1c01] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:50:58,599 - INFO - complianceai - Login attempt for username: admin_da206167
+2026-08-09 01:50:58,815 - INFO - complianceai - User logged in successfully: admin_da206167
+2026-08-09 01:50:58,816 - INFO - complianceai - [b09b1c01] POST /auth/login | Status: 200 | Time: 220.21 ms | Client: testclient
+2026-08-09 01:50:58,819 - INFO - complianceai - [050e3d12] Incoming Request: GET /auth/admin | Client: testclient
+2026-08-09 01:50:58,825 - INFO - complianceai - [050e3d12] GET /auth/admin | Status: 200 | Time: 5.14 ms | Client: testclient
+2026-08-09 01:50:58,830 - INFO - complianceai - [685f7a53] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:50:59,052 - INFO - complianceai - [685f7a53] POST /auth/register | Status: 201 | Time: 221.72 ms | Client: testclient
+2026-08-09 01:50:59,589 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:50:59,595 - INFO - complianceai - [604fd951] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:50:59,599 - INFO - complianceai - Login attempt for username: user_f007809b
+2026-08-09 01:50:59,817 - INFO - complianceai - User logged in successfully: user_f007809b
+2026-08-09 01:50:59,819 - INFO - complianceai - [604fd951] POST /auth/login | Status: 200 | Time: 223.33 ms | Client: testclient
+2026-08-09 01:50:59,823 - INFO - complianceai - [6c5ff5df] Incoming Request: GET /auth/admin | Client: testclient
+2026-08-09 01:50:59,829 - INFO - complianceai - [6c5ff5df] GET /auth/admin | Status: 403 | Time: 5.44 ms | Client: testclient
+2026-08-09 01:50:59,834 - INFO - complianceai - [727f422f] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:00,055 - INFO - complianceai - [727f422f] POST /auth/register | Status: 201 | Time: 220.76 ms | Client: testclient
+2026-08-09 01:51:00,592 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:00,638 - INFO - complianceai - [b3826169] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:00,641 - INFO - complianceai - Login attempt for username: test_user_419a7ad5
+2026-08-09 01:51:00,870 - INFO - complianceai - User logged in successfully: test_user_419a7ad5
+2026-08-09 01:51:00,871 - INFO - complianceai - [b3826169] POST /auth/login | Status: 200 | Time: 233.52 ms | Client: testclient
+2026-08-09 01:51:00,876 - INFO - complianceai - [36620ef9] Incoming Request: POST /companies/ | Client: testclient
+2026-08-09 01:51:00,891 - INFO - complianceai - [36620ef9] POST /companies/ | Status: 201 | Time: 14.64 ms | Client: testclient
+2026-08-09 01:51:00,897 - INFO - complianceai - [1419d5f1] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:01,117 - INFO - complianceai - [1419d5f1] POST /auth/register | Status: 201 | Time: 220.89 ms | Client: testclient
+2026-08-09 01:51:01,657 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:01,665 - INFO - complianceai - [3691365b] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:01,668 - INFO - complianceai - Login attempt for username: test_user_363c58c7
+2026-08-09 01:51:01,883 - INFO - complianceai - User logged in successfully: test_user_363c58c7
+2026-08-09 01:51:01,884 - INFO - complianceai - [3691365b] POST /auth/login | Status: 200 | Time: 219.26 ms | Client: testclient
+2026-08-09 01:51:01,889 - INFO - complianceai - [05d438e7] Incoming Request: GET /companies/ | Client: testclient
+2026-08-09 01:51:01,904 - INFO - complianceai - [05d438e7] GET /companies/ | Status: 200 | Time: 15.12 ms | Client: testclient
+2026-08-09 01:51:01,910 - INFO - complianceai - [b94bef01] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:02,133 - INFO - complianceai - [b94bef01] POST /auth/register | Status: 201 | Time: 222.96 ms | Client: testclient
+2026-08-09 01:51:02,678 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:02,690 - INFO - complianceai - [b6ed22a5] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:02,693 - INFO - complianceai - Login attempt for username: test_user_9ee48743
+2026-08-09 01:51:02,930 - INFO - complianceai - User logged in successfully: test_user_9ee48743
+2026-08-09 01:51:02,931 - INFO - complianceai - [b6ed22a5] POST /auth/login | Status: 200 | Time: 241.26 ms | Client: testclient
+2026-08-09 01:51:02,936 - INFO - complianceai - [9255417a] Incoming Request: POST /companies/ | Client: testclient
+2026-08-09 01:51:02,947 - INFO - complianceai - [9255417a] POST /companies/ | Status: 201 | Time: 11.43 ms | Client: testclient
+2026-08-09 01:51:02,952 - INFO - complianceai - [6f3a45c9] Incoming Request: GET /companies/ | Client: testclient
+2026-08-09 01:51:02,964 - INFO - complianceai - [6f3a45c9] GET /companies/ | Status: 200 | Time: 12.37 ms | Client: testclient
+2026-08-09 01:51:02,970 - INFO - complianceai - [2252629c] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 08:51:03,129 - INFO - complianceai - [3de2a72a] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:51:03,130 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:51:03,131 - INFO - complianceai - [3de2a72a] GET /health/ | Status: 200 | Time: 2.38 ms | Client: 127.0.0.1
+2026-08-09 01:51:03,203 - INFO - complianceai - [2252629c] POST /auth/register | Status: 201 | Time: 232.98 ms | Client: testclient
+2026-08-09 01:51:03,727 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:03,738 - INFO - complianceai - [ab9ace62] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:03,741 - INFO - complianceai - Login attempt for username: test_user_eb1c70eb
+2026-08-09 01:51:03,963 - INFO - complianceai - User logged in successfully: test_user_eb1c70eb
+2026-08-09 01:51:03,965 - INFO - complianceai - [ab9ace62] POST /auth/login | Status: 200 | Time: 226.88 ms | Client: testclient
+2026-08-09 01:51:03,970 - INFO - complianceai - [bc5256e5] Incoming Request: POST /companies/ | Client: testclient
+2026-08-09 01:51:03,984 - INFO - complianceai - [bc5256e5] POST /companies/ | Status: 201 | Time: 13.94 ms | Client: testclient
+2026-08-09 01:51:03,989 - INFO - complianceai - [129fccf5] Incoming Request: GET /companies/ | Client: testclient
+2026-08-09 01:51:04,001 - INFO - complianceai - [129fccf5] GET /companies/ | Status: 200 | Time: 12.02 ms | Client: testclient
+2026-08-09 01:51:04,007 - INFO - complianceai - [a201ca29] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:04,250 - INFO - complianceai - [a201ca29] POST /auth/register | Status: 201 | Time: 243.23 ms | Client: testclient
+2026-08-09 01:51:04,786 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:04,800 - INFO - complianceai - [79804a7f] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:04,803 - INFO - complianceai - Login attempt for username: test_user_bdfcbc6e
+2026-08-09 01:51:05,017 - INFO - complianceai - User logged in successfully: test_user_bdfcbc6e
+2026-08-09 01:51:05,018 - INFO - complianceai - [79804a7f] POST /auth/login | Status: 200 | Time: 217.9 ms | Client: testclient
+2026-08-09 01:51:05,023 - INFO - complianceai - [4b51b8a9] Incoming Request: POST /companies/ | Client: testclient
+2026-08-09 01:51:05,034 - INFO - complianceai - [4b51b8a9] POST /companies/ | Status: 201 | Time: 10.98 ms | Client: testclient
+2026-08-09 01:51:05,038 - INFO - complianceai - [3d72ed5a] Incoming Request: POST /companies/ | Client: testclient
+2026-08-09 01:51:05,048 - INFO - complianceai - [3d72ed5a] POST /companies/ | Status: 201 | Time: 10.75 ms | Client: testclient
+2026-08-09 01:51:05,052 - INFO - complianceai - [a3393798] Incoming Request: GET /companies/ | Client: testclient
+2026-08-09 01:51:05,061 - INFO - complianceai - [a3393798] GET /companies/ | Status: 200 | Time: 8.7 ms | Client: testclient
+2026-08-09 01:51:05,066 - INFO - complianceai - [5604899a] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:05,288 - INFO - complianceai - [5604899a] POST /auth/register | Status: 201 | Time: 221.45 ms | Client: testclient
+2026-08-09 01:51:05,859 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:05,871 - INFO - complianceai - [ec788a6e] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:05,874 - INFO - complianceai - Login attempt for username: test_user_e7417a35
+2026-08-09 01:51:06,092 - INFO - complianceai - User logged in successfully: test_user_e7417a35
+2026-08-09 01:51:06,092 - INFO - complianceai - [ec788a6e] POST /auth/login | Status: 200 | Time: 220.78 ms | Client: testclient
+2026-08-09 01:51:06,097 - INFO - complianceai - [1b2c71a3] Incoming Request: POST /companies/ | Client: testclient
+2026-08-09 01:51:06,108 - INFO - complianceai - [1b2c71a3] POST /companies/ | Status: 201 | Time: 11.51 ms | Client: testclient
+2026-08-09 01:51:06,113 - INFO - complianceai - [3c357324] Incoming Request: GET /companies/414 | Client: testclient
+2026-08-09 01:51:06,119 - INFO - complianceai - [3c357324] GET /companies/414 | Status: 200 | Time: 6.02 ms | Client: testclient
+2026-08-09 01:51:06,124 - INFO - complianceai - [d6e07d93] Incoming Request: POST /companies/ | Client: testclient
+2026-08-09 01:51:06,125 - INFO - complianceai - [d6e07d93] POST /companies/ | Status: 401 | Time: 2.02 ms | Client: testclient
+2026-08-09 01:51:06,130 - INFO - complianceai - [14149f0d] Incoming Request: GET /companies/ | Client: testclient
+2026-08-09 01:51:06,132 - INFO - complianceai - [14149f0d] GET /companies/ | Status: 401 | Time: 2.5 ms | Client: testclient
+2026-08-09 01:51:06,137 - INFO - complianceai - [c726b5bb] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:06,360 - INFO - complianceai - [c726b5bb] POST /auth/register | Status: 201 | Time: 222.62 ms | Client: testclient
+2026-08-09 01:51:06,938 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:06,960 - INFO - complianceai - [53b6ba8c] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:06,963 - INFO - complianceai - Login attempt for username: test_user_c223d81f
+2026-08-09 01:51:07,178 - INFO - complianceai - User logged in successfully: test_user_c223d81f
+2026-08-09 01:51:07,179 - INFO - complianceai - [53b6ba8c] POST /auth/login | Status: 200 | Time: 219.49 ms | Client: testclient
+2026-08-09 01:51:07,184 - INFO - complianceai - [9e2b82da] Incoming Request: POST /companies/ | Client: testclient
+2026-08-09 01:51:07,190 - WARNING - complianceai - Validation Error: [{'field': 'body.email', 'message': 'Field required'}]
+2026-08-09 01:51:07,190 - INFO - complianceai - [9e2b82da] POST /companies/ | Status: 422 | Time: 6.46 ms | Client: testclient
+2026-08-09 01:51:07,191 - INFO - complianceai - [08ed666e] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:07,415 - INFO - complianceai - [08ed666e] POST /auth/register | Status: 201 | Time: 223.85 ms | Client: testclient
+2026-08-09 01:51:09,811 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:09,822 - INFO - complianceai - [60df183c] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:09,824 - INFO - complianceai - Login attempt for username: test_user_339900fa
+2026-08-09 01:51:10,046 - INFO - complianceai - User logged in successfully: test_user_339900fa
+2026-08-09 01:51:10,047 - INFO - complianceai - [60df183c] POST /auth/login | Status: 200 | Time: 225.13 ms | Client: testclient
+2026-08-09 01:51:10,052 - INFO - complianceai - [982d4e62] Incoming Request: GET /companies/999999 | Client: testclient
+2026-08-09 01:51:10,059 - INFO - complianceai - [982d4e62] GET /companies/999999 | Status: 404 | Time: 6.64 ms | Client: testclient
+2026-08-09 01:51:10,063 - INFO - complianceai - [f037d79c] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:10,289 - INFO - complianceai - [f037d79c] POST /auth/register | Status: 201 | Time: 225.65 ms | Client: testclient
+2026-08-09 01:51:10,855 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:10,880 - INFO - complianceai - [ae7f2e17] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:10,883 - INFO - complianceai - Login attempt for username: test_user_bcfbb5c0
+2026-08-09 01:51:11,099 - INFO - complianceai - User logged in successfully: test_user_bcfbb5c0
+2026-08-09 01:51:11,100 - INFO - complianceai - [ae7f2e17] POST /auth/login | Status: 200 | Time: 219.79 ms | Client: testclient
+2026-08-09 01:51:11,105 - INFO - complianceai - [9e0a8173] Incoming Request: POST /companies/ | Client: testclient
+2026-08-09 01:51:11,116 - INFO - complianceai - [9e0a8173] POST /companies/ | Status: 201 | Time: 11.69 ms | Client: testclient
+2026-08-09 01:51:11,121 - INFO - complianceai - [3269ee1f] Incoming Request: PUT /companies/415 | Client: testclient
+2026-08-09 01:51:11,132 - INFO - complianceai - [3269ee1f] PUT /companies/415 | Status: 200 | Time: 11.77 ms | Client: testclient
+2026-08-09 01:51:11,137 - INFO - complianceai - [25cc0401] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:11,358 - INFO - complianceai - [25cc0401] POST /auth/register | Status: 201 | Time: 221.21 ms | Client: testclient
+2026-08-09 01:51:11,921 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:11,934 - INFO - complianceai - [3c65cbe6] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:11,938 - INFO - complianceai - Login attempt for username: test_user_c7d3573e
+2026-08-09 01:51:12,156 - INFO - complianceai - User logged in successfully: test_user_c7d3573e
+2026-08-09 01:51:12,157 - INFO - complianceai - [3c65cbe6] POST /auth/login | Status: 200 | Time: 222.44 ms | Client: testclient
+2026-08-09 01:51:12,162 - INFO - complianceai - [9e6b523b] Incoming Request: POST /companies/ | Client: testclient
+2026-08-09 01:51:12,173 - INFO - complianceai - [9e6b523b] POST /companies/ | Status: 201 | Time: 12.04 ms | Client: testclient
+2026-08-09 01:51:12,177 - INFO - complianceai - [f2021dbd] Incoming Request: DELETE /companies/416 | Client: testclient
+2026-08-09 01:51:12,186 - INFO - complianceai - [f2021dbd] DELETE /companies/416 | Status: 200 | Time: 9.21 ms | Client: testclient
+2026-08-09 01:51:12,188 - INFO - complianceai - [5f0f5729] Incoming Request: DELETE /companies/999999 | Client: testclient
+2026-08-09 01:51:12,188 - INFO - complianceai - [5f0f5729] DELETE /companies/999999 | Status: 401 | Time: 0.0 ms | Client: testclient
+2026-08-09 01:51:12,197 - INFO - complianceai - [b5aa6902] Incoming Request: PUT /companies/999999 | Client: testclient
+2026-08-09 01:51:12,199 - INFO - complianceai - [b5aa6902] PUT /companies/999999 | Status: 401 | Time: 2.25 ms | Client: testclient
+2026-08-09 01:51:12,206 - INFO - complianceai - [3b16a899] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:12,427 - INFO - complianceai - [3b16a899] POST /auth/register | Status: 201 | Time: 220.74 ms | Client: testclient
+2026-08-09 08:51:13,367 - INFO - complianceai - [740a2f01] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:51:13,369 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:51:13,370 - INFO - complianceai - [740a2f01] GET /health/ | Status: 200 | Time: 3.09 ms | Client: 127.0.0.1
+2026-08-09 01:51:16,318 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:16,336 - INFO - complianceai - [48ab4e70] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:16,339 - INFO - complianceai - Login attempt for username: test_user_5449f3e6
+2026-08-09 01:51:16,552 - INFO - complianceai - User logged in successfully: test_user_5449f3e6
+2026-08-09 01:51:16,553 - INFO - complianceai - [48ab4e70] POST /auth/login | Status: 200 | Time: 216.59 ms | Client: testclient
+2026-08-09 01:51:16,558 - INFO - complianceai - [4fcc9afd] Incoming Request: PUT /companies/999999 | Client: testclient
+2026-08-09 01:51:16,565 - INFO - complianceai - [4fcc9afd] PUT /companies/999999 | Status: 404 | Time: 7.18 ms | Client: testclient
+2026-08-09 01:51:16,569 - INFO - complianceai - [392050a7] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:16,795 - INFO - complianceai - [392050a7] POST /auth/register | Status: 201 | Time: 225.31 ms | Client: testclient
+2026-08-09 01:51:17,376 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:17,385 - INFO - complianceai - [2af19ee7] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:17,388 - INFO - complianceai - Login attempt for username: test_user_8eed3851
+2026-08-09 01:51:17,602 - INFO - complianceai - User logged in successfully: test_user_8eed3851
+2026-08-09 01:51:17,603 - INFO - complianceai - [2af19ee7] POST /auth/login | Status: 200 | Time: 217.7 ms | Client: testclient
+2026-08-09 01:51:17,608 - INFO - complianceai - [412c31fa] Incoming Request: POST /companies/ | Client: testclient
+2026-08-09 01:51:17,619 - INFO - complianceai - [412c31fa] POST /companies/ | Status: 201 | Time: 11.54 ms | Client: testclient
+2026-08-09 01:51:17,624 - INFO - complianceai - [126a5b49] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:17,843 - INFO - complianceai - [126a5b49] POST /auth/register | Status: 201 | Time: 219.59 ms | Client: testclient
+2026-08-09 01:51:18,377 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:18,402 - INFO - complianceai - [2729f670] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:18,405 - INFO - complianceai - Login attempt for username: other_user_61ae486c
+2026-08-09 01:51:18,622 - INFO - complianceai - User logged in successfully: other_user_61ae486c
+2026-08-09 01:51:18,623 - INFO - complianceai - [2729f670] POST /auth/login | Status: 200 | Time: 221.15 ms | Client: testclient
+2026-08-09 01:51:18,627 - INFO - complianceai - [a355c409] Incoming Request: GET /companies/417 | Client: testclient
+2026-08-09 01:51:18,633 - INFO - complianceai - [a355c409] GET /companies/417 | Status: 404 | Time: 5.93 ms | Client: testclient
+2026-08-09 01:51:18,637 - INFO - complianceai - [7529fc81] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:18,860 - INFO - complianceai - [7529fc81] POST /auth/register | Status: 201 | Time: 223.01 ms | Client: testclient
+2026-08-09 01:51:19,565 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:19,575 - INFO - complianceai - [791333d8] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:19,578 - INFO - complianceai - Login attempt for username: test_user_ab3eff9e
+2026-08-09 01:51:19,792 - INFO - complianceai - User logged in successfully: test_user_ab3eff9e
+2026-08-09 01:51:19,794 - INFO - complianceai - [791333d8] POST /auth/login | Status: 200 | Time: 219.11 ms | Client: testclient
+2026-08-09 01:51:19,799 - INFO - complianceai - [e4f35b51] Incoming Request: POST /companies/ | Client: testclient
+2026-08-09 01:51:19,811 - INFO - complianceai - [e4f35b51] POST /companies/ | Status: 201 | Time: 11.94 ms | Client: testclient
+2026-08-09 01:51:19,815 - INFO - complianceai - [5a126117] Incoming Request: POST /companies/ | Client: testclient
+2026-08-09 01:51:19,822 - INFO - complianceai - [5a126117] POST /companies/ | Status: 400 | Time: 6.86 ms | Client: testclient
+2026-08-09 01:51:19,826 - INFO - complianceai - [2818e005] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:20,048 - INFO - complianceai - [2818e005] POST /auth/register | Status: 201 | Time: 221.53 ms | Client: testclient
+2026-08-09 01:51:20,608 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:20,616 - INFO - complianceai - [554b63ea] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:20,618 - INFO - complianceai - Login attempt for username: test_user_4a822224
+2026-08-09 01:51:20,883 - INFO - complianceai - User logged in successfully: test_user_4a822224
+2026-08-09 01:51:20,884 - INFO - complianceai - [554b63ea] POST /auth/login | Status: 200 | Time: 268.65 ms | Client: testclient
+2026-08-09 01:51:20,890 - INFO - complianceai - [ae61ed18] Incoming Request: POST /companies/ | Client: testclient
+2026-08-09 01:51:20,904 - INFO - complianceai - [ae61ed18] POST /companies/ | Status: 201 | Time: 14.14 ms | Client: testclient
+2026-08-09 01:51:20,909 - INFO - complianceai - [39bde39e] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:21,132 - INFO - complianceai - [39bde39e] POST /auth/register | Status: 201 | Time: 222.73 ms | Client: testclient
+2026-08-09 01:51:21,679 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:21,694 - INFO - complianceai - [2cb6be6d] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:21,697 - INFO - complianceai - Login attempt for username: other_update_607be91b
+2026-08-09 01:51:21,912 - INFO - complianceai - User logged in successfully: other_update_607be91b
+2026-08-09 01:51:21,913 - INFO - complianceai - [2cb6be6d] POST /auth/login | Status: 200 | Time: 219.59 ms | Client: testclient
+2026-08-09 01:51:21,917 - INFO - complianceai - [b84ad641] Incoming Request: PUT /companies/419 | Client: testclient
+2026-08-09 01:51:21,924 - INFO - complianceai - [b84ad641] PUT /companies/419 | Status: 404 | Time: 7.0 ms | Client: testclient
+2026-08-09 01:51:21,929 - INFO - complianceai - [54299d19] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:22,152 - INFO - complianceai - [54299d19] POST /auth/register | Status: 201 | Time: 222.52 ms | Client: testclient
+2026-08-09 01:51:22,687 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:22,697 - INFO - complianceai - [ec0b00a0] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:22,699 - INFO - complianceai - Login attempt for username: test_user_ddcfeac0
+2026-08-09 01:51:22,917 - INFO - complianceai - User logged in successfully: test_user_ddcfeac0
+2026-08-09 01:51:22,919 - INFO - complianceai - [ec0b00a0] POST /auth/login | Status: 200 | Time: 222.06 ms | Client: testclient
+2026-08-09 01:51:22,923 - INFO - complianceai - [c76f524e] Incoming Request: POST /companies/ | Client: testclient
+2026-08-09 01:51:22,934 - INFO - complianceai - [c76f524e] POST /companies/ | Status: 201 | Time: 11.45 ms | Client: testclient
+2026-08-09 01:51:22,939 - INFO - complianceai - [818df73e] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:23,159 - INFO - complianceai - [818df73e] POST /auth/register | Status: 201 | Time: 220.82 ms | Client: testclient
+2026-08-09 08:51:23,615 - INFO - complianceai - [79598307] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:51:23,616 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:51:23,617 - INFO - complianceai - [79598307] GET /health/ | Status: 200 | Time: 2.91 ms | Client: 127.0.0.1
+2026-08-09 01:51:23,694 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:23,715 - INFO - complianceai - [862ec6c1] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:23,718 - INFO - complianceai - Login attempt for username: other_delete_4c407e57
+2026-08-09 01:51:23,936 - INFO - complianceai - User logged in successfully: other_delete_4c407e57
+2026-08-09 01:51:23,937 - INFO - complianceai - [862ec6c1] POST /auth/login | Status: 200 | Time: 221.48 ms | Client: testclient
+2026-08-09 01:51:23,941 - INFO - complianceai - [4e95e92d] Incoming Request: DELETE /companies/420 | Client: testclient
+2026-08-09 01:51:23,948 - INFO - complianceai - [4e95e92d] DELETE /companies/420 | Status: 404 | Time: 6.76 ms | Client: testclient
+2026-08-09 01:51:23,952 - INFO - complianceai - [b9e02d1d] Incoming Request: POST /auth/register | Client: testclient
+2026-08-09 01:51:24,173 - INFO - complianceai - [b9e02d1d] POST /auth/register | Status: 201 | Time: 221.73 ms | Client: testclient
+2026-08-09 01:51:24,710 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-09 01:51:24,727 - INFO - complianceai - [5ddbab40] Incoming Request: POST /auth/login | Client: testclient
+2026-08-09 01:51:24,730 - INFO - complianceai - Login attempt for username: test_user_8b366bae
+2026-08-09 01:51:24,946 - INFO - complianceai - User logged in successfully: test_user_8b366bae
+2026-08-09 01:51:24,947 - INFO - complianceai - [5ddbab40] POST /auth/login | Status: 200 | Time: 220.16 ms | Client: testclient
+2026-08-09 01:51:24,952 - INFO - complianceai - [9ad06e3b] Incoming Request: DELETE /companies/999999 | Client: testclient
+2026-08-09 01:51:24,958 - INFO - complianceai - [9ad06e3b] DELETE /companies/999999 | Status: 403 | Time: 6.41 ms | Client: testclient
+2026-08-09 01:51:24,962 - INFO - complianceai - [91839991] Incoming Request: GET /health/ | Client: testclient
+2026-08-09 01:51:24,965 - INFO - complianceai - Health endpoint accessed
+2026-08-09 01:51:24,965 - INFO - complianceai - [91839991] GET /health/ | Status: 200 | Time: 2.75 ms | Client: testclient
+2026-08-09 01:51:24,969 - INFO - complianceai - [bb256e25] Incoming Request: GET / | Client: testclient
+2026-08-09 01:51:24,972 - INFO - complianceai - [bb256e25] GET / | Status: 200 | Time: 3.14 ms | Client: testclient
+2026-08-09 08:51:33,871 - INFO - complianceai - [98bbf124] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:51:33,873 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:51:33,875 - INFO - complianceai - [98bbf124] GET /health/ | Status: 200 | Time: 4.41 ms | Client: 127.0.0.1
+2026-08-09 08:51:44,116 - INFO - complianceai - [17d9f105] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:51:44,118 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:51:44,119 - INFO - complianceai - [17d9f105] GET /health/ | Status: 200 | Time: 2.69 ms | Client: 127.0.0.1
+2026-08-09 08:51:54,366 - INFO - complianceai - [d17a3854] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:51:54,367 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:51:54,368 - INFO - complianceai - [d17a3854] GET /health/ | Status: 200 | Time: 2.52 ms | Client: 127.0.0.1
+2026-08-09 08:52:04,593 - INFO - complianceai - [67e4286b] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:52:04,594 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:52:04,596 - INFO - complianceai - [67e4286b] GET /health/ | Status: 200 | Time: 2.52 ms | Client: 127.0.0.1

@@ -9,19 +9,19 @@ from app.logger import logger
 
 class LoggingMiddleware(BaseHTTPMiddleware):
 
-    async def dispatch(self, request: Request, call_next):
+ async def dispatch(self, request: Request, call_next):
+    start_time = time.time()
+    request_id = str(uuid.uuid4())[:8]
 
-        start_time = time.time()
-        request_id = str(uuid.uuid4())[:8]
+    client_ip = request.client.host if request.client else "Unknown"
 
-        client_ip = request.client.host if request.client else "Unknown"
+    logger.info(
+        f"[{request_id}] Incoming Request: "
+        f"{request.method} {request.url.path} | "
+        f"Client: {client_ip}"
+    )
 
-        logger.info(
-            f"[{request_id}] Incoming Request: "
-            f"{request.method} {request.url.path} | "
-            f"Client: {client_ip}"
-        )
-
+    try:
         response = await call_next(request)
 
         process_time = round((time.time() - start_time) * 1000, 2)
@@ -38,6 +38,19 @@ class LoggingMiddleware(BaseHTTPMiddleware):
         response.headers["X-Request-ID"] = request_id
 
         return response
+
+    except Exception:
+        process_time = round((time.time() - start_time) * 1000, 2)
+
+        logger.exception(
+            f"[{request_id}] "
+            f"{request.method} {request.url.path} | "
+            f"Request failed | "
+            f"Time: {process_time} ms | "
+            f"Client: {client_ip}"
+        )
+
+        raise
 
 
 class SecurityHeadersMiddleware(BaseHTTPMiddleware):
