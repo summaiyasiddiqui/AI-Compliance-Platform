@@ -16799,3 +16799,466 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2026-08-09 08:52:04,593 - INFO - complianceai - [67e4286b] Incoming Request: GET /health/ | Client: 127.0.0.1
 2026-08-09 08:52:04,594 - INFO - complianceai - Health endpoint accessed
 2026-08-09 08:52:04,596 - INFO - complianceai - [67e4286b] GET /health/ | Status: 200 | Time: 2.52 ms | Client: 127.0.0.1
+2026-08-09 08:52:14,861 - INFO - complianceai - [a6f5b213] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:52:14,862 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:52:14,863 - INFO - complianceai - [a6f5b213] GET /health/ | Status: 200 | Time: 2.22 ms | Client: 127.0.0.1
+2026-08-09 08:52:25,094 - INFO - complianceai - [bd484758] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:52:25,097 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:52:25,098 - INFO - complianceai - [bd484758] GET /health/ | Status: 200 | Time: 4.06 ms | Client: 127.0.0.1
+2026-08-09 08:52:35,339 - INFO - complianceai - [d3b94d79] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:52:35,340 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:52:35,341 - INFO - complianceai - [d3b94d79] GET /health/ | Status: 200 | Time: 2.56 ms | Client: 127.0.0.1
+2026-08-09 08:52:45,617 - INFO - complianceai - [8a2e9e90] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:52:45,618 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:52:45,620 - INFO - complianceai - [8a2e9e90] GET /health/ | Status: 200 | Time: 3.09 ms | Client: 127.0.0.1
+2026-08-09 08:52:55,860 - INFO - complianceai - [137b2a06] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:52:55,861 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:52:55,862 - INFO - complianceai - [137b2a06] GET /health/ | Status: 200 | Time: 2.45 ms | Client: 127.0.0.1
+2026-08-09 08:53:06,119 - INFO - complianceai - [2e3a1c53] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:53:06,121 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:53:06,122 - INFO - complianceai - [2e3a1c53] GET /health/ | Status: 200 | Time: 2.5 ms | Client: 127.0.0.1
+2026-08-09 08:53:16,375 - INFO - complianceai - [acd26322] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:53:16,376 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:53:16,377 - INFO - complianceai - [acd26322] GET /health/ | Status: 200 | Time: 2.41 ms | Client: 127.0.0.1
+2026-08-09 08:53:26,632 - INFO - complianceai - [6a66f801] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:53:26,633 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:53:26,634 - INFO - complianceai - [6a66f801] GET /health/ | Status: 200 | Time: 2.67 ms | Client: 127.0.0.1
+2026-08-09 08:53:36,878 - INFO - complianceai - [94adc9a2] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:53:36,879 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:53:36,880 - INFO - complianceai - [94adc9a2] GET /health/ | Status: 200 | Time: 2.58 ms | Client: 127.0.0.1
+2026-08-09 08:53:47,127 - INFO - complianceai - [8ee8bc36] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:53:47,128 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:53:47,129 - INFO - complianceai - [8ee8bc36] GET /health/ | Status: 200 | Time: 1.96 ms | Client: 127.0.0.1
+2026-08-09 08:53:57,489 - INFO - complianceai - [0c817c08] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:53:57,491 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:53:57,492 - INFO - complianceai - [0c817c08] GET /health/ | Status: 200 | Time: 2.21 ms | Client: 127.0.0.1
+2026-08-09 08:54:07,760 - INFO - complianceai - [a32ee604] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:54:07,761 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:54:07,762 - INFO - complianceai - [a32ee604] GET /health/ | Status: 200 | Time: 2.27 ms | Client: 127.0.0.1
+2026-08-09 08:54:18,039 - INFO - complianceai - [0dca764b] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:54:18,041 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:54:18,042 - INFO - complianceai - [0dca764b] GET /health/ | Status: 200 | Time: 2.72 ms | Client: 127.0.0.1
+2026-08-09 08:54:28,296 - INFO - complianceai - [8c1755ff] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:54:28,297 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:54:28,298 - INFO - complianceai - [8c1755ff] GET /health/ | Status: 200 | Time: 2.47 ms | Client: 127.0.0.1
+2026-08-09 08:54:38,542 - INFO - complianceai - [a3fa9fc3] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:54:38,544 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:54:38,545 - INFO - complianceai - [a3fa9fc3] GET /health/ | Status: 200 | Time: 2.86 ms | Client: 127.0.0.1
+2026-08-09 08:54:48,772 - INFO - complianceai - [a554a872] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:54:48,774 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:54:48,775 - INFO - complianceai - [a554a872] GET /health/ | Status: 200 | Time: 2.72 ms | Client: 127.0.0.1
+2026-08-09 08:54:58,993 - INFO - complianceai - [a1279fd7] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:54:58,995 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:54:58,996 - INFO - complianceai - [a1279fd7] GET /health/ | Status: 200 | Time: 2.46 ms | Client: 127.0.0.1
+2026-08-09 08:55:09,248 - INFO - complianceai - [6bbac091] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:55:09,251 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:55:09,252 - INFO - complianceai - [6bbac091] GET /health/ | Status: 200 | Time: 4.02 ms | Client: 127.0.0.1
+2026-08-09 08:55:19,482 - INFO - complianceai - [8e1b3035] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:55:19,483 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:55:19,484 - INFO - complianceai - [8e1b3035] GET /health/ | Status: 200 | Time: 2.27 ms | Client: 127.0.0.1
+2026-08-09 08:55:29,723 - INFO - complianceai - [c63230af] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:55:29,725 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:55:29,726 - INFO - complianceai - [c63230af] GET /health/ | Status: 200 | Time: 2.3 ms | Client: 127.0.0.1
+2026-08-09 08:55:39,949 - INFO - complianceai - [98cf2f75] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:55:39,951 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:55:39,952 - INFO - complianceai - [98cf2f75] GET /health/ | Status: 200 | Time: 2.5 ms | Client: 127.0.0.1
+2026-08-09 08:55:50,194 - INFO - complianceai - [7752aa2a] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:55:50,196 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:55:50,197 - INFO - complianceai - [7752aa2a] GET /health/ | Status: 200 | Time: 2.79 ms | Client: 127.0.0.1
+2026-08-09 08:56:00,474 - INFO - complianceai - [5b5ab838] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:56:00,475 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:56:00,476 - INFO - complianceai - [5b5ab838] GET /health/ | Status: 200 | Time: 2.43 ms | Client: 127.0.0.1
+2026-08-09 08:56:10,713 - INFO - complianceai - [78e7668b] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-09 08:56:10,715 - INFO - complianceai - Health endpoint accessed
+2026-08-09 08:56:10,716 - INFO - complianceai - [78e7668b] GET /health/ | Status: 200 | Time: 3.57 ms | Client: 127.0.0.1
+2026-08-10 07:57:55,816 - INFO - complianceai - [8c6c4787] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 07:57:55,839 - INFO - complianceai - Health endpoint accessed
+2026-08-10 07:57:55,841 - INFO - complianceai - [8c6c4787] GET /health/ | Status: 200 | Time: 25.28 ms | Client: 127.0.0.1
+2026-08-10 07:58:06,249 - INFO - complianceai - [cb97bfe3] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 07:58:06,252 - INFO - complianceai - Health endpoint accessed
+2026-08-10 07:58:06,254 - INFO - complianceai - [cb97bfe3] GET /health/ | Status: 200 | Time: 5.6 ms | Client: 127.0.0.1
+2026-08-10 07:58:16,660 - INFO - complianceai - [f3a5575d] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 07:58:16,663 - INFO - complianceai - Health endpoint accessed
+2026-08-10 07:58:16,666 - INFO - complianceai - [f3a5575d] GET /health/ | Status: 200 | Time: 5.96 ms | Client: 127.0.0.1
+2026-08-10 07:58:27,070 - INFO - complianceai - [f6f4ef1c] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 07:58:27,072 - INFO - complianceai - Health endpoint accessed
+2026-08-10 07:58:27,075 - INFO - complianceai - [f6f4ef1c] GET /health/ | Status: 200 | Time: 4.86 ms | Client: 127.0.0.1
+2026-08-10 07:58:37,484 - INFO - complianceai - [c22648d0] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 07:58:37,488 - INFO - complianceai - Health endpoint accessed
+2026-08-10 07:58:37,490 - INFO - complianceai - [c22648d0] GET /health/ | Status: 200 | Time: 6.02 ms | Client: 127.0.0.1
+2026-08-10 07:58:47,988 - INFO - complianceai - [93e12b13] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 07:58:47,990 - INFO - complianceai - Health endpoint accessed
+2026-08-10 07:58:47,992 - INFO - complianceai - [93e12b13] GET /health/ | Status: 200 | Time: 4.11 ms | Client: 127.0.0.1
+2026-08-10 07:58:58,626 - INFO - complianceai - [59d34f5e] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 07:58:58,630 - INFO - complianceai - Health endpoint accessed
+2026-08-10 07:58:58,632 - INFO - complianceai - [59d34f5e] GET /health/ | Status: 200 | Time: 6.79 ms | Client: 127.0.0.1
+2026-08-10 07:59:09,099 - INFO - complianceai - [79f646bc] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 07:59:09,102 - INFO - complianceai - Health endpoint accessed
+2026-08-10 07:59:09,104 - INFO - complianceai - [79f646bc] GET /health/ | Status: 200 | Time: 5.01 ms | Client: 127.0.0.1
+2026-08-10 07:59:19,584 - INFO - complianceai - [817e1966] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 07:59:19,588 - INFO - complianceai - Health endpoint accessed
+2026-08-10 07:59:19,591 - INFO - complianceai - [817e1966] GET /health/ | Status: 200 | Time: 7.12 ms | Client: 127.0.0.1
+2026-08-10 07:59:30,344 - INFO - complianceai - [53f5ad0a] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 07:59:30,346 - INFO - complianceai - Health endpoint accessed
+2026-08-10 07:59:30,348 - INFO - complianceai - [53f5ad0a] GET /health/ | Status: 200 | Time: 4.46 ms | Client: 127.0.0.1
+2026-08-10 07:59:40,840 - INFO - complianceai - [6060c857] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 07:59:40,846 - INFO - complianceai - Health endpoint accessed
+2026-08-10 07:59:40,849 - INFO - complianceai - [6060c857] GET /health/ | Status: 200 | Time: 8.7 ms | Client: 127.0.0.1
+2026-08-10 07:59:51,276 - INFO - complianceai - [abc7b8c2] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 07:59:51,280 - INFO - complianceai - Health endpoint accessed
+2026-08-10 07:59:51,282 - INFO - complianceai - [abc7b8c2] GET /health/ | Status: 200 | Time: 5.98 ms | Client: 127.0.0.1
+2026-08-10 08:00:01,904 - INFO - complianceai - [d688f454] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:00:01,909 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:00:01,912 - INFO - complianceai - [d688f454] GET /health/ | Status: 200 | Time: 7.82 ms | Client: 127.0.0.1
+2026-08-10 08:00:12,533 - INFO - complianceai - [14c00f6d] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:00:12,536 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:00:12,539 - INFO - complianceai - [14c00f6d] GET /health/ | Status: 200 | Time: 5.77 ms | Client: 127.0.0.1
+2026-08-10 08:00:23,355 - INFO - complianceai - [e61bef2a] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:00:23,359 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:00:23,361 - INFO - complianceai - [e61bef2a] GET /health/ | Status: 200 | Time: 6.62 ms | Client: 127.0.0.1
+2026-08-10 08:00:33,897 - INFO - complianceai - [7a627b9c] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:00:33,900 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:00:33,902 - INFO - complianceai - [7a627b9c] GET /health/ | Status: 200 | Time: 4.92 ms | Client: 127.0.0.1
+2026-08-10 08:00:44,427 - INFO - complianceai - [b6249509] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:00:44,429 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:00:44,432 - INFO - complianceai - [b6249509] GET /health/ | Status: 200 | Time: 5.05 ms | Client: 127.0.0.1
+2026-08-10 08:00:54,948 - INFO - complianceai - [ba88c387] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:00:54,950 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:00:54,952 - INFO - complianceai - [ba88c387] GET /health/ | Status: 200 | Time: 4.16 ms | Client: 127.0.0.1
+2026-08-10 08:01:05,389 - INFO - complianceai - [facf4a34] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:01:05,393 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:01:05,396 - INFO - complianceai - [facf4a34] GET /health/ | Status: 200 | Time: 6.43 ms | Client: 127.0.0.1
+2026-08-10 08:01:15,915 - INFO - complianceai - [af779e41] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:01:15,920 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:01:15,922 - INFO - complianceai - [af779e41] GET /health/ | Status: 200 | Time: 6.87 ms | Client: 127.0.0.1
+2026-08-10 08:01:26,392 - INFO - complianceai - [387320e5] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:01:26,395 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:01:26,397 - INFO - complianceai - [387320e5] GET /health/ | Status: 200 | Time: 4.41 ms | Client: 127.0.0.1
+2026-08-10 08:01:37,166 - INFO - complianceai - [c61cf854] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:01:37,170 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:01:37,173 - INFO - complianceai - [c61cf854] GET /health/ | Status: 200 | Time: 7.18 ms | Client: 127.0.0.1
+2026-08-10 08:01:47,762 - INFO - complianceai - [8db4f1ca] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:01:47,765 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:01:47,768 - INFO - complianceai - [8db4f1ca] GET /health/ | Status: 200 | Time: 6.04 ms | Client: 127.0.0.1
+2026-08-10 08:01:58,239 - INFO - complianceai - [a6246b6f] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:01:58,246 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:01:58,248 - INFO - complianceai - [a6246b6f] GET /health/ | Status: 200 | Time: 9.11 ms | Client: 127.0.0.1
+2026-08-10 08:02:08,693 - INFO - complianceai - [f5838f48] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:02:08,695 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:02:08,697 - INFO - complianceai - [f5838f48] GET /health/ | Status: 200 | Time: 4.63 ms | Client: 127.0.0.1
+2026-08-10 08:02:19,128 - INFO - complianceai - [5ba129f5] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:02:19,131 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:02:19,134 - INFO - complianceai - [5ba129f5] GET /health/ | Status: 200 | Time: 5.79 ms | Client: 127.0.0.1
+2026-08-10 08:02:29,558 - INFO - complianceai - [a9a6772d] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:02:29,561 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:02:29,563 - INFO - complianceai - [a9a6772d] GET /health/ | Status: 200 | Time: 5.31 ms | Client: 127.0.0.1
+2026-08-10 08:02:40,243 - INFO - complianceai - [a3ba1bfb] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:02:40,245 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:02:40,247 - INFO - complianceai - [a3ba1bfb] GET /health/ | Status: 200 | Time: 4.63 ms | Client: 127.0.0.1
+2026-08-10 08:02:51,003 - INFO - complianceai - [4f1c4589] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:02:51,006 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:02:51,010 - INFO - complianceai - [4f1c4589] GET /health/ | Status: 200 | Time: 6.63 ms | Client: 127.0.0.1
+2026-08-10 08:03:01,844 - INFO - complianceai - [7f535fb5] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:03:01,848 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:03:01,850 - INFO - complianceai - [7f535fb5] GET /health/ | Status: 200 | Time: 6.01 ms | Client: 127.0.0.1
+2026-08-10 08:03:12,445 - INFO - complianceai - [7a500d5a] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:03:12,448 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:03:12,450 - INFO - complianceai - [7a500d5a] GET /health/ | Status: 200 | Time: 4.96 ms | Client: 127.0.0.1
+2026-08-10 08:03:22,976 - INFO - complianceai - [47ddb264] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:03:22,979 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:03:22,982 - INFO - complianceai - [47ddb264] GET /health/ | Status: 200 | Time: 5.62 ms | Client: 127.0.0.1
+2026-08-10 08:03:33,465 - INFO - complianceai - [6d5c0b94] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:03:33,468 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:03:33,469 - INFO - complianceai - [6d5c0b94] GET /health/ | Status: 200 | Time: 4.35 ms | Client: 127.0.0.1
+2026-08-10 08:03:43,984 - INFO - complianceai - [9ad67645] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:03:43,987 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:03:43,989 - INFO - complianceai - [9ad67645] GET /health/ | Status: 200 | Time: 4.75 ms | Client: 127.0.0.1
+2026-08-10 08:03:54,481 - INFO - complianceai - [51cac545] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:03:54,484 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:03:54,487 - INFO - complianceai - [51cac545] GET /health/ | Status: 200 | Time: 5.4 ms | Client: 127.0.0.1
+2026-08-10 08:04:05,347 - INFO - complianceai - [c9bfcacc] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:04:05,352 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:04:05,355 - INFO - complianceai - [c9bfcacc] GET /health/ | Status: 200 | Time: 8.03 ms | Client: 127.0.0.1
+2026-08-10 08:04:20,751 - INFO - complianceai - [89071cad] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:04:20,773 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:04:20,775 - INFO - complianceai - [89071cad] GET /health/ | Status: 200 | Time: 24.71 ms | Client: 127.0.0.1
+2026-08-10 08:04:31,470 - INFO - complianceai - [296c030b] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:04:31,473 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:04:31,475 - INFO - complianceai - [296c030b] GET /health/ | Status: 200 | Time: 4.85 ms | Client: 127.0.0.1
+2026-08-10 08:04:41,956 - INFO - complianceai - [4eb374fd] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:04:41,958 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:04:41,960 - INFO - complianceai - [4eb374fd] GET /health/ | Status: 200 | Time: 3.93 ms | Client: 127.0.0.1
+2026-08-10 08:04:52,383 - INFO - complianceai - [7f373b68] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:04:52,385 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:04:52,387 - INFO - complianceai - [7f373b68] GET /health/ | Status: 200 | Time: 4.21 ms | Client: 127.0.0.1
+2026-08-10 08:05:02,888 - INFO - complianceai - [f7db965b] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:05:02,891 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:05:02,893 - INFO - complianceai - [f7db965b] GET /health/ | Status: 200 | Time: 4.44 ms | Client: 127.0.0.1
+2026-08-10 08:05:13,348 - INFO - complianceai - [27f24577] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:05:13,350 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:05:13,352 - INFO - complianceai - [27f24577] GET /health/ | Status: 200 | Time: 4.19 ms | Client: 127.0.0.1
+2026-08-10 08:05:23,856 - INFO - complianceai - [f42bfe0c] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:05:23,859 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:05:23,861 - INFO - complianceai - [f42bfe0c] GET /health/ | Status: 200 | Time: 4.89 ms | Client: 127.0.0.1
+2026-08-10 08:05:34,316 - INFO - complianceai - [3e22e261] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:05:34,318 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:05:34,320 - INFO - complianceai - [3e22e261] GET /health/ | Status: 200 | Time: 5.02 ms | Client: 127.0.0.1
+2026-08-10 08:05:38,181 - INFO - complianceai - [66a0a81c] Incoming Request: GET /health/ | Client: 172.19.0.1
+2026-08-10 08:05:38,184 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:05:38,186 - INFO - complianceai - [66a0a81c] GET /health/ | Status: 200 | Time: 4.97 ms | Client: 172.19.0.1
+2026-08-10 08:05:44,460 - INFO - complianceai - [ad6cb64d] Incoming Request: GET /ready/ | Client: 172.19.0.1
+2026-08-10 08:05:44,537 - INFO - complianceai - [ad6cb64d] GET /ready/ | Status: 200 | Time: 76.25 ms | Client: 172.19.0.1
+2026-08-10 08:05:45,064 - INFO - complianceai - [4a828c9d] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:05:45,070 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:05:45,073 - INFO - complianceai - [4a828c9d] GET /health/ | Status: 200 | Time: 9.5 ms | Client: 127.0.0.1
+2026-08-10 08:05:49,509 - INFO - complianceai - [1166986d] Incoming Request: GET /docs | Client: 172.19.0.1
+2026-08-10 08:05:49,512 - INFO - complianceai - [1166986d] GET /docs | Status: 200 | Time: 3.22 ms | Client: 172.19.0.1
+2026-08-10 08:05:55,619 - INFO - complianceai - [a7a17662] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:05:55,621 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:05:55,623 - INFO - complianceai - [a7a17662] GET /health/ | Status: 200 | Time: 4.65 ms | Client: 127.0.0.1
+2026-08-10 08:06:06,230 - INFO - complianceai - [fd26bc41] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:06:06,233 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:06:06,235 - INFO - complianceai - [fd26bc41] GET /health/ | Status: 200 | Time: 5.5 ms | Client: 127.0.0.1
+2026-08-10 08:06:16,649 - INFO - complianceai - [c387c138] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:06:16,651 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:06:16,653 - INFO - complianceai - [c387c138] GET /health/ | Status: 200 | Time: 4.37 ms | Client: 127.0.0.1
+2026-08-10 08:06:27,097 - INFO - complianceai - [cb67da37] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:06:27,100 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:06:27,101 - INFO - complianceai - [cb67da37] GET /health/ | Status: 200 | Time: 3.92 ms | Client: 127.0.0.1
+2026-08-10 08:06:37,546 - INFO - complianceai - [7093ec35] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:06:37,549 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:06:37,551 - INFO - complianceai - [7093ec35] GET /health/ | Status: 200 | Time: 4.63 ms | Client: 127.0.0.1
+2026-08-10 08:06:48,057 - INFO - complianceai - [da2733a4] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:06:48,059 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:06:48,062 - INFO - complianceai - [da2733a4] GET /health/ | Status: 200 | Time: 5.24 ms | Client: 127.0.0.1
+2026-08-10 08:06:58,686 - INFO - complianceai - [f5a3b514] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:06:58,689 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:06:58,692 - INFO - complianceai - [f5a3b514] GET /health/ | Status: 200 | Time: 5.74 ms | Client: 127.0.0.1
+2026-08-10 08:07:06,535 - INFO - complianceai - [4753a243] Incoming Request: POST /auth/register | Client: 172.19.0.1
+2026-08-10 08:07:06,567 - WARNING - complianceai - Validation Error: [{'field': 'body.username', 'message': 'Field required'}]
+2026-08-10 08:07:06,569 - INFO - complianceai - [4753a243] POST /auth/register | Status: 422 | Time: 34.11 ms | Client: 172.19.0.1
+2026-08-10 08:07:09,210 - INFO - complianceai - [8922ec8a] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:07:09,213 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:07:09,215 - INFO - complianceai - [8922ec8a] GET /health/ | Status: 200 | Time: 5.13 ms | Client: 127.0.0.1
+2026-08-10 08:07:16,857 - INFO - complianceai - [91537df2] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-08-10 08:07:16,874 - WARNING - complianceai - Validation Error: [{'field': 'body.username', 'message': 'Field required'}, {'field': 'body.password', 'message': 'Field required'}]
+2026-08-10 08:07:16,876 - INFO - complianceai - [91537df2] POST /auth/login | Status: 422 | Time: 19.09 ms | Client: 172.19.0.1
+2026-08-10 08:07:19,763 - INFO - complianceai - [4879d0e0] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:07:19,766 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:07:19,768 - INFO - complianceai - [4879d0e0] GET /health/ | Status: 200 | Time: 4.73 ms | Client: 127.0.0.1
+2026-08-10 08:07:30,456 - INFO - complianceai - [1f0dc757] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:07:30,459 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:07:30,462 - INFO - complianceai - [1f0dc757] GET /health/ | Status: 200 | Time: 5.32 ms | Client: 127.0.0.1
+2026-08-10 08:07:40,987 - INFO - complianceai - [8c9df592] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:07:40,991 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:07:40,993 - INFO - complianceai - [8c9df592] GET /health/ | Status: 200 | Time: 6.28 ms | Client: 127.0.0.1
+2026-08-10 08:07:43,732 - INFO - complianceai - [78e43f34] Incoming Request: POST /auth/register | Client: 172.19.0.1
+2026-08-10 08:07:43,739 - WARNING - complianceai - Validation Error: [{'field': 'body.email', 'message': 'Field required'}]
+2026-08-10 08:07:43,741 - INFO - complianceai - [78e43f34] POST /auth/register | Status: 422 | Time: 9.1 ms | Client: 172.19.0.1
+2026-08-10 08:07:50,112 - INFO - complianceai - [3b9d68e2] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-08-10 08:07:50,117 - WARNING - complianceai - Validation Error: [{'field': 'body.username', 'message': 'Field required'}, {'field': 'body.password', 'message': 'Field required'}]
+2026-08-10 08:07:50,119 - INFO - complianceai - [3b9d68e2] POST /auth/login | Status: 422 | Time: 7.25 ms | Client: 172.19.0.1
+2026-08-10 08:07:51,512 - INFO - complianceai - [e91f1e1b] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:07:51,516 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:07:51,518 - INFO - complianceai - [e91f1e1b] GET /health/ | Status: 200 | Time: 6.15 ms | Client: 127.0.0.1
+2026-08-10 08:08:02,013 - INFO - complianceai - [602ec10e] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:08:02,015 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:08:02,018 - INFO - complianceai - [602ec10e] GET /health/ | Status: 200 | Time: 4.67 ms | Client: 127.0.0.1
+2026-08-10 08:08:12,633 - INFO - complianceai - [6ffb94fd] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:08:12,636 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:08:12,638 - INFO - complianceai - [6ffb94fd] GET /health/ | Status: 200 | Time: 4.96 ms | Client: 127.0.0.1
+2026-08-10 08:08:14,958 - INFO - complianceai - [e2f86a7d] Incoming Request: POST /auth/register | Client: 172.19.0.1
+2026-08-10 08:08:15,458 - INFO - complianceai - [e2f86a7d] POST /auth/register | Status: 201 | Time: 499.37 ms | Client: 172.19.0.1
+2026-08-10 08:08:16,346 - ERROR - complianceai - Failed to send email: 422 Client Error: Unprocessable Entity for url: https://api.resend.com/emails
+2026-08-10 08:08:22,559 - INFO - complianceai - [f8449fa9] Incoming Request: GET /openapi.json | Client: 172.19.0.1
+2026-08-10 08:08:22,639 - INFO - complianceai - [f8449fa9] GET /openapi.json | Status: 200 | Time: 79.6 ms | Client: 172.19.0.1
+2026-08-10 08:08:23,112 - INFO - complianceai - [d28ac1a9] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:08:23,115 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:08:23,117 - INFO - complianceai - [d28ac1a9] GET /health/ | Status: 200 | Time: 5.05 ms | Client: 127.0.0.1
+2026-08-10 08:08:33,645 - INFO - complianceai - [acfa0963] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:08:33,647 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:08:33,649 - INFO - complianceai - [acfa0963] GET /health/ | Status: 200 | Time: 4.39 ms | Client: 127.0.0.1
+2026-08-10 08:08:44,278 - INFO - complianceai - [74c9c17c] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:08:44,281 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:08:44,284 - INFO - complianceai - [74c9c17c] GET /health/ | Status: 200 | Time: 6.46 ms | Client: 127.0.0.1
+2026-08-10 08:08:54,837 - INFO - complianceai - [4bc31ea2] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:08:54,840 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:08:54,845 - INFO - complianceai - [4bc31ea2] GET /health/ | Status: 200 | Time: 7.79 ms | Client: 127.0.0.1
+2026-08-10 08:09:05,428 - INFO - complianceai - [dbaabe4e] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:09:05,430 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:09:05,433 - INFO - complianceai - [dbaabe4e] GET /health/ | Status: 200 | Time: 5.13 ms | Client: 127.0.0.1
+2026-08-10 08:09:15,888 - INFO - complianceai - [d67f0d3b] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:09:15,890 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:09:15,893 - INFO - complianceai - [d67f0d3b] GET /health/ | Status: 200 | Time: 5.0 ms | Client: 127.0.0.1
+2026-08-10 08:09:26,360 - INFO - complianceai - [e187d731] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:09:26,365 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:09:26,367 - INFO - complianceai - [e187d731] GET /health/ | Status: 200 | Time: 6.51 ms | Client: 127.0.0.1
+2026-08-10 08:09:37,222 - INFO - complianceai - [8605ac5f] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:09:37,226 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:09:37,229 - INFO - complianceai - [8605ac5f] GET /health/ | Status: 200 | Time: 7.99 ms | Client: 127.0.0.1
+2026-08-10 08:09:48,133 - INFO - complianceai - [37d3a35b] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:09:48,138 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:09:48,141 - INFO - complianceai - [37d3a35b] GET /health/ | Status: 200 | Time: 8.23 ms | Client: 127.0.0.1
+2026-08-10 08:09:58,608 - INFO - complianceai - [f6b36f59] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:09:58,611 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:09:58,613 - INFO - complianceai - [f6b36f59] GET /health/ | Status: 200 | Time: 4.24 ms | Client: 127.0.0.1
+2026-08-10 08:10:09,035 - INFO - complianceai - [834457ff] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:10:09,037 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:10:09,039 - INFO - complianceai - [834457ff] GET /health/ | Status: 200 | Time: 5.01 ms | Client: 127.0.0.1
+2026-08-10 08:10:19,467 - INFO - complianceai - [66951ad9] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:10:19,469 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:10:19,471 - INFO - complianceai - [66951ad9] GET /health/ | Status: 200 | Time: 4.59 ms | Client: 127.0.0.1
+2026-08-10 08:10:29,999 - INFO - complianceai - [d54174cb] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:10:30,002 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:10:30,004 - INFO - complianceai - [d54174cb] GET /health/ | Status: 200 | Time: 4.99 ms | Client: 127.0.0.1
+2026-08-10 08:10:36,150 - INFO - complianceai - [a7b506d5] Incoming Request: POST /auth/login | Client: 172.19.0.1
+2026-08-10 08:10:36,158 - INFO - complianceai - Login attempt for username: day38test
+2026-08-10 08:10:36,554 - INFO - complianceai - User logged in successfully: day38test
+2026-08-10 08:10:36,558 - INFO - complianceai - [a7b506d5] POST /auth/login | Status: 200 | Time: 407.76 ms | Client: 172.19.0.1
+2026-08-10 08:10:40,822 - INFO - complianceai - [b042ea15] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:10:40,825 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:10:40,828 - INFO - complianceai - [b042ea15] GET /health/ | Status: 200 | Time: 6.47 ms | Client: 127.0.0.1
+2026-08-10 08:10:51,337 - INFO - complianceai - [47d87597] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:10:51,339 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:10:51,341 - INFO - complianceai - [47d87597] GET /health/ | Status: 200 | Time: 4.42 ms | Client: 127.0.0.1
+2026-08-10 08:11:01,825 - INFO - complianceai - [b7e13a5e] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:11:01,828 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:11:01,830 - INFO - complianceai - [b7e13a5e] GET /health/ | Status: 200 | Time: 4.94 ms | Client: 127.0.0.1
+2026-08-10 08:11:12,252 - INFO - complianceai - [7d6cd229] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:11:12,256 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:11:12,258 - INFO - complianceai - [7d6cd229] GET /health/ | Status: 200 | Time: 5.64 ms | Client: 127.0.0.1
+2026-08-10 08:11:22,748 - INFO - complianceai - [4b4ec8c7] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:11:22,751 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:11:22,753 - INFO - complianceai - [4b4ec8c7] GET /health/ | Status: 200 | Time: 5.85 ms | Client: 127.0.0.1
+2026-08-10 08:11:33,205 - INFO - complianceai - [319d0afe] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:11:33,208 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:11:33,210 - INFO - complianceai - [319d0afe] GET /health/ | Status: 200 | Time: 5.06 ms | Client: 127.0.0.1
+2026-08-10 08:11:43,663 - INFO - complianceai - [cc3c3bcf] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:11:43,666 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:11:43,669 - INFO - complianceai - [cc3c3bcf] GET /health/ | Status: 200 | Time: 5.83 ms | Client: 127.0.0.1
+2026-08-10 08:11:54,419 - INFO - complianceai - [1a59f626] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:11:54,422 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:11:54,426 - INFO - complianceai - [1a59f626] GET /health/ | Status: 200 | Time: 7.88 ms | Client: 127.0.0.1
+2026-08-10 08:12:05,066 - INFO - complianceai - [44b05c09] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:12:05,069 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:12:05,070 - INFO - complianceai - [44b05c09] GET /health/ | Status: 200 | Time: 4.19 ms | Client: 127.0.0.1
+2026-08-10 08:12:15,681 - INFO - complianceai - [c9fb208e] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:12:15,687 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:12:15,692 - INFO - complianceai - [c9fb208e] GET /health/ | Status: 200 | Time: 10.99 ms | Client: 127.0.0.1
+2026-08-10 08:12:26,143 - INFO - complianceai - [d8c0f7b2] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:12:26,146 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:12:26,148 - INFO - complianceai - [d8c0f7b2] GET /health/ | Status: 200 | Time: 5.2 ms | Client: 127.0.0.1
+2026-08-10 08:12:36,581 - INFO - complianceai - [cee3e4a6] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:12:36,583 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:12:36,586 - INFO - complianceai - [cee3e4a6] GET /health/ | Status: 200 | Time: 4.95 ms | Client: 127.0.0.1
+2026-08-10 08:12:47,095 - INFO - complianceai - [236f91d3] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:12:47,097 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:12:47,099 - INFO - complianceai - [236f91d3] GET /health/ | Status: 200 | Time: 4.28 ms | Client: 127.0.0.1
+2026-08-10 08:12:57,510 - INFO - complianceai - [b68fcec1] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:12:57,513 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:12:57,515 - INFO - complianceai - [b68fcec1] GET /health/ | Status: 200 | Time: 5.7 ms | Client: 127.0.0.1
+2026-08-10 08:13:07,927 - INFO - complianceai - [d141b2d6] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:13:07,930 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:13:07,932 - INFO - complianceai - [d141b2d6] GET /health/ | Status: 200 | Time: 5.06 ms | Client: 127.0.0.1
+2026-08-10 08:13:18,398 - INFO - complianceai - [c75174d3] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:13:18,401 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:13:18,404 - INFO - complianceai - [c75174d3] GET /health/ | Status: 200 | Time: 6.05 ms | Client: 127.0.0.1
+2026-08-10 08:13:28,930 - INFO - complianceai - [b74c8bcd] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:13:28,934 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:13:28,936 - INFO - complianceai - [b74c8bcd] GET /health/ | Status: 200 | Time: 6.1 ms | Client: 127.0.0.1
+2026-08-10 08:13:39,361 - INFO - complianceai - [e986bbfe] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:13:39,365 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:13:39,368 - INFO - complianceai - [e986bbfe] GET /health/ | Status: 200 | Time: 6.17 ms | Client: 127.0.0.1
+2026-08-10 08:13:49,826 - INFO - complianceai - [33692839] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:13:49,829 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:13:49,832 - INFO - complianceai - [33692839] GET /health/ | Status: 200 | Time: 5.65 ms | Client: 127.0.0.1
+2026-08-10 08:14:00,353 - INFO - complianceai - [24dfa2ff] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:14:00,356 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:14:00,359 - INFO - complianceai - [24dfa2ff] GET /health/ | Status: 200 | Time: 5.63 ms | Client: 127.0.0.1
+2026-08-10 08:14:11,031 - INFO - complianceai - [9ca9ced1] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:14:11,037 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:14:11,041 - INFO - complianceai - [9ca9ced1] GET /health/ | Status: 200 | Time: 9.53 ms | Client: 127.0.0.1
+2026-08-10 08:14:21,670 - INFO - complianceai - [0f16e1e1] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:14:21,672 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:14:21,674 - INFO - complianceai - [0f16e1e1] GET /health/ | Status: 200 | Time: 4.77 ms | Client: 127.0.0.1
+2026-08-10 08:14:32,299 - INFO - complianceai - [42114354] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:14:32,302 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:14:32,304 - INFO - complianceai - [42114354] GET /health/ | Status: 200 | Time: 5.28 ms | Client: 127.0.0.1
+2026-08-10 08:14:42,875 - INFO - complianceai - [45f79bbd] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:14:42,907 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:14:42,912 - INFO - complianceai - [45f79bbd] GET /health/ | Status: 200 | Time: 36.97 ms | Client: 127.0.0.1
+2026-08-10 08:14:53,531 - INFO - complianceai - [4dfdc749] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:14:53,535 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:14:53,538 - INFO - complianceai - [4dfdc749] GET /health/ | Status: 200 | Time: 6.52 ms | Client: 127.0.0.1
+2026-08-10 08:15:04,015 - INFO - complianceai - [6deb0128] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:15:04,019 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:15:04,021 - INFO - complianceai - [6deb0128] GET /health/ | Status: 200 | Time: 6.23 ms | Client: 127.0.0.1
+2026-08-10 08:15:14,490 - INFO - complianceai - [b1fd4612] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:15:14,493 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:15:14,495 - INFO - complianceai - [b1fd4612] GET /health/ | Status: 200 | Time: 5.39 ms | Client: 127.0.0.1
+2026-08-10 08:15:24,886 - INFO - complianceai - [40a7a7e1] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:15:24,889 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:15:24,890 - INFO - complianceai - [40a7a7e1] GET /health/ | Status: 200 | Time: 3.97 ms | Client: 127.0.0.1
+2026-08-10 08:15:35,394 - INFO - complianceai - [25ffef21] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:15:35,397 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:15:35,399 - INFO - complianceai - [25ffef21] GET /health/ | Status: 200 | Time: 5.03 ms | Client: 127.0.0.1
+2026-08-10 08:15:45,934 - INFO - complianceai - [2090698c] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:15:45,937 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:15:45,939 - INFO - complianceai - [2090698c] GET /health/ | Status: 200 | Time: 5.29 ms | Client: 127.0.0.1
+2026-08-10 08:15:56,412 - INFO - complianceai - [9fccae2f] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:15:56,415 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:15:56,417 - INFO - complianceai - [9fccae2f] GET /health/ | Status: 200 | Time: 4.84 ms | Client: 127.0.0.1
+2026-08-10 08:16:06,941 - INFO - complianceai - [6d66139a] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:16:06,944 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:16:06,947 - INFO - complianceai - [6d66139a] GET /health/ | Status: 200 | Time: 5.6 ms | Client: 127.0.0.1
+2026-08-10 08:16:17,380 - INFO - complianceai - [e2726c43] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:16:17,383 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:16:17,386 - INFO - complianceai - [e2726c43] GET /health/ | Status: 200 | Time: 5.72 ms | Client: 127.0.0.1
+2026-08-10 08:16:28,026 - INFO - complianceai - [9aef64ce] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:16:28,030 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:16:28,032 - INFO - complianceai - [9aef64ce] GET /health/ | Status: 200 | Time: 6.75 ms | Client: 127.0.0.1
+2026-08-10 08:16:38,555 - INFO - complianceai - [63857097] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:16:38,558 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:16:38,560 - INFO - complianceai - [63857097] GET /health/ | Status: 200 | Time: 5.14 ms | Client: 127.0.0.1
+2026-08-10 08:16:49,045 - INFO - complianceai - [b25d9e00] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:16:49,047 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:16:49,049 - INFO - complianceai - [b25d9e00] GET /health/ | Status: 200 | Time: 4.29 ms | Client: 127.0.0.1
+2026-08-10 08:16:59,640 - INFO - complianceai - [422d37f7] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:16:59,643 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:16:59,645 - INFO - complianceai - [422d37f7] GET /health/ | Status: 200 | Time: 4.6 ms | Client: 127.0.0.1
+2026-08-10 08:17:10,187 - INFO - complianceai - [4088fc50] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:17:10,192 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:17:10,194 - INFO - complianceai - [4088fc50] GET /health/ | Status: 200 | Time: 6.66 ms | Client: 127.0.0.1
+2026-08-10 08:17:20,694 - INFO - complianceai - [62e88124] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:17:20,698 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:17:20,700 - INFO - complianceai - [62e88124] GET /health/ | Status: 200 | Time: 6.94 ms | Client: 127.0.0.1
+2026-08-10 08:17:31,181 - INFO - complianceai - [b19e32a0] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:17:31,184 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:17:31,185 - INFO - complianceai - [b19e32a0] GET /health/ | Status: 200 | Time: 4.3 ms | Client: 127.0.0.1
+2026-08-10 08:17:41,702 - INFO - complianceai - [6b937f90] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:17:41,704 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:17:41,706 - INFO - complianceai - [6b937f90] GET /health/ | Status: 200 | Time: 4.43 ms | Client: 127.0.0.1
+2026-08-10 08:17:52,196 - INFO - complianceai - [65eb2075] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:17:52,200 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:17:52,202 - INFO - complianceai - [65eb2075] GET /health/ | Status: 200 | Time: 6.66 ms | Client: 127.0.0.1
+2026-08-10 08:18:02,735 - INFO - complianceai - [12ea5192] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:18:02,737 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:18:02,739 - INFO - complianceai - [12ea5192] GET /health/ | Status: 200 | Time: 4.43 ms | Client: 127.0.0.1
+2026-08-10 08:18:13,521 - INFO - complianceai - [de61d53b] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:18:13,524 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:18:13,527 - INFO - complianceai - [de61d53b] GET /health/ | Status: 200 | Time: 5.98 ms | Client: 127.0.0.1
+2026-08-10 08:18:24,078 - INFO - complianceai - [8a46debd] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:18:24,080 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:18:24,082 - INFO - complianceai - [8a46debd] GET /health/ | Status: 200 | Time: 4.73 ms | Client: 127.0.0.1
+2026-08-10 08:18:34,670 - INFO - complianceai - [b1d064e9] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:18:34,674 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:18:34,676 - INFO - complianceai - [b1d064e9] GET /health/ | Status: 200 | Time: 5.73 ms | Client: 127.0.0.1
+2026-08-10 08:18:45,194 - INFO - complianceai - [e458950c] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:18:45,199 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:18:45,201 - INFO - complianceai - [e458950c] GET /health/ | Status: 200 | Time: 6.11 ms | Client: 127.0.0.1
+2026-08-10 08:18:55,685 - INFO - complianceai - [f014fc3d] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:18:55,687 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:18:55,690 - INFO - complianceai - [f014fc3d] GET /health/ | Status: 200 | Time: 5.35 ms | Client: 127.0.0.1
+2026-08-10 08:19:06,206 - INFO - complianceai - [de27fe2c] Incoming Request: GET /health/ | Client: 127.0.0.1
+2026-08-10 08:19:06,209 - INFO - complianceai - Health endpoint accessed
+2026-08-10 08:19:06,211 - INFO - complianceai - [de27fe2c] GET /health/ | Status: 200 | Time: 4.77 ms | Client: 127.0.0.1
