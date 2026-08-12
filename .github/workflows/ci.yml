@@ -55,9 +55,20 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install pytest-cov ruff black isort
+
+      - name: Run Ruff
+        run: ruff check app tests
+
+      - name: Check Black Formatting
+        run: black --check app tests
+
+      - name: Check isort Imports
+        run: isort --check-only app tests
 
       - name: Run Alembic Migrations
         run: alembic upgrade head
 
-      - name: Run Tests
-        run: pytest
+      - name: Run Tests with Coverage
+        run: |
+          pytest --cov=app --cov-report=term-missing --cov-fail-under=90
