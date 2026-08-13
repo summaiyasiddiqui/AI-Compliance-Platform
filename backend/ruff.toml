@@ -1,7 +1,6 @@
-[tool.ruff]
-line-length = 88
+﻿line-length = 88
 
-[tool.ruff.lint]
+[lint]
 ignore = [
     "B008",  # FastAPI Depends() in function arguments
 ]
