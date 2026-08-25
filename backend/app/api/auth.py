@@ -232,11 +232,10 @@ def forgot_password(
     forgot_request: ForgotPasswordRequest,
     db: Session = Depends(get_db),
 ):
-    print("Received email:", repr(forgot_request.email))
 
     user = db.query(User).filter(User.email == forgot_request.email).first()
 
-    print("User found:", user)
+
 
     if not user:
         return {
@@ -299,11 +298,17 @@ def reset_password(request: ResetPasswordRequest, db: Session = Depends(get_db))
 
     expires_at = user.reset_token_expires
 
+    if expires_at is None:
+        raise HTTPException(status_code=400, detail="Invalid or expired reset token.")
+
     if expires_at.tzinfo is None:
         expires_at = expires_at.replace(tzinfo=timezone.utc)
 
-    if expires_at < datetime.now(timezone.utc):
+    now = datetime.now(timezone.utc)
+
+    if expires_at < now:
         raise HTTPException(status_code=400, detail="Reset token has expired.")
+
     # Update the password
     user.hashed_password = hash_password(request.new_password)
 
@@ -315,8 +320,6 @@ def reset_password(request: ResetPasswordRequest, db: Session = Depends(get_db))
     db.commit()
 
     return {"message": "Password has been reset successfully."}
-
-
 # -----------------------------
 # admin dashboard
 # -----------------------------

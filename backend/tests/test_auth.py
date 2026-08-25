@@ -1,3 +1,4 @@
+from datetime import datetime, timezone
 from uuid import uuid4
 
 from fastapi.testclient import TestClient
@@ -613,7 +614,8 @@ def test_reset_password_success():
 
         assert user is not None
 
-        user.reset_token = "valid-reset-token"
+        reset_token = f"valid-reset-token-{unique}"
+        user.reset_token = reset_token
         user.reset_token_expires = datetime.now(timezone.utc) + timedelta(minutes=10)
 
         db.commit()
@@ -624,11 +626,10 @@ def test_reset_password_success():
     response = client.post(
         "/auth/reset-password",
         json={
-            "token": "valid-reset-token",
+            "token": reset_token,
             "new_password": "newpassword123",
         },
     )
-
     assert response.status_code == 200
 
     data = response.json()
@@ -668,6 +669,10 @@ def test_admin_dashboard():
 
         user.role = "admin"
         db.commit()
+        db.refresh(user)
+        print("RESET TOKEN:", user.reset_token)
+        print("RESET EXPIRY:", user.reset_token_expires)
+        print("CURRENT UTC:", datetime.now(timezone.utc))
     finally:
         db.close()
 

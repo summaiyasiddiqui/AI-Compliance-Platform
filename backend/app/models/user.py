@@ -16,5 +16,5 @@ class User(Base):
 
     companies = relationship("Company", back_populates="owner", cascade="all, delete")
     reset_token = Column(String, nullable=True)
-    reset_token_expires = Column(DateTime, nullable=True)
+    reset_token_expires = Column(DateTime(timezone=True), nullable=True)
     refresh_token = Column(String, nullable=True)
