@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.trustedhost import TrustedHostMiddleware
 from slowapi.errors import RateLimitExceeded
 
 from app.api.about import router as about_router
@@ -51,8 +52,23 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[settings.frontend_url],
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allow_headers=["Authorization", "Content-Type"],
+)
+allowed_hosts = [
+    host.strip()
+    for host in settings.allowed_hosts.split(",")
+    if host.strip()
+]
+
+# TestClient uses "testserver" as the default Host header.
+# Allow it only outside production.
+if settings.environment.lower() != "production":
+    allowed_hosts.append("testserver")
+
+app.add_middleware(
+    TrustedHostMiddleware,
+    allowed_hosts=allowed_hosts,
 )
 app.state.limiter = limiter
 

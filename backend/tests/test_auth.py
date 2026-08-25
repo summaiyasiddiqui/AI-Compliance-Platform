@@ -745,3 +745,18 @@ def test_admin_dashboard_non_admin():
     data = response.json()
 
     assert data["message"] == "Admin access required."
+
+def test_refresh_token_rejected_as_access_token():
+    from app.auth import create_refresh_token, decode_access_token
+
+    token = create_refresh_token({"sub": "testuser"})
+
+    assert decode_access_token(token) is None
+
+
+def test_access_token_rejected_as_refresh_token():
+    from app.auth import create_access_token, decode_refresh_token
+
+    token = create_access_token({"sub": "testuser"})
+
+    assert decode_refresh_token(token) is None

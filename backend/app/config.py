@@ -1,11 +1,12 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from pydantic import validator
+from pydantic import field_validator
 
 
 class Settings(BaseSettings):
     environment: str = "development"
     debug: bool = False
     frontend_url: str = "http://localhost:5173"
+    allowed_hosts: str = "localhost,127.0.0.1"
 
     database_url: str
     secret_key: str
@@ -21,11 +22,11 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-    @validator("debug")
-    def validate_debug(cls, value, values):
-        if values.get("environment", "").lower() == "production" and value:
-            raise ValueError("DEBUG must be False in production.")
-        return value
-
+@field_validator("debug")
+@classmethod
+def validate_debug(cls, value, info):
+    if info.data.get("environment", "").lower() == "production" and value:
+        raise ValueError("DEBUG must be False in production.")
+    return value
 
 settings = Settings()
