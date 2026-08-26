@@ -52,5 +52,26 @@ async def rate_limit_exception_handler(
 ):
     return JSONResponse(
         status_code=429,
-        content={"detail": "Too many requests. Please try again later."},
+        content={
+            "success": False,
+            "message": "Too many requests. Please try again later.",
+            "data": None,
+        },
+    )
+
+async def general_exception_handler(
+    request: Request,
+    exc: Exception,
+):
+    logger.exception(
+        f"Unhandled exception on {request.method} {request.url.path}"
+    )
+
+    return JSONResponse(
+        status_code=500,
+        content={
+            "success": False,
+            "message": "An internal server error occurred.",
+            "data": None,
+        },
     )

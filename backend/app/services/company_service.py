@@ -121,9 +121,13 @@ def create_company(company, db: Session, current_user: User):
         owner_id=current_user.id,
     )
 
-    db.add(db_company)
-    db.commit()
-    db.refresh(db_company)
+    try:
+        db.add(db_company)
+        db.commit()
+        db.refresh(db_company)
+    except Exception:
+        db.rollback()
+        raise
 
     return CompanyResponse.model_validate(db_company)
 
@@ -138,8 +142,12 @@ def update_company(company_id: int, company, db: Session, current_user: User):
     db_company.industry = company.industry
     db_company.email = company.email
 
-    db.commit()
-    db.refresh(db_company)
+    try:
+        db.commit()
+        db.refresh(db_company)
+    except Exception:
+        db.rollback()
+        raise
 
     return CompanyResponse.model_validate(db_company)
 
@@ -156,7 +164,11 @@ def delete_company(company_id: int, db: Session, current_user: User):
     if company.owner_id != current_user.id:
         return "unauthorized"
 
-    db.delete(company)
-    db.commit()
+    try:
+        db.delete(company)
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise
 
     return "deleted"

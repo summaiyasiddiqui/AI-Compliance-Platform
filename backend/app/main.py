@@ -11,6 +11,7 @@ from app.api.health import router as health_router
 from app.api.ready import router as ready_router
 from app.config import settings
 from app.exceptions import (
+    general_exception_handler,
     http_exception_handler,
     rate_limit_exception_handler,
     validation_exception_handler,
@@ -78,7 +79,7 @@ app.add_middleware(SecurityHeadersMiddleware)
 app.add_exception_handler(HTTPException, http_exception_handler)
 app.add_exception_handler(RequestValidationError, validation_exception_handler)
 app.add_exception_handler(RateLimitExceeded, rate_limit_exception_handler)
-
+app.add_exception_handler(Exception, general_exception_handler)
 
 @app.get(
     "/",

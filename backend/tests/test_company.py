@@ -1,5 +1,10 @@
 from uuid import uuid4
 
+from fastapi.testclient import TestClient
+
+from app.main import app
+from app.services import company_service
+
 
 def test_create_company(client, auth_token):
     token = auth_token
@@ -25,6 +30,40 @@ def test_create_company(client, auth_token):
     assert data["data"]["industry"] == "Technology"
     assert data["data"]["email"] == f"{unique}@company.com"
 
+def test_create_company_database_failure(client, auth_token, monkeypatch):
+    def mock_create_company(*args, **kwargs):
+        raise RuntimeError("Database connection failed")
+
+    monkeypatch.setattr(
+        company_service,
+        "create_company",
+        mock_create_company,
+    )
+
+    test_client = TestClient(
+        app,
+        raise_server_exceptions=False,
+    )
+
+    response = test_client.post(
+        "/companies/",
+        headers={"Authorization": f"Bearer {auth_token}"},
+        json={
+            "company_name": "Database Failure Test",
+            "industry": "Technology",
+            "email": "dbfailure@example.com",
+        },
+    )
+
+    assert response.status_code == 500
+
+    data = response.json()
+
+    assert data["success"] is False
+    assert data["message"] == "An internal server error occurred."
+    assert data["data"] is None
+
+    assert "Database connection failed" not in response.text
 
 def test_get_companies(client, auth_token):
     token = auth_token

@@ -28,7 +28,29 @@ def test_register_user():
     assert data["username"] == f"user_{unique}"
     assert data["email"] == f"{unique}@example.com"
 
+def test_register_validation_error():
+    response = client.post(
+        "/auth/register",
+        json={
+            "username": "test_user",
+            "email": "invalid-email",
+            "password": "",
+        },
+    )
 
+    assert response.status_code == 422
+
+    data = response.json()
+
+    assert data["success"] is False
+    assert data["message"] == "Validation failed"
+    assert isinstance(data["data"], list)
+    assert len(data["data"]) > 0
+
+    for error in data["data"]:
+        assert "field" in error
+        assert "message" in error
+        
 def test_login_user():
     unique = uuid4().hex[:8]
 
@@ -511,7 +533,6 @@ def test_forgot_password_nonexistent_email():
         data["message"]
         == "If an account with that email exists, a password reset link has been sent."
     )
-
 
 def test_reset_password_invalid_token():
     response = client.post(
