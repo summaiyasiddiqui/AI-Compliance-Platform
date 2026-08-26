@@ -16,7 +16,7 @@ def test_register_user():
         json={
             "username": f"user_{unique}",
             "email": f"{unique}@example.com",
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
@@ -33,7 +33,7 @@ def test_login_user():
     unique = uuid4().hex[:8]
 
     username = f"user_{unique}"
-    password = "password123"
+    password = "StrongPassword123"
 
     client.post(
         "/auth/register",
@@ -64,7 +64,7 @@ def test_get_current_user():
     unique = uuid4().hex[:8]
 
     username = f"user_{unique}"
-    password = "password123"
+    password = "StrongPassword123"
 
     client.post(
         "/auth/register",
@@ -103,7 +103,7 @@ def test_login_wrong_password():
     unique = uuid4().hex[:8]
 
     username = f"user_{unique}"
-    password = "password123"
+    password = "StrongPassword123"
 
     client.post(
         "/auth/register",
@@ -132,7 +132,7 @@ def test_login_nonexistent_user():
         "/auth/login",
         data={
             "username": f"nonexistent_{unique}",
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
@@ -150,7 +150,7 @@ def test_register_duplicate_username():
         json={
             "username": username,
             "email": email,
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
@@ -161,7 +161,7 @@ def test_register_duplicate_username():
         json={
             "username": username,
             "email": f"another_{unique}@example.com",
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
@@ -210,7 +210,7 @@ def test_refresh_token():
     unique = uuid4().hex[:8]
 
     username = f"user_{unique}"
-    password = "password123"
+    password = "StrongPassword123"
 
     register_response = client.post(
         "/auth/register",
@@ -291,7 +291,7 @@ def test_forgot_password(client):
         json={
             "username": f"user_{unique}",
             "email": email,
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
@@ -318,7 +318,7 @@ def test_logout_after_login():
     unique = uuid4().hex[:8]
 
     username = f"user_{unique}"
-    password = "password123"
+    password = "StrongPassword123"
 
     register_response = client.post(
         "/auth/register",
@@ -356,7 +356,7 @@ def test_refresh_token_after_logout():
     unique = uuid4().hex[:8]
 
     username = f"user_{unique}"
-    password = "password123"
+    password = "StrongPassword123"
 
     register_response = client.post(
         "/auth/register",
@@ -411,7 +411,7 @@ def test_register_duplicate_email():
         json={
             "username": f"user_{unique}",
             "email": email,
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
@@ -422,7 +422,7 @@ def test_register_duplicate_email():
         json={
             "username": f"another_user_{unique}",
             "email": email,
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
@@ -446,7 +446,7 @@ def test_refresh_token_user_not_found():
         json={
             "username": username,
             "email": f"{unique}@example.com",
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
@@ -457,7 +457,7 @@ def test_refresh_token_user_not_found():
         "/auth/login",
         data={
             "username": username,
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
@@ -518,7 +518,7 @@ def test_reset_password_invalid_token():
         "/auth/reset-password",
         json={
             "token": "invalid-reset-token",
-            "new_password": "newpassword123",
+            "new_password": "NewStrongPassword123",
         },
     )
 
@@ -541,7 +541,7 @@ def test_reset_password_expired_token():
         json={
             "username": username,
             "email": email,
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
@@ -572,7 +572,7 @@ def test_reset_password_expired_token():
         "/auth/reset-password",
         json={
             "token": "expired-test-token",
-            "new_password": "newpassword123",
+            "new_password": "NewStrongPassword123",
         },
     )
 
@@ -595,7 +595,7 @@ def test_reset_password_success():
         json={
             "username": username,
             "email": email,
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
@@ -627,12 +627,13 @@ def test_reset_password_success():
         "/auth/reset-password",
         json={
             "token": reset_token,
-            "new_password": "newpassword123",
+            "new_password": "NewStrongPassword123",
         },
     )
     assert response.status_code == 200
 
     data = response.json()
+
 
     assert data["message"] == "Password has been reset successfully."
 
@@ -642,7 +643,7 @@ def test_admin_dashboard():
 
     username = f"admin_{unique}"
     email = f"{unique}@example.com"
-    password = "password123"
+    password = "StrongPassword123"
 
     # Register user
     register_response = client.post(
@@ -707,7 +708,7 @@ def test_admin_dashboard_non_admin():
 
     username = f"user_{unique}"
     email = f"{unique}@example.com"
-    password = "password123"
+    password = "StrongPassword123"
 
     # Register normal user
     register_response = client.post(
@@ -760,3 +761,57 @@ def test_access_token_rejected_as_refresh_token():
     token = create_access_token({"sub": "testuser"})
 
     assert decode_refresh_token(token) is None
+
+def test_old_refresh_token_rejected_after_rotation():
+    unique = uuid4().hex[:8]
+
+    username = f"rotation_{unique}"
+    password = "StrongPassword123"
+
+    register_response = client.post(
+        "/auth/register",
+        json={
+            "username": username,
+            "email": f"{unique}@example.com",
+            "password": password,
+        },
+    )
+
+    assert register_response.status_code == 201
+
+    login_response = client.post(
+        "/auth/login",
+        data={
+            "username": username,
+            "password": password,
+        },
+    )
+
+    assert login_response.status_code == 200
+
+    old_refresh_token = login_response.json()["refresh_token"]
+
+    # Use the refresh token once.
+    refresh_response = client.post(
+        "/auth/refresh",
+        json={
+            "refresh_token": old_refresh_token,
+        },
+    )
+
+    assert refresh_response.status_code == 200
+
+    new_refresh_token = refresh_response.json()["refresh_token"]
+
+    # The server must rotate the refresh token.
+    assert new_refresh_token != old_refresh_token
+
+    # The old refresh token must no longer be usable.
+    replay_response = client.post(
+        "/auth/refresh",
+        json={
+            "refresh_token": old_refresh_token,
+        },
+    )
+
+    assert replay_response.status_code == 401

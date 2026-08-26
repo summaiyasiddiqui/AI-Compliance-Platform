@@ -308,13 +308,15 @@ def reset_password(request: ResetPasswordRequest, db: Session = Depends(get_db))
 
     if expires_at < now:
         raise HTTPException(status_code=400, detail="Reset token has expired.")
-
     # Update the password
     user.hashed_password = hash_password(request.new_password)
 
-    # Invalidate the token
+    # Invalidate the password-reset token
     user.reset_token = None
     user.reset_token_expires = None
+
+    # Invalidate the existing refresh session
+    user.refresh_token = None
 
     # Save everything
     db.commit()

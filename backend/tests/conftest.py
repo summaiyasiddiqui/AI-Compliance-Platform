@@ -22,7 +22,7 @@ def auth_token(client):
     unique = uuid4().hex[:8]
 
     username = f"test_user_{unique}"
-    password = "password123"
+    password = "StrongPassword123"
 
     register_response = client.post(
         "/auth/register",

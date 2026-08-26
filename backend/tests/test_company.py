@@ -361,7 +361,7 @@ def test_get_company_unauthorized_owner(client, auth_token):
         json={
             "username": f"other_user_{other_unique}",
             "email": f"{other_unique}@example.com",
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
@@ -371,7 +371,7 @@ def test_get_company_unauthorized_owner(client, auth_token):
         "/auth/login",
         data={
             "username": f"other_user_{other_unique}",
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
@@ -448,7 +448,7 @@ def test_update_company_unauthorized_owner(client, auth_token):
         json={
             "username": f"other_update_{other_unique}",
             "email": f"{other_unique}@example.com",
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
@@ -458,7 +458,7 @@ def test_update_company_unauthorized_owner(client, auth_token):
         "/auth/login",
         data={
             "username": f"other_update_{other_unique}",
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
@@ -507,7 +507,7 @@ def test_delete_company_unauthorized_owner(client, auth_token):
         json={
             "username": f"other_delete_{other_unique}",
             "email": f"{other_unique}@example.com",
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
@@ -517,7 +517,7 @@ def test_delete_company_unauthorized_owner(client, auth_token):
         "/auth/login",
         data={
             "username": f"other_delete_{other_unique}",
-            "password": "password123",
+            "password": "StrongPassword123",
         },
     )
 
