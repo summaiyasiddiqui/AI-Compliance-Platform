@@ -14,13 +14,34 @@ router = APIRouter(prefix="/companies", tags=["Companies"])
 # ==========================
 # GET ALL COMPANIES
 # ==========================
-@router.get("/", response_model=APIResponse)
+@router.get(
+    "/",
+    response_model=APIResponse,
+    summary="List companies",
+    description=(
+        "Returns a paginated list of companies owned by the authenticated user. "
+        "Supports searching by company name, filtering by industry, and sorting."
+    ),
+    responses={
+        200: {"description": "Companies retrieved successfully"},
+        401: {"description": "Authentication required"},
+    },
+)
 def get_companies(
-    search: str | None = None,
-    industry: str | None = None,
+    search: str | None = Query(
+    None,
+    description="Search companies by name",
+),
+    industry: str | None = Query(
+    None,
+    description="Filter companies by industry",
+),
     page: int = Query(1, ge=1, description="Page number"),
     limit: int = Query(10, ge=1, le=100, description="Number of companies per page"),
-    sort_by: str = "id",
+    sort_by: str = Query(
+    "id",
+    description="Field used for sorting: id, company_name, industry, or email",
+),
     order: str = Query(
         "asc", pattern="^(asc|desc)$", description="Sort order: asc or desc"
     ),
@@ -56,7 +77,17 @@ def get_companies(
 # ==========================
 # GET COMPANY BY ID
 # ==========================
-@router.get("/{company_id}", response_model=CompanyResponse)
+@router.get(
+    "/{company_id}",
+    response_model=CompanyResponse,
+    summary="Get a company",
+    description="Returns a company owned by the authenticated user.",
+    responses={
+        200: {"description": "Company retrieved successfully"},
+        401: {"description": "Authentication required"},
+        404: {"description": "Company not found"},
+    },
+)
 def get_company(
     company_id: int,
     db: Session = Depends(get_db),
@@ -74,8 +105,19 @@ def get_company(
 
 # ==========================
 # CREATE COMPANY
-# ==========================
-@router.post("/", response_model=APIResponse, status_code=status.HTTP_201_CREATED)
+# ========================
+@router.post(
+    "/",
+    response_model=APIResponse,
+    status_code=status.HTTP_201_CREATED,
+    summary="Create a company",
+    description="Creates a new company owned by the authenticated user.",
+    responses={
+        201: {"description": "Company created successfully"},
+        400: {"description": "A company with this name already exists"},
+        401: {"description": "Authentication required"},
+    },
+)
 def create_company(
     company: CompanyCreate,
     db: Session = Depends(get_db),
@@ -98,7 +140,17 @@ def create_company(
 # ==========================
 # UPDATE COMPANY
 # ==========================
-@router.put("/{company_id}", response_model=APIResponse)
+@router.put(
+    "/{company_id}",
+    response_model=APIResponse,
+    summary="Update a company",
+    description="Updates a company owned by the authenticated user.",
+    responses={
+        200: {"description": "Company updated successfully"},
+        401: {"description": "Authentication required"},
+        404: {"description": "Company not found"},
+    },
+)
 def update_company(
     company_id: int,
     company: CompanyCreate,
@@ -121,7 +173,17 @@ def update_company(
 # ==========================
 # DELETE COMPANY
 # ==========================
-@router.delete("/{company_id}", response_model=APIResponse)
+@router.delete(
+    "/{company_id}",
+    response_model=APIResponse,
+    summary="Delete a company",
+    description="Deletes a company owned by the authenticated user.",
+    responses={
+        200: {"description": "Company deleted successfully"},
+        401: {"description": "Authentication required"},
+        404: {"description": "Company not found"},
+    },
+)
 def delete_company(
     company_id: int,
     db: Session = Depends(get_db),

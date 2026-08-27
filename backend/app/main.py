@@ -26,28 +26,33 @@ app = FastAPI(
 
 ComplianceAI is an AI-powered Compliance Management Platform designed to help organizations manage compliance requirements efficiently.
 
-### Features
-- 🔐 JWT Authentication
-- 🔄 Refresh Token Authentication
-- 👤 Role-Based Access Control (RBAC)
-- 🏢 Company Management
-- 📧 Email Notifications
-- 🔑 Password Reset
-- 🚦 Rate Limiting
-- 📝 Structured API Responses
-- 📊 OpenAPI Documentation
+### Core Features
 
-Built using **FastAPI**, **PostgreSQL**, **SQLAlchemy**, and **Docker**.
+- Company management
+- User authentication and authorization
+- JWT access and refresh tokens
+- Password reset
+- Email notifications
+- Rate limiting
+- Health and readiness monitoring
+- Secure error handling
+
+### Authentication
+
+Protected endpoints require a valid JWT access token.
+
+Use the **Authorize** button in Swagger UI to provide your bearer token.
+
+### API Reliability
+
+The API provides consistent error responses for validation errors,
+authentication failures, rate limiting, database failures, and unexpected
+server exceptions.
 """,
     version="1.0.0",
-    contact={
-        "name": "Summaiya Nadeem",
-        "email": "summaiyanadeem002@gmail.com",
-    },
-    license_info={
-        "name": "MIT License",
-    },
-    terms_of_service="https://example.com/terms",
+    docs_url="/docs",
+    redoc_url="/redoc",
+    openapi_url="/openapi.json",
 )
 app.add_middleware(
     CORSMiddleware,
@@ -81,8 +86,10 @@ app.add_exception_handler(RequestValidationError, validation_exception_handler)
 app.add_exception_handler(RateLimitExceeded, rate_limit_exception_handler)
 app.add_exception_handler(Exception, general_exception_handler)
 
+n="Returns basic information about the ComplianceAI API.",
 @app.get(
     "/",
+    tags=["System"],
     summary="API Home",
     description="Returns basic information about the ComplianceAI API.",
 )
