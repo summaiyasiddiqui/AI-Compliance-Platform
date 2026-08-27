@@ -583,3 +583,182 @@ def test_delete_nonexistent_company(client, auth_token):
     assert (
         response.json()["message"] == "You are not authorized to delete this company."
     )
+def test_get_companies_invalid_page(client, auth_token):
+    response = client.get(
+        "/companies/?page=0",
+        headers={"Authorization": f"Bearer {auth_token}"},
+    )
+
+    assert response.status_code == 422
+
+
+def test_get_companies_negative_page(client, auth_token):
+    response = client.get(
+        "/companies/?page=-1",
+        headers={"Authorization": f"Bearer {auth_token}"},
+    )
+
+    assert response.status_code == 422
+
+
+def test_get_companies_invalid_limit_zero(client, auth_token):
+    response = client.get(
+        "/companies/?limit=0",
+        headers={"Authorization": f"Bearer {auth_token}"},
+    )
+
+    assert response.status_code == 422
+
+
+def test_get_companies_limit_above_maximum(client, auth_token):
+    response = client.get(
+        "/companies/?limit=101",
+        headers={"Authorization": f"Bearer {auth_token}"},
+    )
+
+    assert response.status_code == 422
+
+
+def test_get_companies_invalid_order(client, auth_token):
+    response = client.get(
+        "/companies/?order=invalid",
+        headers={"Authorization": f"Bearer {auth_token}"},
+    )
+
+    assert response.status_code == 422
+
+
+def test_get_companies_empty_page(client, auth_token):
+    response = client.get(
+        "/companies/?page=9999",
+        headers={"Authorization": f"Bearer {auth_token}"},
+    )
+
+    assert response.status_code == 200
+
+    data = response.json()["data"]
+
+    assert data["companies"] == []
+    assert data["meta"]["current_page"] == 9999
+
+def test_update_company_database_failure(client, auth_token, monkeypatch):
+    unique = uuid4().hex[:8]
+
+    create_response = client.post(
+        "/companies/",
+        headers={"Authorization": f"Bearer {auth_token}"},
+        json={
+            "company_name": f"Update Failure {unique}",
+            "industry": "Technology",
+            "email": f"{unique}@company.com",
+        },
+    )
+
+    assert create_response.status_code == 201
+
+    company_id = create_response.json()["data"]["id"]
+
+    def mock_update_company(*args, **kwargs):
+        raise RuntimeError("Database update failed")
+
+    monkeypatch.setattr(
+        company_service,
+        "update_company",
+        mock_update_company,
+    )
+
+    test_client = TestClient(
+        app,
+        raise_server_exceptions=False,
+    )
+
+    response = test_client.put(
+        f"/companies/{company_id}",
+        headers={"Authorization": f"Bearer {auth_token}"},
+        json={
+            "company_name": f"Updated Company {unique}",
+            "industry": "Finance",
+            "email": f"updated_{unique}@company.com",
+        },
+    )
+
+    assert response.status_code == 500
+
+    data = response.json()
+
+    assert data["success"] is False
+    assert data["message"] == "An internal server error occurred."
+    assert data["data"] is None
+
+    assert "Database update failed" not in response.text
+
+def test_company_list_isolated_between_users(client):
+    unique_a = uuid4().hex[:8]
+    unique_b = uuid4().hex[:8]
+
+    user_a = {
+        "username": f"user_a_{unique_a}",
+        "email": f"user_a_{unique_a}@example.com",
+        "password": "StrongPassword123",
+    }
+
+    user_b = {
+        "username": f"user_b_{unique_b}",
+        "email": f"user_b_{unique_b}@example.com",
+        "password": "StrongPassword123",
+    }
+
+    response_a = client.post("/auth/register", json=user_a)
+    response_b = client.post("/auth/register", json=user_b)
+
+    assert response_a.status_code == 201
+    assert response_b.status_code == 201
+
+    login_a = client.post(
+        "/auth/login",
+        data={
+            "username": user_a["username"],
+            "password": user_a["password"],
+        },
+    )
+
+    login_b = client.post(
+        "/auth/login",
+        data={
+            "username": user_b["username"],
+            "password": user_b["password"],
+        },
+    )
+
+    assert login_a.status_code == 200
+    assert login_b.status_code == 200
+
+    token_a = login_a.json()["access_token"]
+    token_b = login_b.json()["access_token"]
+
+    company_response = client.post(
+        "/companies/",
+        json={
+            "company_name": f"User A Company {unique_a}",
+            "industry": "Technology",
+            "email": f"company_{unique_a}@example.com",
+            "website": "https://example.com",
+        },
+        headers={"Authorization": f"Bearer {token_a}"},
+    )
+
+    assert company_response.status_code == 201
+
+    response_b = client.get(
+        "/companies/",
+        headers={"Authorization": f"Bearer {token_b}"},
+    )
+
+    assert response_b.status_code == 200
+
+    companies = response_b.json()["data"]["companies"]
+
+    assert all(
+        company["company_name"] != f"User A Company {unique_a}"
+        for company in companies
+    )

@@ -1,8 +1,10 @@
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from uuid import uuid4
-
+from jose import jwt
+from app.auth import ALGORITHM, SECRET_KEY
 from fastapi.testclient import TestClient
-
+from app.database import SessionLocal
+from app.models.user import User
 from app.main import app
 
 client = TestClient(app)
@@ -836,3 +838,98 @@ def test_old_refresh_token_rejected_after_rotation():
     )
 
     assert replay_response.status_code == 401
+def test_current_user_does_not_expose_sensitive_fields(client, auth_token):
+    response = client.get(
+        "/auth/me",
+        headers={"Authorization": f"Bearer {auth_token}"},
+    )
+
+    assert response.status_code == 200
+
+    data = response.json()
+
+    assert "hashed_password" not in data
+    assert "refresh_token" not in data
+    assert "reset_token" not in data
+    assert "reset_token_expires" not in data
+
+def test_current_user_does_not_expose_sensitive_fields(client, auth_token):
+    response = client.get(
+        "/auth/me",
+        headers={"Authorization": f"Bearer {auth_token}"},
+    )
+
+    assert response.status_code == 200
+
+    data = response.json()
+
+    assert "hashed_password" not in data
+    assert "refresh_token" not in data
+    assert "reset_token" not in data
+    assert "reset_token_expires" not in data
+
+def test_expired_access_token_rejected(client):
+    expired_token = jwt.encode(
+        {
+            "sub": "expired_user",
+            "type": "access",
+            "exp": datetime.now(timezone.utc) - timedelta(minutes=1),
+        },
+        SECRET_KEY,
+        algorithm=ALGORITHM,
+    )
+
+    response = client.get(
+        "/auth/me",
+        headers={"Authorization": f"Bearer {expired_token}"},
+    )
+
+    assert response.status_code == 401
+
+def test_access_token_rejected_after_user_deletion():
+    unique = uuid4().hex[:8]
+
+    username = f"deleted_user_{unique}"
+    password = "StrongPassword123"
+
+    register_response = client.post(
+        "/auth/register",
+        json={
+            "username": username,
+            "email": f"{unique}@example.com",
+            "password": password,
+        },
+    )
+
+    assert register_response.status_code == 201
+
+    login_response = client.post(
+        "/auth/login",
+        data={
+            "username": username,
+            "password": password,
+        },
+    )
+
+    assert login_response.status_code == 200
+
+    token = login_response.json()["access_token"]
+
+    db = SessionLocal()
+
+    try:
+        user = db.query(User).filter(User.username == username).first()
+
+        assert user is not None
+
+        db.delete(user)
+        db.commit()
+    finally:
+        db.close()
+
+    response = client.get(
+        "/auth/me",
+        headers={"Authorization": f"Bearer {token}"},
+    )
+
+    assert response.status_code == 401
