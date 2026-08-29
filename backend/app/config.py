@@ -1,5 +1,5 @@
-from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import field_validator
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
@@ -22,11 +22,12 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-@field_validator("debug")
-@classmethod
-def validate_debug(cls, value, info):
-    if info.data.get("environment", "").lower() == "production" and value:
-        raise ValueError("DEBUG must be False in production.")
-    return value
+    @field_validator("debug")
+    @classmethod
+    def validate_debug(cls, value, info):
+        if info.data.get("environment", "").lower() == "production" and value:
+            raise ValueError("DEBUG must be False in production.")
+        return value
+
 
 settings = Settings()

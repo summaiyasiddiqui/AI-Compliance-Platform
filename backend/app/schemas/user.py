@@ -20,14 +20,19 @@ def validate_password_strength(password: str) -> str:
 class ForgotPasswordRequest(BaseModel):
     email: EmailStr
 
-    model_config = {"json_schema_extra": {"example": {"email": "john@example.com"}}}
+    model_config = {
+        "json_schema_extra": {
+            "example": {
+                "email": "john@example.com"
+            }
+        }
+    }
 
 
 class UserCreate(BaseModel):
     username: str
     email: EmailStr
     password: str = Field(min_length=12)
-    role: str = "user"
 
     @field_validator("password")
     @classmethod
@@ -40,7 +45,6 @@ class UserCreate(BaseModel):
                 "username": "john123",
                 "email": "john@example.com",
                 "password": "StrongPassword123",
-                "role": "user",
             }
         }
     }
@@ -52,7 +56,10 @@ class UserLogin(BaseModel):
 
     model_config = {
         "json_schema_extra": {
-            "example": {"username": "john123", "password": "StrongPassword123"}
+            "example": {
+                "username": "john123",
+                "password": "StrongPassword123",
+            }
         }
     }
 

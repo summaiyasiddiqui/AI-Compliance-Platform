@@ -61,7 +61,7 @@ def register_user(
         username=user.username,
         email=user.email,
         hashed_password=hash_password(user.password),
-        role=user.role,
+        role="user",
     )
 
     db.add(new_user)
@@ -249,7 +249,7 @@ def forgot_password(
 
     db.commit()
 
-    reset_link = f"http://localhost:3000/reset-password?token={token}"
+    reset_link = f"{settings.frontend_url}/reset-password?token={token}"
 
     subject = "Reset Your ComplianceAI Password"
 
@@ -290,8 +290,13 @@ If you didn't request this, simply ignore this email.
         400: {"description": "Invalid or expired reset token"},
     },
 )
-def reset_password(request: ResetPasswordRequest, db: Session = Depends(get_db)):
-    user = db.query(User).filter(User.reset_token == request.token).first()
+@limiter.limit("3/minute")
+def reset_password(
+    request: Request,
+    reset_request: ResetPasswordRequest,
+    db: Session = Depends(get_db),
+):
+    user = db.query(User).filter(User.reset_token == reset_request.token).first()
 
     if not user:
         raise HTTPException(status_code=400, detail="Invalid or expired reset token.")
@@ -309,7 +314,7 @@ def reset_password(request: ResetPasswordRequest, db: Session = Depends(get_db))
     if expires_at < now:
         raise HTTPException(status_code=400, detail="Reset token has expired.")
     # Update the password
-    user.hashed_password = hash_password(request.new_password)
+    user.hashed_password = hash_password(reset_request.new_password)
 
     # Invalidate the password-reset token
     user.reset_token = None

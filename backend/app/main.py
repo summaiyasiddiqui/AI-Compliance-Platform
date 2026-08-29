@@ -86,7 +86,6 @@ app.add_exception_handler(RequestValidationError, validation_exception_handler)
 app.add_exception_handler(RateLimitExceeded, rate_limit_exception_handler)
 app.add_exception_handler(Exception, general_exception_handler)
 
-n="Returns basic information about the ComplianceAI API.",
 @app.get(
     "/",
     tags=["System"],
