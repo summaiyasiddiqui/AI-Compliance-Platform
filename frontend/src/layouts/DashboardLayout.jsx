@@ -1,10 +1,27 @@
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 
 function DashboardLayout() {
+  const navigate = useNavigate()
+  const { logout } = useAuth()
+
+  const handleLogout = async () => {
+    await logout()
+    navigate('/login')
+  }
+
   return (
     <div className="min-h-screen bg-slate-100">
-      <header className="border-b bg-white p-4">
+      <header className="flex items-center justify-between border-b bg-white p-4">
         <h1 className="text-xl font-bold">ComplianceAI</h1>
+
+        <button
+          type="button"
+          onClick={handleLogout}
+          className="rounded-lg px-4 py-2 text-sm font-medium hover:bg-slate-100"
+        >
+          Logout
+        </button>
       </header>
 
       <div className="flex">
@@ -42,3 +59,7 @@ function DashboardLayout() {
 }
 
 export default DashboardLayout
+
+
+
+
