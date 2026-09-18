@@ -54,13 +54,19 @@ server exceptions.
     redoc_url="/redoc",
     openapi_url="/openapi.json",
 )
+allowed_origins = [
+    settings.frontend_url,
+    "http://localhost:5173",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[settings.frontend_url],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allow_headers=["Authorization", "Content-Type"],
 )
+
 allowed_hosts = [
     host.strip()
     for host in settings.allowed_hosts.split(",")
